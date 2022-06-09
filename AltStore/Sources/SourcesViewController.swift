@@ -68,11 +68,6 @@ class SourcesViewController: UICollectionViewController
         super.viewDidLoad()
         
         self.collectionView.dataSource = self.dataSource
-        
-        #if !BETA
-        // Hide "Add Source" button for public version while in beta.
-        self.navigationItem.leftBarButtonItem = nil
-        #endif
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -259,11 +254,7 @@ private extension SourcesViewController
                 let source = try result.get()
                 let sourceName = source.name
                 let managedObjectContext = source.managedObjectContext
-                
-                #if !BETA
-                guard let trustedSourceIDs = UserDefaults.shared.trustedSourceIDs, trustedSourceIDs.contains(source.identifier) else { throw SourceError(code: .unsupported, source: source) }
-                #endif
-                
+
                 // Hide warning when adding a featured trusted source.
                 let message = isTrusted ? nil : NSLocalizedString("Make sure to only add sources that you trust.", comment: "")
                 
@@ -546,19 +537,9 @@ extension SourcesViewController: UICollectionViewDelegateFlowLayout
                 footerView.textView.delegate = self
                 
                 let attributedText = NSMutableAttributedString(
-                    string: NSLocalizedString("AltStore has reviewed these sources to make sure they meet our safety standards.\n\nSupport for untrusted sources is currently in beta, but you can help test them out by", comment: ""),
+                    string: NSLocalizedString("AltStore has reviewed these sources to make sure they meet our safety standards.", comment: ""),
                     attributes: [.font: font, .foregroundColor: UIColor.gray]
                 )
-                attributedText.mutableString.append(" ")
-                
-                let boldedFont = UIFont(descriptor: font.fontDescriptor.withSymbolicTraits(.traitBold)!, size: font.pointSize)
-                let openPatreonURL = URL(string: "https://altstore.io/patreon")!
-                
-                let joinPatreonText = NSAttributedString(
-                    string: NSLocalizedString("joining our Patreon.", comment: ""),
-                    attributes: [.font: boldedFont, .link: openPatreonURL, .underlineColor: UIColor.clear]
-                )
-                attributedText.append(joinPatreonText)
                 
                 footerView.textView.attributedText = attributedText
                 footerView.textView.textAlignment = .natural

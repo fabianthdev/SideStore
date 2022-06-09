@@ -171,18 +171,8 @@ public extension InstalledApp
     
     class func fetchAppsForRefreshingAll(in context: NSManagedObjectContext) -> [InstalledApp]
     {
-        var predicate = NSPredicate(format: "%K == YES AND %K != %@", #keyPath(InstalledApp.isActive), #keyPath(InstalledApp.bundleIdentifier), StoreApp.altstoreAppID)
-        
-        if let patreonAccount = DatabaseManager.shared.patreonAccount(in: context), patreonAccount.isPatron, PatreonAPI.shared.isAuthenticated
-        {
-            // No additional predicate
-        }
-        else
-        {
-            predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate,
-                                                                            NSPredicate(format: "%K == nil OR %K == NO", #keyPath(InstalledApp.storeApp), #keyPath(InstalledApp.storeApp.isBeta))])
-        }
-        
+        let predicate = NSPredicate(format: "%K == YES AND %K != %@", #keyPath(InstalledApp.isActive), #keyPath(InstalledApp.bundleIdentifier), StoreApp.altstoreAppID)
+
         var installedApps = InstalledApp.all(satisfying: predicate,
                                              sortedBy: [NSSortDescriptor(keyPath: \InstalledApp.expirationDate, ascending: true)],
                                              in: context)
@@ -201,20 +191,10 @@ public extension InstalledApp
         // Date 6 hours before now.
         let date = Date().addingTimeInterval(-1 * 6 * 60 * 60)
         
-        var predicate = NSPredicate(format: "(%K == YES) AND (%K < %@) AND (%K != %@)",
+        let predicate = NSPredicate(format: "(%K == YES) AND (%K < %@) AND (%K != %@)",
                                     #keyPath(InstalledApp.isActive),
                                     #keyPath(InstalledApp.refreshedDate), date as NSDate,
                                     #keyPath(InstalledApp.bundleIdentifier), StoreApp.altstoreAppID)
-        
-        if let patreonAccount = DatabaseManager.shared.patreonAccount(in: context), patreonAccount.isPatron, PatreonAPI.shared.isAuthenticated
-        {
-            // No additional predicate
-        }
-        else
-        {
-            predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [predicate,
-                                                                            NSPredicate(format: "%K == nil OR %K == NO", #keyPath(InstalledApp.storeApp), #keyPath(InstalledApp.storeApp.isBeta))])
-        }
         
         var installedApps = InstalledApp.all(satisfying: predicate,
                                              sortedBy: [NSSortDescriptor(keyPath: \InstalledApp.expirationDate, ascending: true)],
