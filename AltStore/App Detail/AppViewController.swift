@@ -323,7 +323,7 @@ class AppViewController: UIViewController
         
         self.backButtonContainerView.layer.cornerRadius = self.backButtonContainerView.bounds.midY
         
-        self.scrollView.scrollIndicatorInsets.top = statusBarHeight
+        self.scrollView.verticalScrollIndicatorInsets.top = statusBarHeight
         
         // Adjust content offset + size.
         let contentOffset = self.scrollView.contentOffset
