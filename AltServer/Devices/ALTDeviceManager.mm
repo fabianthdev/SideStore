@@ -27,6 +27,7 @@
 #include <libimobiledevice/afc.h>
 #include <libimobiledevice/misagent.h>
 #include <libimobiledevice/mobile_image_mounter.h>
+@import Constants;
 
 void ALTDeviceManagerUpdateStatus(plist_t command, plist_t status, void *udid);
 void ALTDeviceManagerUpdateAppDeletionStatus(plist_t command, plist_t status, void *uuid);

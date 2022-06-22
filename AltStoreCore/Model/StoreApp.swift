@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import Constants
 
 import Roxas
 import AltSign
@@ -15,13 +16,13 @@ import AltSign
 public extension StoreApp
 {
     #if ALPHA
-    static let altstoreAppID = "com.rileytestut.AltStore.Alpha"
+    static let altstoreAppID = Constants.kProductBundleIdentifier + ".Alpha"
     #elseif BETA
-    static let altstoreAppID = "com.rileytestut.AltStore.Beta"
+    static let altstoreAppID = Constants.kProductBundleIdentifier + ".Beta"
     #else
-    static let altstoreAppID = "com.rileytestut.AltStore"
+    static let altstoreAppID = Constants.kProductBundleIdentifier
     #endif
-    
+        
     static let dolphinAppID = "me.oatmealdome.dolphinios-njb"
 }
 

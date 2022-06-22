@@ -8,13 +8,14 @@
 
 import Foundation
 import AppKit
+import Constants
 
 private extension Bundle
 {
     struct ID
     {
         static let mail = "com.apple.mail"
-        static let altXPC = "com.rileytestut.AltXPC"
+        static let altXPC = Constants.kOrgIdentifier + ".AltXPC"  //"com.rileytestut.AltXPC"
     }
 }
 
@@ -49,7 +50,7 @@ class AnisetteDataManager: NSObject
     {
         super.init()
         
-        DistributedNotificationCenter.default().addObserver(self, selector: #selector(AnisetteDataManager.handleAnisetteDataResponse(_:)), name: Notification.Name("com.rileytestut.AltServer.AnisetteDataResponse"), object: nil)
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(AnisetteDataManager.handleAnisetteDataResponse(_:)), name: Notification.Name(Constants.kOrgIdentifier + ".AltServer.AnisetteDataResponse"), object: nil)
     }
     
     func requestAnisetteData(_ completion: @escaping (Result<ALTAnisetteData, Error>) -> Void)
@@ -129,7 +130,7 @@ private extension AnisetteDataManager
         
         RunLoop.main.add(timer, forMode: .default)
         
-        DistributedNotificationCenter.default().postNotificationName(Notification.Name("com.rileytestut.AltServer.FetchAnisetteData"), object: nil, userInfo: ["requestUUID": requestUUID], options: .deliverImmediately)
+        DistributedNotificationCenter.default().postNotificationName(Notification.Name(Constants.kOrgIdentifier + ".AltServer.FetchAnisetteData"), object: nil, userInfo: ["requestUUID": requestUUID], options: .deliverImmediately)
     }
     
     @objc func handleAnisetteDataResponse(_ notification: Notification)

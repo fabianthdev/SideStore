@@ -7,13 +7,14 @@
 //
 
 import CoreData
+import Constants
 
 public extension Source
 {
     #if ALPHA
-    static let altStoreIdentifier = "com.rileytestut.AltStore.Alpha"
+    static let altStoreIdentifier = Constants.kProductBundleIdentifier + ".Alpha"
     #else
-    static let altStoreIdentifier = "com.rileytestut.AltStore"
+    static let altStoreIdentifier = Constants.kProductBundleIdentifier
     #endif
     
     #if STAGING
