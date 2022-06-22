@@ -19,6 +19,11 @@
 		B3C395F9284F362400DA9E2F /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = B3C395F8284F362400DA9E2F /* AppCenterCrashes */; };
 		B3C395FC284F3B2400DA9E2F /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = B3C395FB284F3B2400DA9E2F /* Sparkle */; };
 		B3C395FF284F3C0900DA9E2F /* STPrivilegedTask in Frameworks */ = {isa = PBXBuildFile; productRef = B3C395FE284F3C0900DA9E2F /* STPrivilegedTask */; };
+		B3F2329528631B0A00437709 /* libConstants.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F232882863177400437709 /* libConstants.a */; };
+		B3F2329B28631C0100437709 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F2329A28631C0100437709 /* Constants.swift */; };
+		B3F2329D28631C1600437709 /* Constants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B3F2329C28631C1600437709 /* Constants.h */; };
+		B3F2329E28631D1200437709 /* libConstants.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F232882863177400437709 /* libConstants.a */; };
+		B3F232A128631D6A00437709 /* libConstants.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B3F232882863177400437709 /* libConstants.a */; };
 		BF02419622F2199300129732 /* RefreshAttemptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02419522F2199300129732 /* RefreshAttemptsViewController.swift */; };
 		BF0241AA22F29CCD00129732 /* UserDefaults+AltServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0241A922F29CCD00129732 /* UserDefaults+AltServer.swift */; };
 		BF08858322DE795100DE9F1E /* MyAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08858222DE795100DE9F1E /* MyAppsViewController.swift */; };
@@ -387,6 +392,27 @@
 			remoteGlobalIDString = BFADB00319AE7BB80050CF31;
 			remoteInfo = RoxasTests;
 		};
+		B3F2329628631B0A00437709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFD247622284B9A500981D42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F232872863177400437709;
+			remoteInfo = Constants;
+		};
+		B3F2329F28631D1200437709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFD247622284B9A500981D42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F232872863177400437709;
+			remoteInfo = Constants;
+		};
+		B3F232A228631D6A00437709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFD247622284B9A500981D42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3F232872863177400437709;
+			remoteInfo = Constants;
+		};
 		BF4588442298D48B00BD7491 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFD247622284B9A500981D42 /* Project object */;
@@ -425,6 +451,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		B3F232862863177400437709 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				B3F2329D28631C1600437709 /* Constants.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF0201BC22C2EFA3000B93E4 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,6 +530,11 @@
 		B3C3960D284F4E4B00DA9E2F /* AltWidgetExtension.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AltWidgetExtension.xcconfig; sourceTree = "<group>"; };
 		B3C3960E284F4F9100DA9E2F /* AltStoreCore.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AltStoreCore.xcconfig; sourceTree = "<group>"; };
 		B3C3960F284F53E900DA9E2F /* AltBackup.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AltBackup.xcconfig; sourceTree = "<group>"; };
+		B3F232882863177400437709 /* libConstants.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libConstants.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F2329328631A0500437709 /* Constants */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Constants; sourceTree = "<group>"; };
+		B3F2329428631A2400437709 /* Scripts */ = {isa = PBXFileReference; lastKnownFileType = text; path = Scripts; sourceTree = SOURCE_ROOT; };
+		B3F2329A28631C0100437709 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B3F2329C28631C1600437709 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		BF02419522F2199300129732 /* RefreshAttemptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAttemptsViewController.swift; sourceTree = "<group>"; };
 		BF0241A922F29CCD00129732 /* UserDefaults+AltServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AltServer.swift"; sourceTree = "<group>"; };
 		BF08858222DE795100DE9F1E /* MyAppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppsViewController.swift; sourceTree = "<group>"; };
@@ -861,6 +902,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B3F232852863177400437709 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF18BFE424857D7900DD5981 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -877,6 +925,7 @@
 				BF4588882298DD3F00BD7491 /* libxml2.tbd in Frameworks */,
 				B3C395FC284F3B2400DA9E2F /* Sparkle in Frameworks */,
 				BF4588472298D4B000BD7491 /* libimobiledevice.a in Frameworks */,
+				B3F232A128631D6A00437709 /* libConstants.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -900,6 +949,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C395F1284F2DE700DA9E2F /* KeychainAccess in Frameworks */,
+				B3F2329E28631D1200437709 /* libConstants.a in Frameworks */,
 				4879A95F2861046500FC1BBD /* AltSign in Frameworks */,
 				B39575F5284F29E20080B4FF /* Roxas.framework in Frameworks */,
 			);
@@ -924,6 +974,7 @@
 				4879A9622861049C00FC1BBD /* OpenSSL in Frameworks */,
 				B3C395F4284F35DD00DA9E2F /* Nuke in Frameworks */,
 				BF1614F1250822F100767AEA /* Roxas.framework in Frameworks */,
+				B3F2329528631B0A00437709 /* libConstants.a in Frameworks */,
 				B3C395F7284F362400DA9E2F /* AppCenterAnalytics in Frameworks */,
 				D533E8BC2727BBEE00A9B5DD /* libfragmentzip.a in Frameworks */,
 				BF66EE852501AE50007EE018 /* AltStoreCore.framework in Frameworks */,
@@ -948,6 +999,17 @@
 				B3146ED1284F580500BBC3FD /* RoxasTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B3F232892863177400437709 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B3F2329C28631C1600437709 /* Constants.h */,
+				B3F2329A28631C0100437709 /* Constants.swift */,
+				B3F2329428631A2400437709 /* Scripts */,
+				B3F2329328631A0500437709 /* Constants */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		BF055B4A233B528B0086DEA9 /* Extensions */ = {
@@ -1523,6 +1585,7 @@
 				BF18BFE824857D7900DD5981 /* AltDaemon */,
 				BF98916C250AABF3002ACF50 /* AltWidget */,
 				BFF7C905257844C900E55F36 /* AltXPC */,
+				B3F232892863177400437709 /* Constants */,
 				BFD247852284BB3300981D42 /* Frameworks */,
 				B3146EC6284F580500BBC3FD /* Roxas.xcodeproj */,
 				BFD2476B2284B9A500981D42 /* Products */,
@@ -1541,6 +1604,7 @@
 				BF66EE7E2501AE50007EE018 /* AltStoreCore.framework */,
 				BF989167250AABF3002ACF50 /* AltWidgetExtension.appex */,
 				BFF7C904257844C900E55F36 /* AltXPC.xpc */,
+				B3F232882863177400437709 /* libConstants.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1870,6 +1934,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		B3F232872863177400437709 /* Constants */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3F232912863177400437709 /* Build configuration list for PBXNativeTarget "Constants" */;
+			buildPhases = (
+				B3F232922863185900437709 /* ShellScript */,
+				B3F232842863177400437709 /* Sources */,
+				B3F232852863177400437709 /* Frameworks */,
+				B3F232862863177400437709 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Constants;
+			productName = Constants;
+			productReference = B3F232882863177400437709 /* libConstants.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		BF18BFE624857D7900DD5981 /* AltDaemon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF18BFEB24857D7900DD5981 /* Build configuration list for PBXNativeTarget "AltDaemon" */;
@@ -1903,6 +1985,7 @@
 			dependencies = (
 				BF4588452298D48B00BD7491 /* PBXTargetDependency */,
 				BFF7C90E257844C900E55F36 /* PBXTargetDependency */,
+				B3F232A328631D6A00437709 /* PBXTargetDependency */,
 			);
 			name = AltServer;
 			packageProductDependencies = (
@@ -1978,6 +2061,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B3F232A028631D1200437709 /* PBXTargetDependency */,
 			);
 			name = AltStoreCore;
 			packageProductDependencies = (
@@ -2021,6 +2105,7 @@
 			dependencies = (
 				BF66EE842501AE50007EE018 /* PBXTargetDependency */,
 				BF989176250AABF4002ACF50 /* PBXTargetDependency */,
+				B3F2329728631B0A00437709 /* PBXTargetDependency */,
 			);
 			name = AltStore;
 			packageProductDependencies = (
@@ -2056,10 +2141,13 @@
 		BFD247622284B9A500981D42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Riley Testut";
 				TargetAttributes = {
+					B3F232872863177400437709 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					BF18BFE624857D7900DD5981 = {
 						CreatedOnToolsVersion = 11.5;
 						LastSwiftMigration = 1150;
@@ -2149,6 +2237,7 @@
 				BF66EE7D2501AE50007EE018 /* AltStoreCore */,
 				BF989166250AABF3002ACF50 /* AltWidgetExtension */,
 				BFF7C903257844C900E55F36 /* AltXPC */,
+				B3F232872863177400437709 /* Constants */,
 			);
 		};
 /* End PBXProject section */
@@ -2251,7 +2340,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B3F232922863185900437709 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/setup_env.sh",
+				"$(SRCROOT)/Provenance/createConstants.sh",
+				"$(SRCROOT)/.version",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(PROJECT_DIR)/Constants/Constants.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = ". \"${SRCROOT}/Scripts/createConstants.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		B3F232842863177400437709 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3F2329B28631C0100437709 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BF18BFE324857D7900DD5981 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2581,6 +2702,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B3F2329728631B0A00437709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F232872863177400437709 /* Constants */;
+			targetProxy = B3F2329628631B0A00437709 /* PBXContainerItemProxy */;
+		};
+		B3F232A028631D1200437709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F232872863177400437709 /* Constants */;
+			targetProxy = B3F2329F28631D1200437709 /* PBXContainerItemProxy */;
+		};
+		B3F232A328631D6A00437709 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3F232872863177400437709 /* Constants */;
+			targetProxy = B3F232A228631D6A00437709 /* PBXContainerItemProxy */;
+		};
 		BF4588452298D48B00BD7491 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BF45872A2298D31600BD7491 /* libimobiledevice */;
@@ -2644,6 +2780,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B3F2328C2863177400437709 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S32Z3HMYVQ;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.2;
+			};
+			name = Debug;
+		};
+		B3F2328D2863177400437709 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S32Z3HMYVQ;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TVOS_DEPLOYMENT_TARGET = 12.2;
+			};
+			name = Release;
+		};
 		BF18BFEC24857D7900DD5981 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3403,6 +3577,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B3F232912863177400437709 /* Build configuration list for PBXNativeTarget "Constants" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3F2328C2863177400437709 /* Debug */,
+				B3F2328D2863177400437709 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF18BFEB24857D7900DD5981 /* Build configuration list for PBXNativeTarget "AltDaemon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
