@@ -8,6 +8,7 @@
 
 import WidgetKit
 import SwiftUI
+import Constants
 
 import AltStoreCore
 import AltSign
@@ -154,12 +155,26 @@ struct WidgetView_Previews: PreviewProvider {
         let longRefreshedDate = Calendar.current.date(byAdding: .day, value: -100, to: Date()) ?? Date()
         let longExpirationDate = Calendar.current.date(byAdding: .day, value: 365, to: longRefreshedDate) ?? Date()
         
+        let sidestore = AppSnapshot(name: "SideStore",
+                                    bundleIdentifier: Constants.kProductBundleIdentifier,
+                              expirationDate: shortExpirationDate,
+                              refreshedDate: shortRefreshedDate,
+                              tintColor: .altPrimary,
+                              icon: UIImage(named: "SideStore"))
+        
         let altstore = AppSnapshot(name: "AltStore",
                               bundleIdentifier: "com.rileytestut.AltStore",
                               expirationDate: shortExpirationDate,
                               refreshedDate: shortRefreshedDate,
                               tintColor: .altPrimary,
                               icon: UIImage(named: "AltStore"))
+        
+        let provenance = AppSnapshot(name: "Provenance",
+                              bundleIdentifier: "org.provenance-emu.Provenance",
+                              expirationDate: longExpirationDate,
+                              refreshedDate: longRefreshedDate,
+                              tintColor: .deltaPrimary,
+                              icon: UIImage(named: "Provenance"))
         
         let delta = AppSnapshot(name: "Delta",
                               bundleIdentifier: "com.rileytestut.Delta",
@@ -176,9 +191,15 @@ struct WidgetView_Previews: PreviewProvider {
                                        icon: UIImage(named: "Delta"))
         
         return Group {
+            WidgetView(entry: AppEntry(date: Date(), app: sidestore))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+
             WidgetView(entry: AppEntry(date: Date(), app: altstore))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
-            
+
+            WidgetView(entry: AppEntry(date: Date(), app: provenance))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+
             WidgetView(entry: AppEntry(date: Date(), app: delta))
                 .previewContext(WidgetPreviewContext(family: .systemSmall))
             

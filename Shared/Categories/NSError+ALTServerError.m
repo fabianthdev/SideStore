@@ -7,6 +7,7 @@
 //
 
 #import "NSError+ALTServerError.h"
+#import <Constants/Constants.h>
 
 NSErrorDomain const AltServerErrorDomain = @"com.rileytestut.AltServer";
 NSErrorDomain const AltServerInstallationErrorDomain = @"com.rileytestut.AltServer.Installation";

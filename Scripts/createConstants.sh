@@ -152,12 +152,12 @@ static const char* gitbranch            = "${GIT_BRANCH}";
 static const char* appversion           = "${appversion}";
 static const char* buildconfiguration   = "${CONFIGURATION}";
 static const char* builtByUser          = "${USER}";
-static const char* kOrgIdentifier           = "${ORG_IDENTIFIER}";
-static const char* kOrgPrefix               = "${ORG_PREFIX}";
-static const char* kProductBundleIdentifier = "${PRODUCT_BUNDLE_IDENTIFIER}";
-static const char* kAppGroupIdentifier      = "${APP_GROUP_IDENTIFIER}";
-static const char* kiCloudContainerIdenfitier = "${ICLOUD_CONTAINER_IDENTIFIER}";
-static const char* kUbiquityIdentityTokenKey     = "${PRODUCT_BUNDLE_IDENTIFIER}.UbiquityIdentityToken";
+static const char* OrgIdentifier           = "${ORG_IDENTIFIER}";
+static const char* OrgPrefix               = "${ORG_PREFIX}";
+static const char* ProductBundleIdentifier = "${PRODUCT_BUNDLE_IDENTIFIER}";
+static const char* AppGroupIdentifier      = "${APP_GROUP_IDENTIFIER}";
+static const char* iCloudContainerIdenfitier = "${ICLOUD_CONTAINER_IDENTIFIER}";
+static const char* UbiquityIdentityTokenKey     = "${PRODUCT_BUNDLE_IDENTIFIER}.UbiquityIdentityToken";
 
 
 // static const char* compiletime          = __TIME__;

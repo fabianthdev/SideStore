@@ -27,7 +27,7 @@
 #include <libimobiledevice/afc.h>
 #include <libimobiledevice/misagent.h>
 #include <libimobiledevice/mobile_image_mounter.h>
-@import Constants;
+#import <Constants/Constants.h>
 
 void ALTDeviceManagerUpdateStatus(plist_t command, plist_t status, void *udid);
 void ALTDeviceManagerUpdateAppDeletionStatus(plist_t command, plist_t status, void *uuid);
@@ -74,8 +74,8 @@ NSNotificationName const ALTDeviceManagerDeviceDidDisconnectNotification = @"ALT
         
         _installationProgress = [NSMutableDictionary dictionary];
         
-        _installationQueue = dispatch_queue_create("com.rileytestut.AltServer.Installation", DISPATCH_QUEUE_SERIAL);
-        _devicesQueue = dispatch_queue_create("com.rileytestut.AltServer.Devices", DISPATCH_QUEUE_CONCURRENT_WITH_AUTORELEASE_POOL);
+        _installationQueue = dispatch_queue_create(kOrgIdentifier + ".AltServer.Installation", DISPATCH_QUEUE_SERIAL);
+        _devicesQueue = dispatch_queue_create(kOrgIdentifier + ".AltServer.Devices", DISPATCH_QUEUE_CONCURRENT_WITH_AUTORELEASE_POOL);
         
         _cachedDevices = [NSMutableSet set];
     }

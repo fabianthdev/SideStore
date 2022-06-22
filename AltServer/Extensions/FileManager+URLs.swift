@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import Constants
 
 extension FileManager
 {
     var altserverDirectory: URL {
         let applicationSupportDirectoryURL = self.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
         
-        let altserverDirectoryURL = applicationSupportDirectoryURL.appendingPathComponent("com.rileytestut.AltServer")
+        let altserverDirectoryURL = applicationSupportDirectoryURL.appendingPathComponent(Constants.kOrgPrefix + ".AltServer")
         return altserverDirectoryURL
     }
     

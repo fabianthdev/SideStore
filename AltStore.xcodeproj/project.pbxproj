@@ -2357,6 +2357,7 @@
 			);
 			outputPaths = (
 				"$(PROJECT_DIR)/Constants/Constants.swift",
+				"$(PROJECT_DIR)/Constants/Constants.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;

@@ -8,6 +8,7 @@
 
 import Foundation
 import Security
+import Constants
 
 class XPCConnectionHandler: NSObject, ConnectionHandler
 {
@@ -77,7 +78,7 @@ extension XPCConnectionHandler: NSXPCListenerDelegate
         guard
             let codeSigningInfo = signingInfo as? [String: Any],
             let bundleIdentifier = codeSigningInfo["identifier"] as? String,
-            bundleIdentifier.contains("com.rileytestut.AltStore")
+            bundleIdentifier.contains("com.rileytestut.AltStore") || bundleIdentifier.contains(Constants.kProductBundleIdentifier)
         else { return false }
         
         let connection = XPCConnection(newConnection)

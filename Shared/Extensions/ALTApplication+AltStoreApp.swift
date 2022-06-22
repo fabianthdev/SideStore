@@ -7,11 +7,12 @@
 //
 
 import AltSign
+import Constants
 
 extension ALTApplication
 {
-    static let altstoreBundleID = "com.rileytestut.AltStore"
-    
+    static let altstoreBundleID = Constants.kProductBundleIdentifier
+
     var isAltStoreApp: Bool {
         let isAltStoreApp = self.bundleIdentifier.contains(ALTApplication.altstoreBundleID)
         return isAltStoreApp

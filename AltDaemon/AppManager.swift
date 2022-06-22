@@ -9,6 +9,7 @@
 import Foundation
 
 import AltSign
+@exported import Constants
 
 private extension URL
 {
@@ -24,14 +25,14 @@ struct AppManager
 {
     static let shared = AppManager()
     
-    private let appQueue = DispatchQueue(label: "com.rileytestut.AltDaemon.appQueue", qos: .userInitiated)
+    private let appQueue = DispatchQueue(label: Constants.kOrgPrefix + ".AltDaemon.appQueue", qos: .userInitiated)
     private let profilesQueue = OperationQueue()
     
     private let fileCoordinator = NSFileCoordinator()
     
     private init()
     {
-        self.profilesQueue.name = "com.rileytestut.AltDaemon.profilesQueue"
+        self.profilesQueue.name = Constants.kOrgPrefix + ".AltDaemon.profilesQueue"
         self.profilesQueue.qualityOfService = .userInitiated
     }
     
