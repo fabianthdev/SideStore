@@ -1114,7 +1114,7 @@
 				BF4587972298D36400BD7491 /* libimobiledevice */,
 				BF45883D2298D3E800BD7491 /* libusbmuxd */,
 			);
-			path = libimobiledevice;
+			name = libimobiledevice;
 			sourceTree = "<group>";
 		};
 		BF4587972298D36400BD7491 /* libimobiledevice */ = {
@@ -2783,6 +2783,7 @@
 /* Begin XCBuildConfiguration section */
 		B3F2328C2863177400437709 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C39609284F4C9800DA9E2F /* AltServer.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2803,6 +2804,7 @@
 		};
 		B3F2328D2863177400437709 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C39609284F4C9800DA9E2F /* AltServer.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
