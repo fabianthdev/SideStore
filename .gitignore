@@ -34,3 +34,6 @@ xcuserdata
 
 ## AppCode specific
 .idea/
+.version
+/Constants/Constants.h
+/Constants/Constants.swift
