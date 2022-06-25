@@ -8,6 +8,7 @@
 
 import Foundation
 import Network
+import Constants
 
 import AltStoreCore
 
@@ -49,7 +50,7 @@ extension ServerManager
         
         // Print log mentioning that we are manually adding this
         NSLog("Manually adding server")
-        let ianTestService = NetService(domain: "69.69.0.1", type: "_altserver._tcp", name: "AltStore", port: 43311)
+        let ianTestService = NetService(domain: Constants.kServerIP, type: "_altserver._tcp", name: "AltStore", port: 43311)
 
         if let server = Server(service: ianTestService)
         {
@@ -305,7 +306,7 @@ func connectNetmuxd() {
     let parameters: [String: Any] = ["nothing": 0]
   
   // create the url with URL
-  let url = URL(string: "http://69.69.0.1/netmuxd/")!
+    let url = URL(string: Constants.kServerURL)!
   
   // create the session object
   let session = URLSession.shared

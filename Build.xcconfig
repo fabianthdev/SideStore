@@ -11,6 +11,8 @@ ORG_IDENTIFIER = com.joemattiello
 PATREON_URL = sidestore.io/patreon
 PRODUCT_NAME = AltStore
 SUPPORT_EMAIL = support@sidestore.io
+SERVER_URL = 'http://69.69.0.1/netmuxd/'
+SERVER_IP = 69.69.0.1
 
 // Codesigning settings defined optionally, see `CodeSigning.xcconfig.example`
 #include? "CodeSigning.xcconfig"

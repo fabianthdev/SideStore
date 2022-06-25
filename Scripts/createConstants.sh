@@ -210,6 +210,8 @@ public enum Constants {
 
   public static var kPatreonURL     = "${PATREON_URL}"
   public static var kSupportEMAIL     = "${SUPPORT_EMAIL}"
+  public static var kServerURL     = "${SERVER_URL}"
+  public static var kServerIP     = "${SERVER_IP}"
 }
 // public let compiletime          = __TIME__
 // public let compiledate          = __DATE__
