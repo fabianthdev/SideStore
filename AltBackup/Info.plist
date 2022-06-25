@@ -6,7 +6,6 @@
 	<array>
 		<string>group.$(APP_GROUP_IDENTIFIER)</string>
 		<string>group.com.rileytestut.AltStore</string>
-		<string>group.$(APP_GROUP_IDENTIFIER)</string>
 	</array>
 	<key>ALTBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
