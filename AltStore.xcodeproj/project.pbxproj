@@ -2425,12 +2425,13 @@
 				"$(SRCROOT)/Scripts/setup_env.sh",
 				"$(SRCROOT)/Provenance/createConstants.sh",
 				"$(SRCROOT)/.version",
+				"$(SRCROOT)/Build.xcconfig",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(PROJECT_DIR)/Constants/Constants.swift",
-				"$(PROJECT_DIR)/Constants/Constants.h",
+				"$(SRCROOT)/Constants/Constants.swift",
+				"$(SRCROOT)/Constants/Constants.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;

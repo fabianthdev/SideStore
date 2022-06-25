@@ -193,7 +193,7 @@ public enum Constants {
   public static var kGITDate : String = "${GIT_DATE}"
   public static var kGITBranch : String = "${GIT_BRANCH}"
   public static var kAppBuildConfiguration : String  = "${CONFIGURATION}"
-  
+
   public static var gitrevision          = "${GIT_COMMIT_COUNT}"
   public static var gittag               = "${GIT_TAG}"
   public static var gitdate              = "${GIT_DATE}"
@@ -207,6 +207,9 @@ public enum Constants {
   public static var kAppGroupIdentifier          = "${APP_GROUP_IDENTIFIER}"
   public static var kiCloudContainerIdenfitier   = "${ICLOUD_CONTAINER_IDENTIFIER}"
   public static var kUbiquityIdentityTokenKey     = "${PRODUCT_BUNDLE_IDENTIFIER}.UbiquityIdentityToken"
+
+  public static var kPatreonURL     = "${PATREON_URL}"
+  public static var kSupportEMAIL     = "${SUPPORT_EMAIL}"
 }
 // public let compiletime          = __TIME__
 // public let compiledate          = __DATE__

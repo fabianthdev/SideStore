@@ -12,6 +12,7 @@ import AuthenticationServices
 
 import AltStoreCore
 import Roxas
+import Constants
 
 extension PatreonViewController
 {
@@ -182,7 +183,7 @@ private extension PatreonViewController
     
     @objc func openPatreonURL(_ sender: UIButton)
     {
-        let patreonURL = URL(string: "https://altstore.io/patreon")!
+        let patreonURL = URL(string: Constants.kPatreonURL)!
         
         let safariViewController = SFSafariViewController(url: patreonURL)
         safariViewController.preferredControlTintColor = self.view.tintColor

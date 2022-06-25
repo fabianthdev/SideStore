@@ -8,12 +8,14 @@ CURRENT_PROJECT_VERSION = 2780
 DEVELOPMENT_TEAM = S32Z3HMYVQ
 ORG_IDENTIFIER = com.joemattiello
 
+PATREON_URL = sidestore.io/patreon
+PRODUCT_NAME = AltStore
+SUPPORT_EMAIL = support@sidestore.io
+
 // Codesigning settings defined optionally, see `CodeSigning.xcconfig.example`
 #include? "CodeSigning.xcconfig"
 
 ORG_PREFIX = $(ORG_IDENTIFIER)
-
-PRODUCT_NAME = AltStore
 //PRODUCT_NAME[configuration=Debug] = Prov Debug
 
 PRODUCT_BUNDLE_IDENTIFIER   = $(ORG_PREFIX).$(PROJECT_NAME)

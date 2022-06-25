@@ -11,6 +11,7 @@ import SafariServices
 import MessageUI
 import Intents
 import IntentsUI
+import Constants
 
 import AltStoreCore
 
@@ -483,7 +484,7 @@ extension SettingsViewController
                 {
                     let mailViewController = MFMailComposeViewController()
                     mailViewController.mailComposeDelegate = self
-                    mailViewController.setToRecipients(["support@altstore.io"])
+                    mailViewController.setToRecipients([Constants.kSupportEMAIL])
                     
                     if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
                     {
