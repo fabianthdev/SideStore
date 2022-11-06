@@ -41,6 +41,7 @@
 		B3C395F9284F362400DA9E2F /* AppCenterCrashes in Frameworks */ = {isa = PBXBuildFile; productRef = B3C395F8284F362400DA9E2F /* AppCenterCrashes */; };
 		B3C395FC284F3B2400DA9E2F /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = B3C395FB284F3B2400DA9E2F /* Sparkle */; };
 		B3C395FF284F3C0900DA9E2F /* STPrivilegedTask in Frameworks */ = {isa = PBXBuildFile; productRef = B3C395FE284F3C0900DA9E2F /* STPrivilegedTask */; };
+		B3F61B702918443600DA35FC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F61B6F2918443600DA35FC /* NetworkService.swift */; };
 		BF02419622F2199300129732 /* RefreshAttemptsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02419522F2199300129732 /* RefreshAttemptsViewController.swift */; };
 		BF0241AA22F29CCD00129732 /* UserDefaults+AltServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0241A922F29CCD00129732 /* UserDefaults+AltServer.swift */; };
 		BF08858322DE795100DE9F1E /* MyAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08858222DE795100DE9F1E /* MyAppsViewController.swift */; };
@@ -570,6 +571,7 @@
 		B3C3960D284F4E4B00DA9E2F /* AltWidgetExtension.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AltWidgetExtension.xcconfig; sourceTree = "<group>"; };
 		B3C3960E284F4F9100DA9E2F /* AltStoreCore.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AltStoreCore.xcconfig; sourceTree = "<group>"; };
 		B3C3960F284F53E900DA9E2F /* AltBackup.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = AltBackup.xcconfig; sourceTree = "<group>"; };
+		B3F61B6F2918443600DA35FC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		BF02419522F2199300129732 /* RefreshAttemptsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshAttemptsViewController.swift; sourceTree = "<group>"; };
 		BF0241A922F29CCD00129732 /* UserDefaults+AltServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AltServer.swift"; sourceTree = "<group>"; };
 		BF08858222DE795100DE9F1E /* MyAppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppsViewController.swift; sourceTree = "<group>"; };
@@ -1077,6 +1079,14 @@
 				B3146ED1284F580500BBC3FD /* RoxasTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B3F61B6E2918441B00DA35FC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B3F61B6F2918443600DA35FC /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		BF055B4A233B528B0086DEA9 /* Extensions */ = {
@@ -1681,28 +1691,29 @@
 			children = (
 				BF219A7E22CAC431007676A6 /* AltStore.entitlements */,
 				BFD2476D2284B9A500981D42 /* AppDelegate.swift */,
-				BF4B78FD24B3D1DB008AB4AC /* SceneDelegate.swift */,
-				BFD247732284B9A500981D42 /* Main.storyboard */,
 				BFE338E722F10E56002E24B9 /* LaunchViewController.swift */,
+				BF4B78FD24B3D1DB008AB4AC /* SceneDelegate.swift */,
 				BF41B805233423AE00C593A3 /* TabBarController.swift */,
-				BFE6325822A83BA800F30809 /* Authentication */,
-				BFB6B21C2318700D0022A802 /* News */,
-				BF9ABA4322DCFF33008935CF /* Browse */,
-				BF3D64A022E7FAD800E9056B /* App Detail */,
-				BFBBE2E2229320A2002097FA /* My Apps */,
-				BFDB69FB22A9A7A6007EA6D6 /* Settings */,
-				BFD2478A2284C49000981D42 /* Managing Apps */,
-				BF56D2AD23DF9E170006506D /* App IDs */,
-				BFC84A4B2421A13000853474 /* Sources */,
+				BFD247732284B9A500981D42 /* Main.storyboard */,
 				BF0DCA642433BDE200E3A595 /* Analytics */,
-				BFF00D2E2501BD4B00746320 /* Intents */,
-				BFDB6A0922AAEDA1007EA6D6 /* Operations */,
+				BF3D64A022E7FAD800E9056B /* App Detail */,
+				BF56D2AD23DF9E170006506D /* App IDs */,
+				BFE6325822A83BA800F30809 /* Authentication */,
+				BF9ABA4322DCFF33008935CF /* Browse */,
 				BFD2478D2284C4C700981D42 /* Components */,
-				BF3D648922E79A7700E9056B /* Types */,
-				BFD2479D2284FBBD00981D42 /* Extensions */,
-				BFD247962284D7C100981D42 /* Resources */,
 				BF6C8FA8242935CA00125131 /* Dependencies */,
+				BFD2479D2284FBBD00981D42 /* Extensions */,
+				BFF00D2E2501BD4B00746320 /* Intents */,
+				BFD2478A2284C49000981D42 /* Managing Apps */,
+				BFBBE2E2229320A2002097FA /* My Apps */,
+				BFB6B21C2318700D0022A802 /* News */,
+				BFDB6A0922AAEDA1007EA6D6 /* Operations */,
+				BFD247962284D7C100981D42 /* Resources */,
+				B3F61B6E2918441B00DA35FC /* Services */,
+				BFDB69FB22A9A7A6007EA6D6 /* Settings */,
+				BFC84A4B2421A13000853474 /* Sources */,
 				BFD247972284D7D800981D42 /* Supporting Files */,
+				BF3D648922E79A7700E9056B /* Types */,
 			);
 			path = AltStore;
 			sourceTree = "<group>";
@@ -1733,18 +1744,18 @@
 		BFD2478D2284C4C700981D42 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				BF2901302318F7A800D88A45 /* AppBannerView.swift */,
 				BFD2478B2284C4C300981D42 /* AppIconImageView.swift */,
-				BF74989A23621C0700CED65F /* ForwardingNavigationController.swift */,
-				BFD2478E2284C8F900981D42 /* Button.swift */,
 				BF770E6622BD57C3002A40FE /* BackgroundTaskManager.swift */,
+				BF6C8FAD2429597900125131 /* BannerCollectionViewCell.swift */,
+				BFD2478E2284C8F900981D42 /* Button.swift */,
+				BF3D649E22E7B24C00E9056B /* CollapsingTextView.swift */,
+				BF74989A23621C0700CED65F /* ForwardingNavigationController.swift */,
 				BF9ABA4A22DD137F008935CF /* NavigationBar.swift */,
 				BF9ABA4C22DD16DE008935CF /* PillButton.swift */,
-				BF18B0F022E25DF9005C4CF5 /* ToastView.swift */,
-				BF3D649E22E7B24C00E9056B /* CollapsingTextView.swift */,
-				BF2901302318F7A800D88A45 /* AppBannerView.swift */,
-				BF29012E2318F6B100D88A45 /* AppBannerView.xib */,
-				BF6C8FAD2429597900125131 /* BannerCollectionViewCell.swift */,
 				BF6C8FAF2429599900125131 /* TextCollectionReusableView.swift */,
+				BF18B0F022E25DF9005C4CF5 /* ToastView.swift */,
+				BF29012E2318F6B100D88A45 /* AppBannerView.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1773,11 +1784,11 @@
 		BFD2479D2284FBBD00981D42 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BFF0B6992322D7D0007A79E1 /* UIScreen+CompactHeight.swift */,
 				BF663C4E2433ED8200DAA738 /* FileManager+DirectorySize.swift */,
-				BF8CAE4D248AEABA004D6CCE /* UIDevice+Jailbreak.swift */,
 				BFE00A1F2503097F00EB4D0C /* INInteraction+AltStore.swift */,
+				BF8CAE4D248AEABA004D6CCE /* UIDevice+Jailbreak.swift */,
 				D57F2C9326E01BC700B9FA39 /* UIDevice+Vibration.swift */,
+				BFF0B6992322D7D0007A79E1 /* UIScreen+CompactHeight.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2693,6 +2704,7 @@
 				BFDB6A0D22AAFC1A007EA6D6 /* OperationError.swift in Sources */,
 				BF74989B23621C0700CED65F /* ForwardingNavigationController.swift in Sources */,
 				BF3D649D22E7AC1B00E9056B /* PermissionPopoverViewController.swift in Sources */,
+				B3F61B702918443600DA35FC /* NetworkService.swift in Sources */,
 				D57F2C9426E01BC700B9FA39 /* UIDevice+Vibration.swift in Sources */,
 				BFD2478F2284C8F900981D42 /* Button.swift in Sources */,
 				BF56D2AC23DF8E170006506D /* FetchAppIDsOperation.swift in Sources */,
