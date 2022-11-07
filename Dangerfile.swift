@@ -65,11 +65,12 @@ if github.pr_body.length < 5 {
   fail("PR body is too short")
 }
 
-let has_app_changes = !git.modified_files.any { $0.contains("Provenance") }
-let has_support_changes = !git.modified_files.any { $0.contains("PVSupport") }
-let has_support_test_changes = !git.modified_files.any { $0.contains("PVSupport Tests") }
-let has_library_changes = !git.modified_files.any { $0.contains("PVLibrary") }
-let has_library_test_changes = !git.modified_files.any { $0.contains("PVLibrary Tests") }
+let has_app_changes = !git.modified_files.any { $0.contains("AltStore") }
+let has_altstorecore_changes = !git.modified_files.any { $0.contains("AltStoreCore") }
+// let has_support_test_changes = !git.modified_files.any { $0.contains("AltStoreCore
+//  Tests") }
+// let has_library_changes = !git.modified_files.any { $0.contains("PVLibrary") }
+// let has_library_test_changes = !git.modified_files.any { $0.contains("PVLibrary Tests") }
 
 // If changes are more than 10 lines of code, tests need to be updated too
 // if (has_core_changes && !has_core_test_changes) ||
