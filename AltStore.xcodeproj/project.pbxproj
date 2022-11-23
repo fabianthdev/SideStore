@@ -1742,7 +1742,7 @@
 			buildConfigurationList = B3919A88292DCEA300519575 /* Build configuration list for PBXLegacyTarget "em_proxy_rust" */;
 			buildPhases = (
 			);
-			buildToolPath = $HOME/.cargo/bin/cargo;
+			buildToolPath = "$(PROJECT_DIR)/Scripts/cargo.sh";
 			buildWorkingDirectory = /Users/jmattiello/Workspace/Provenance/SideStore/Dependencies/em_proxy;
 			dependencies = (
 			);
@@ -1756,7 +1756,7 @@
 			buildConfigurationList = B3919A8E292DCFB300519575 /* Build configuration list for PBXLegacyTarget "minimuxer_rust" */;
 			buildPhases = (
 			);
-			buildToolPath = "$(HOME)/.cargo/bin/cargo";
+			buildToolPath = "$(PROJECT_DIR)/Scripts/cargo.sh";
 			buildWorkingDirectory = /Users/jmattiello/Workspace/Provenance/SideStore/Dependencies/minimuxer;
 			dependencies = (
 			);
@@ -2587,6 +2587,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PATH = "${HOME}/.cargo/bin:${PATH}:/opt/local/bin:/opt/local/sbin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2601,6 +2602,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				PATH = "${HOME}/.cargo/bin:${PATH}:/opt/local/bin:/opt/local/sbin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
