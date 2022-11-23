@@ -31,6 +31,32 @@
 		191E6087290C7B50001A3B7C /* libminimuxer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191E5FB5290A5E1F001A3B7C /* libminimuxer.a */; };
 		1920B04F2924AC8300744F60 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1920B04E2924AC8300744F60 /* Settings.bundle */; };
 		19B9B7452845E6DF0076EF69 /* SelectTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */; };
+		1F6E08DA292806E0005059C0 /* AppRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08D9292806E0005059C0 /* AppRowView.swift */; };
+		1F6E08DC292807D3005059C0 /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08DB292807D3005059C0 /* AppIconView.swift */; };
+		1F6E08E029280B12005059C0 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08DF29280B12005059C0 /* SafariView.swift */; };
+		1F6E08E429280D1E005059C0 /* PillButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08E329280D1E005059C0 /* PillButtonStyle.swift */; };
+		1F6E08E629280F4B005059C0 /* RatingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08E529280F4B005059C0 /* RatingStars.swift */; };
+		1F6E08E829282174005059C0 /* ConfirmAddSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08E729282174005059C0 /* ConfirmAddSourceView.swift */; };
+		1F943C692927F8F200ABE095 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5B52927E06300B8D837 /* RootView.swift */; };
+		1F943C6A2927F8F700ABE095 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F943C672927F39400ABE095 /* ViewModel.swift */; };
+		1F943C6B2927F8F700ABE095 /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5C32927E18100B8D837 /* NavigationTab.swift */; };
+		1F943C6C2927F90400ABE095 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5C02927E13C00B8D837 /* SettingsView.swift */; };
+		1F943C6D2927F90400ABE095 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F943C652927F36600ABE095 /* NewsViewModel.swift */; };
+		1F943C6E2927F90400ABE095 /* NewsItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F943C632927EF4200ABE095 /* NewsItemView.swift */; };
+		1F943C6F2927F90400ABE095 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5B82927E0EE00B8D837 /* NewsView.swift */; };
+		1F943C702927F90400ABE095 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5BA2927E0F800B8D837 /* BrowseView.swift */; };
+		1F943C712927F90400ABE095 /* MyAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5BD2927E10D00B8D837 /* MyAppsView.swift */; };
+		1FB84BA62928DE08006A5CF4 /* AppDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB84BA52928DE08006A5CF4 /* AppDetailView.swift */; };
+		1FB96FB829297C11007E68D1 /* GridStack in Frameworks */ = {isa = PBXBuildFile; productRef = 1FB96FB729297C11007E68D1 /* GridStack */; };
+		1FB96FBE292A20E5007E68D1 /* ObservableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FBD292A20E5007E68D1 /* ObservableScrollView.swift */; };
+		1FB96FC0292A63F2007E68D1 /* AppPillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FBF292A63F2007E68D1 /* AppPillButton.swift */; };
+		1FB96FC3292A6D7E007E68D1 /* DateFormatterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FC2292A6D7E007E68D1 /* DateFormatterHelper.swift */; };
+		1FB96FC5292A7251007E68D1 /* BrowseAppPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FC4292A7251007E68D1 /* BrowseAppPreviewView.swift */; };
+		1FB96FC7292A853D007E68D1 /* SourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FC6292A853D007E68D1 /* SourcesView.swift */; };
+		1FB96FC9292ABDD0007E68D1 /* AddSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FC8292ABDD0007E68D1 /* AddSourceView.swift */; };
+		1FB96FCF292BBBCA007E68D1 /* SiriShortcutSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FCE292BBBC9007E68D1 /* SiriShortcutSetupView.swift */; };
+		1FB96FEC292C171D007E68D1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FEB292C171D007E68D1 /* NotificationManager.swift */; };
+		1FB96FF3292D0539007E68D1 /* PillButtonProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FF2292D0539007E68D1 /* PillButtonProgressViewStyle.swift */; };
 		4879A95F2861046500FC1BBD /* AltSign in Frameworks */ = {isa = PBXBuildFile; productRef = 4879A95E2861046500FC1BBD /* AltSign */; };
 		4879A9622861049C00FC1BBD /* OpenSSL in Frameworks */ = {isa = PBXBuildFile; productRef = 4879A9612861049C00FC1BBD /* OpenSSL */; };
 		B3146ED2284F581E00BBC3FD /* Roxas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3146ECD284F580500BBC3FD /* Roxas.framework */; };
@@ -457,6 +483,32 @@
 		191E6074290B2E02001A3B7C /* preboard.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = preboard.c; path = ../Dependencies/libimobiledevice/src/preboard.c; sourceTree = "<group>"; };
 		1920B04E2924AC8300744F60 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamViewController.swift; sourceTree = "<group>"; };
+		1F6E08D9292806E0005059C0 /* AppRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowView.swift; sourceTree = "<group>"; };
+		1F6E08DB292807D3005059C0 /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
+		1F6E08DF29280B12005059C0 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		1F6E08E329280D1E005059C0 /* PillButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButtonStyle.swift; sourceTree = "<group>"; };
+		1F6E08E529280F4B005059C0 /* RatingStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingStars.swift; sourceTree = "<group>"; };
+		1F6E08E729282174005059C0 /* ConfirmAddSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmAddSourceView.swift; sourceTree = "<group>"; };
+		1F943C632927EF4200ABE095 /* NewsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemView.swift; sourceTree = "<group>"; };
+		1F943C652927F36600ABE095 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		1F943C672927F39400ABE095 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1FAFC5A42927E00000B8D837 /* SideStoreUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideStoreUIApp.swift; sourceTree = "<group>"; };
+		1FAFC5B52927E06300B8D837 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		1FAFC5B82927E0EE00B8D837 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		1FAFC5BA2927E0F800B8D837 /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
+		1FAFC5BD2927E10D00B8D837 /* MyAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppsView.swift; sourceTree = "<group>"; };
+		1FAFC5C02927E13C00B8D837 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1FAFC5C32927E18100B8D837 /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
+		1FB84BA52928DE08006A5CF4 /* AppDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailView.swift; sourceTree = "<group>"; };
+		1FB96FBD292A20E5007E68D1 /* ObservableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableScrollView.swift; sourceTree = "<group>"; };
+		1FB96FBF292A63F2007E68D1 /* AppPillButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPillButton.swift; sourceTree = "<group>"; };
+		1FB96FC2292A6D7E007E68D1 /* DateFormatterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterHelper.swift; sourceTree = "<group>"; };
+		1FB96FC4292A7251007E68D1 /* BrowseAppPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseAppPreviewView.swift; sourceTree = "<group>"; };
+		1FB96FC6292A853D007E68D1 /* SourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesView.swift; sourceTree = "<group>"; };
+		1FB96FC8292ABDD0007E68D1 /* AddSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSourceView.swift; sourceTree = "<group>"; };
+		1FB96FCE292BBBC9007E68D1 /* SiriShortcutSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutSetupView.swift; sourceTree = "<group>"; };
+		1FB96FEB292C171D007E68D1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		1FB96FF2292D0539007E68D1 /* PillButtonProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButtonProgressViewStyle.swift; sourceTree = "<group>"; };
 		B3146EC6284F580500BBC3FD /* Roxas.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Roxas.xcodeproj; path = Dependencies/Roxas/Roxas.xcodeproj; sourceTree = "<group>"; };
 		B376FE3D29258C8900E18883 /* OSLog+SideStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OSLog+SideStore.swift"; sourceTree = "<group>"; };
 		B39575F4284F29E20080B4FF /* Roxas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Roxas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -848,6 +900,7 @@
 				191E5FB4290A5DA0001A3B7C /* libminimuxer.a in Frameworks */,
 				19104DBC2909C4E500C49C7B /* libEmotionalDamage.a in Frameworks */,
 				19104D952909BAEA00C49C7B /* libimobiledevice.a in Frameworks */,
+				1FB96FB829297C11007E68D1 /* GridStack in Frameworks */,
 				B3146ED2284F581E00BBC3FD /* Roxas.framework in Frameworks */,
 				D533E8B72727841800A9B5DD /* libAppleArchive.tbd in Frameworks */,
 				B3C395F9284F362400DA9E2F /* AppCenterCrashes in Frameworks */,
@@ -896,6 +949,145 @@
 				191E605F290B2D6B001A3B7C /* utils.c */,
 			);
 			name = "libimobiledevice-glue";
+			sourceTree = "<group>";
+		};
+		1F6E08DD29280AF1005059C0 /* View Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1FB96FF1292D051F007E68D1 /* Styles */,
+				1F6E08DE29280AFF005059C0 /* UIView Representables */,
+			);
+			path = "View Extensions";
+			sourceTree = "<group>";
+		};
+		1F6E08DE29280AFF005059C0 /* UIView Representables */ = {
+			isa = PBXGroup;
+			children = (
+				1F6E08DF29280B12005059C0 /* SafariView.swift */,
+				1FB96FCE292BBBC9007E68D1 /* SiriShortcutSetupView.swift */,
+			);
+			path = "UIView Representables";
+			sourceTree = "<group>";
+		};
+		1FAFC5B02927E01400B8D837 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1FAFC5B52927E06300B8D837 /* RootView.swift */,
+				1FAFC5B12927E02E00B8D837 /* Authentication */,
+				1FAFC5B22927E03300B8D837 /* News */,
+				1FAFC5B32927E03D00B8D837 /* Browse */,
+				1FAFC5BC2927E0FD00B8D837 /* My Apps */,
+				1FAFC5BF2927E12B00B8D837 /* Settings */,
+				1FAFC5B42927E04B00B8D837 /* App Detail */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1FAFC5B12927E02E00B8D837 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		1FAFC5B22927E03300B8D837 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				1FAFC5B82927E0EE00B8D837 /* NewsView.swift */,
+				1F943C652927F36600ABE095 /* NewsViewModel.swift */,
+				1F943C632927EF4200ABE095 /* NewsItemView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		1FAFC5B32927E03D00B8D837 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				1FAFC5BA2927E0F800B8D837 /* BrowseView.swift */,
+				1FB96FC6292A853D007E68D1 /* SourcesView.swift */,
+				1FB96FC8292ABDD0007E68D1 /* AddSourceView.swift */,
+				1F6E08E729282174005059C0 /* ConfirmAddSourceView.swift */,
+				1FB96FC4292A7251007E68D1 /* BrowseAppPreviewView.swift */,
+			);
+			path = Browse;
+			sourceTree = "<group>";
+		};
+		1FAFC5B42927E04B00B8D837 /* App Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1FB84BA52928DE08006A5CF4 /* AppDetailView.swift */,
+			);
+			path = "App Detail";
+			sourceTree = "<group>";
+		};
+		1FAFC5B72927E06C00B8D837 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1FAFC5A42927E00000B8D837 /* SideStoreUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1FAFC5BC2927E0FD00B8D837 /* My Apps */ = {
+			isa = PBXGroup;
+			children = (
+				1FAFC5BD2927E10D00B8D837 /* MyAppsView.swift */,
+			);
+			path = "My Apps";
+			sourceTree = "<group>";
+		};
+		1FAFC5BF2927E12B00B8D837 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				1FAFC5C02927E13C00B8D837 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		1FAFC5C22927E17100B8D837 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1FAFC5C32927E18100B8D837 /* NavigationTab.swift */,
+				1F943C672927F39400ABE095 /* ViewModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1FB84BA72928E073006A5CF4 /* View Components */ = {
+			isa = PBXGroup;
+			children = (
+				1F6E08D9292806E0005059C0 /* AppRowView.swift */,
+				1F6E08DB292807D3005059C0 /* AppIconView.swift */,
+				1F6E08E529280F4B005059C0 /* RatingStars.swift */,
+				1FB96FBD292A20E5007E68D1 /* ObservableScrollView.swift */,
+				1FB96FBF292A63F2007E68D1 /* AppPillButton.swift */,
+			);
+			path = "View Components";
+			sourceTree = "<group>";
+		};
+		1FB96FC1292A6D6C007E68D1 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1FB96FC2292A6D7E007E68D1 /* DateFormatterHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1FB96FEA292C1704007E68D1 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1FB96FEB292C171D007E68D1 /* NotificationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1FB96FF1292D051F007E68D1 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				1F6E08E329280D1E005059C0 /* PillButtonStyle.swift */,
+				1FB96FF2292D0539007E68D1 /* PillButtonProgressViewStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		B3146EC7284F580500BBC3FD /* Products */ = {
@@ -1430,6 +1622,13 @@
 		BFD2476C2284B9A500981D42 /* AltStore */ = {
 			isa = PBXGroup;
 			children = (
+				1FAFC5B72927E06C00B8D837 /* App */,
+				1FB96FC1292A6D6C007E68D1 /* Helper */,
+				1FB96FEA292C1704007E68D1 /* Manager */,
+				1FAFC5C22927E17100B8D837 /* Protocols */,
+				1FAFC5B02927E01400B8D837 /* Views */,
+				1FB84BA72928E073006A5CF4 /* View Components */,
+				1F6E08DD29280AF1005059C0 /* View Extensions */,
 				B39F16112918D7B5002E9404 /* Consts */,
 				BF219A7E22CAC431007676A6 /* AltStore.entitlements */,
 				BFD2476D2284B9A500981D42 /* AppDelegate.swift */,
@@ -1876,6 +2075,7 @@
 				B3C395F6284F362400DA9E2F /* AppCenterAnalytics */,
 				B3C395F8284F362400DA9E2F /* AppCenterCrashes */,
 				4879A9612861049C00FC1BBD /* OpenSSL */,
+				1FB96FB729297C11007E68D1 /* GridStack */,
 			);
 			productName = AltStore;
 			productReference = BFD2476A2284B9A500981D42 /* SideStore.app */;
@@ -1887,7 +2087,7 @@
 		BFD247622284B9A500981D42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = SideStore;
 				TargetAttributes = {
@@ -1946,6 +2146,7 @@
 				B3C395FD284F3C0900DA9E2F /* XCRemoteSwiftPackageReference "STPrivilegedTask" */,
 				4879A95D2861046500FC1BBD /* XCRemoteSwiftPackageReference "AltSign" */,
 				4879A9602861049C00FC1BBD /* XCRemoteSwiftPackageReference "OpenSSL" */,
+				1FB96FB629297C11007E68D1 /* XCRemoteSwiftPackageReference "GridStack" */,
 			);
 			productRefGroup = BFD2476B2284B9A500981D42 /* Products */;
 			projectDirPath = "";
@@ -2249,20 +2450,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFDB6A0F22AB2776007EA6D6 /* SendAppOperation.swift in Sources */,
+				1F6E08E029280B12005059C0 /* SafariView.swift in Sources */,
+				1F943C6C2927F90400ABE095 /* SettingsView.swift in Sources */,
 				BFDB6A0D22AAFC1A007EA6D6 /* OperationError.swift in Sources */,
 				BF74989B23621C0700CED65F /* ForwardingNavigationController.swift in Sources */,
 				BF3D649D22E7AC1B00E9056B /* PermissionPopoverViewController.swift in Sources */,
 				D57F2C9426E01BC700B9FA39 /* UIDevice+Vibration.swift in Sources */,
 				BFD2478F2284C8F900981D42 /* Button.swift in Sources */,
+				1F943C6F2927F90400ABE095 /* NewsView.swift in Sources */,
 				BF56D2AC23DF8E170006506D /* FetchAppIDsOperation.swift in Sources */,
 				BFC1F38D22AEE3A4003AC21A /* DownloadAppOperation.swift in Sources */,
+				1F6E08DA292806E0005059C0 /* AppRowView.swift in Sources */,
+				1FB96FC3292A6D7E007E68D1 /* DateFormatterHelper.swift in Sources */,
+				1F943C6D2927F90400ABE095 /* NewsViewModel.swift in Sources */,
+				1FB96FF3292D0539007E68D1 /* PillButtonProgressViewStyle.swift in Sources */,
+				1F6E08E829282174005059C0 /* ConfirmAddSourceView.swift in Sources */,
 				BFE6073A231ADF82002B0E8E /* SettingsViewController.swift in Sources */,
+				1F943C6A2927F8F700ABE095 /* ViewModel.swift in Sources */,
 				D57F2C9126E0070200B9FA39 /* EnableJITOperation.swift in Sources */,
 				BF8CAE4E248AEABA004D6CCE /* UIDevice+Jailbreak.swift in Sources */,
+				1FB96FC7292A853D007E68D1 /* SourcesView.swift in Sources */,
 				D5E1E7C128077DE90016FC96 /* FetchTrustedSourcesOperation.swift in Sources */,
 				BFE338DF22F0EADB002E24B9 /* FetchSourceOperation.swift in Sources */,
 				BFB6B21E231870160022A802 /* NewsViewController.swift in Sources */,
 				BFC57A652416C72400EB891E /* DeactivateAppOperation.swift in Sources */,
+				1F943C712927F90400ABE095 /* MyAppsView.swift in Sources */,
 				BF3BEFC124086A1E00DE7D55 /* RefreshAppOperation.swift in Sources */,
 				BFE60740231AFD2A002B0E8E /* InsetGroupTableViewCell.swift in Sources */,
 				BF0DCA662433BDF500E3A595 /* AnalyticsManager.swift in Sources */,
@@ -2276,18 +2488,25 @@
 				BFF00D302501BD7D00746320 /* Intents.intentdefinition in Sources */,
 				BF6C336224197D700034FD24 /* NSError+AltStore.swift in Sources */,
 				D5DAE0942804B0B80034D8D4 /* ScreenshotProcessor.swift in Sources */,
+				1FB96FBE292A20E5007E68D1 /* ObservableScrollView.swift in Sources */,
 				BFD2476E2284B9A500981D42 /* AppDelegate.swift in Sources */,
 				BF41B806233423AE00C593A3 /* TabBarController.swift in Sources */,
+				1FB96FC9292ABDD0007E68D1 /* AddSourceView.swift in Sources */,
+				1F6E08DC292807D3005059C0 /* AppIconView.swift in Sources */,
 				BFE00A202503097F00EB4D0C /* INInteraction+AltStore.swift in Sources */,
 				BFDB6A0B22AAEDB7007EA6D6 /* Operation.swift in Sources */,
+				1FB96FEC292C171D007E68D1 /* NotificationManager.swift in Sources */,
 				BF770E6722BD57C4002A40FE /* BackgroundTaskManager.swift in Sources */,
 				BF44EEFC246B4550002A52F2 /* RemoveAppOperation.swift in Sources */,
 				BF3D64B022E8D4B800E9056B /* AppContentViewControllerCells.swift in Sources */,
 				BFC57A6E2416FC5D00EB891E /* InstalledAppsCollectionHeaderView.swift in Sources */,
 				B3EE16B62925E27D00B3B1F5 /* AnisetteManager.swift in Sources */,
+				1F943C6E2927F90400ABE095 /* NewsItemView.swift in Sources */,
 				BF88F97224F8727D00BB75DF /* AppManagerErrors.swift in Sources */,
 				B39F16152918D7DA002E9404 /* Consts+Proxy.swift in Sources */,
+				1F6E08E629280F4B005059C0 /* RatingStars.swift in Sources */,
 				BF6C8FAE2429597900125131 /* BannerCollectionViewCell.swift in Sources */,
+				1FB96FC0292A63F2007E68D1 /* AppPillButton.swift in Sources */,
 				BF6F439223644C6E00A0B879 /* RefreshAltStoreViewController.swift in Sources */,
 				BFE60742231B07E6002B0E8E /* SettingsHeaderFooterView.swift in Sources */,
 				BFE338E822F10E56002E24B9 /* LaunchViewController.swift in Sources */,
@@ -2308,8 +2527,10 @@
 				BF02419622F2199300129732 /* RefreshAttemptsViewController.swift in Sources */,
 				B376FE3E29258C8900E18883 /* OSLog+SideStore.swift in Sources */,
 				BF08858322DE795100DE9F1E /* MyAppsViewController.swift in Sources */,
+				1F943C6B2927F8F700ABE095 /* NavigationTab.swift in Sources */,
 				BFC84A4D2421A19100853474 /* SourcesViewController.swift in Sources */,
 				BFF0B696232242D3007A79E1 /* LicensesViewController.swift in Sources */,
+				1F6E08E429280D1E005059C0 /* PillButtonStyle.swift in Sources */,
 				BFBE0007250AD0E70080826E /* ViewAppIntentHandler.swift in Sources */,
 				BFDB6A0822AAED73007EA6D6 /* ResignAppOperation.swift in Sources */,
 				D593F1942717749A006E82DE /* PatchAppOperation.swift in Sources */,
@@ -2321,6 +2542,7 @@
 				BF2901312318F7A800D88A45 /* AppBannerView.swift in Sources */,
 				BFF00D342501BDCF00746320 /* IntentHandler.swift in Sources */,
 				BFDBBD80246CB84F004ED2F3 /* RemoveAppBackupOperation.swift in Sources */,
+				1FB96FCF292BBBCA007E68D1 /* SiriShortcutSetupView.swift in Sources */,
 				BFF0B6942321CB85007A79E1 /* AuthenticationViewController.swift in Sources */,
 				BF3432FB246B894F0052F4A1 /* BackupAppOperation.swift in Sources */,
 				BF9ABA4922DD0742008935CF /* ScreenshotCollectionViewCell.swift in Sources */,
@@ -2331,10 +2553,14 @@
 				BF4B78FE24B3D1DB008AB4AC /* SceneDelegate.swift in Sources */,
 				BF6C8FB02429599900125131 /* TextCollectionReusableView.swift in Sources */,
 				BF663C4F2433ED8200DAA738 /* FileManager+DirectorySize.swift in Sources */,
+				1F943C702927F90400ABE095 /* BrowseView.swift in Sources */,
+				1F943C692927F8F200ABE095 /* RootView.swift in Sources */,
+				1FB84BA62928DE08006A5CF4 /* AppDetailView.swift in Sources */,
 				D57DF63F271E51E400677701 /* ALTAppPatcher.m in Sources */,
 				BFB6B220231870B00022A802 /* NewsCollectionViewCell.swift in Sources */,
 				BF3BEFBF2408673400DE7D55 /* FetchProvisioningProfilesOperation.swift in Sources */,
 				BFF0B69023219C6D007A79E1 /* PatreonComponents.swift in Sources */,
+				1FB96FC5292A7251007E68D1 /* BrowseAppPreviewView.swift in Sources */,
 				BFBE0004250ACFFB0080826E /* ViewApp.intentdefinition in Sources */,
 				BF56D2AF23DF9E310006506D /* AppIDsViewController.swift in Sources */,
 			);
@@ -3139,6 +3365,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1FB96FB629297C11007E68D1 /* XCRemoteSwiftPackageReference "GridStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pietropizzi/GridStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.3;
+			};
+		};
 		4879A95D2861046500FC1BBD /* XCRemoteSwiftPackageReference "AltSign" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SideStore/AltSign";
@@ -3215,6 +3449,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4879A9602861049C00FC1BBD /* XCRemoteSwiftPackageReference "OpenSSL" */;
 			productName = OpenSSL;
+		};
+		1FB96FB729297C11007E68D1 /* GridStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1FB96FB629297C11007E68D1 /* XCRemoteSwiftPackageReference "GridStack" */;
+			productName = GridStack;
 		};
 		4879A95E2861046500FC1BBD /* AltSign */ = {
 			isa = XCSwiftPackageProductDependency;
