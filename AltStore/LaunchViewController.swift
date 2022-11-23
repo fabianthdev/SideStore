@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 import Roxas
 import EmotionalDamage
 import minimuxer
@@ -40,7 +41,10 @@ final class LaunchViewController: RSTLaunchViewController, UIDocumentPickerDeleg
     {
         defer {
             // Create destinationViewController now so view controllers can register for receiving Notifications.
-            self.destinationViewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController") as! TabBarController
+//            self.destinationViewController = self.storyboard!.instantiateViewController(withIdentifier: "tabBarController") as! TabBarController
+            let rootView = RootView()
+                .environment(\.managedObjectContext, DatabaseManager.shared.viewContext)
+            self.destinationViewController = UIHostingController(rootView: rootView)
         }
         super.viewDidLoad()
     }
