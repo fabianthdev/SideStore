@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AsyncImage
 import AltStoreCore
 
 struct NewsItemView: View {
@@ -53,17 +54,15 @@ struct NewsItemView: View {
             }
             .padding(24)
             
-            if let imageUrl = newsItem.imageURL, #available(iOS 15.0, *) {
-                AsyncImage(
-                    url: imageUrl,
-                    content: { image in
-                        if let image = image.image {
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        }
-                    }
-                )
+            if let imageUrl = newsItem.imageURL {
+                AsyncImage(url: imageUrl) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    Color.secondary
+                        .frame(maxWidth: .infinity, maxHeight: 100)
+                }
             }
         }
         .frame(

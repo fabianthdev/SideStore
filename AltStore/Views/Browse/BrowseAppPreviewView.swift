@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AsyncImage
 import AltStoreCore
 
 struct BrowseAppPreviewView: View {
@@ -23,16 +24,15 @@ struct BrowseAppPreviewView: View {
             if !storeApp.screenshotURLs.isEmpty {
                 HStack {
                     ForEach(storeApp.screenshotURLs.prefix(2)) { url in
-                        if #available(iOS 15.0, *) {
-                            AsyncImage(url: url) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            } placeholder: {
-                                Color(UIColor.secondarySystemBackground)
-                            }
-                            .cornerRadius(8)
+                        AsyncImage(url: url) { image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            Color(UIColor.secondarySystemBackground)
+                                .aspectRatio(9/16, contentMode: .fit)
                         }
+                        .cornerRadius(8)
                     }
                 }
                 .frame(height: 300)

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AsyncImage
 import AltStoreCore
 import Intents
 
@@ -86,6 +87,9 @@ struct SettingsView: View {
                     Text("Switch to UIKit")
                 }
 
+                SwiftUI.Button(action: resetImageCache) {
+                    Text("Reset Image Cache")
+                }
             } header: {
                 Text("Debug")
             }
@@ -137,6 +141,19 @@ struct SettingsView: View {
         
         UIApplication.shared.keyWindow?.rootViewController = rootVC
     }
+    
+    func resetImageCache() {
+        do {
+            let url = try FileManager.default.url(
+                for: .cachesDirectory,
+                in: .userDomainMask,
+                appropriateFor: nil,
+                create: true)
+            try FileManager.default.removeItem(at: url.appendingPathComponent("com.zeu.cache", isDirectory: true))
+        } catch let error {
+            fatalError("\(error)")
+        }
+    }
 }
 
 struct SettingsView_Previews: PreviewProvider {
@@ -144,3 +161,5 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsView()
     }
 }
+
+

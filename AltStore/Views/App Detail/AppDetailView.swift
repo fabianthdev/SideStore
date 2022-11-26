@@ -8,6 +8,7 @@
 
 import SwiftUI
 import GridStack
+import AsyncImage
 import AltStoreCore
 
 struct AppDetailView: View {
@@ -39,7 +40,7 @@ struct AppDetailView: View {
     }
     
     var body: some View {
-        ObservableScrollView(scrollOffset: self.$scrollOffset) { proxy in
+        ObservableScrollView(scrollOffset: $scrollOffset) { proxy in
             LazyVStack {
                 headerView
                     .frame(height: headerViewHeight)
@@ -86,56 +87,40 @@ struct AppDetailView: View {
     }
     
     var contentView: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 24) {
             if let subtitle = storeApp.subtitle {
                 Text(subtitle)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity)
-                    .padding()
+                    .padding(.horizontal)
             }
             
             if !storeApp.screenshotURLs.isEmpty {
-                screenshotsView
+                // Equatable: Only reload the view if the screenshots change.
+                // This prevents unnecessary redraws on scroll.
+                AppScreenshotsScrollView(urls: storeApp.screenshotURLs)
+                    .equatable()
             }
             
             Text(storeApp.localizedDescription)
                 .lineLimit(6)
-                .padding()
+                .padding(.horizontal)
             
             currentVersionView
+                .padding(.horizontal)
             
             permissionsView
+                .padding(.horizontal)
             
             // TODO: Add review view
             // Only let users rate the app if it is currently installed!
         }
+        .padding(.vertical)
         .background(
             RoundedRectangle(cornerRadius: contentCornerRadius)
                 .foregroundColor(Color(UIColor.systemBackground))
                 .shadow(radius: isHeaderViewVisible ? 12 : 0)
         )
-    }
-    
-    var screenshotsView: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(storeApp.screenshotURLs) { url in
-                    if #available(iOS 15.0, *) {
-                        AsyncImage(url: url) { image in
-                            image.resizable()
-                        } placeholder: {
-                            Rectangle()
-                                .foregroundColor(.secondary)
-                        }
-                        .aspectRatio(9/16, contentMode: .fit)
-                        .cornerRadius(8)
-                    }
-                }
-            }
-            .padding(.horizontal)
-        }
-        .frame(height: 400)
-        .shadow(radius: 12)
     }
     
     var currentVersionView: some View {
@@ -169,7 +154,6 @@ struct AppDetailView: View {
                     .foregroundColor(.secondary)
             }
         }
-        .padding()
     }
     
     var permissionsView: some View {
@@ -199,12 +183,5 @@ struct AppDetailView: View {
             
             Spacer()
         }
-        .padding()
     }
 }
-
-//struct AppDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AppDetailView()
-//    }
-//}

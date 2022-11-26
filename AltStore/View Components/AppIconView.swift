@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AsyncImage
 
 struct AppIconView: View {
     let iconUrl: URL?
@@ -16,7 +17,7 @@ struct AppIconView: View {
     }
     
     var body: some View {
-        if let iconUrl, #available(iOS 15.0, *) {
+        if let iconUrl {
             AsyncImage(url: iconUrl) { image in
                 image
                     .resizable()
@@ -25,10 +26,6 @@ struct AppIconView: View {
             }
             .frame(width: size, height: size)
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
-        } else {
-            RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
-                .background(Color.secondary)
-                .frame(width: size, height: size)
         }
     }
 }
