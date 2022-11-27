@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import GridStack
 import AsyncImage
 import ExpandableText
 import AltStoreCore
@@ -88,7 +87,7 @@ struct AppDetailView: View {
     }
     
     var contentView: some View {
-        VStack(alignment: .leading, spacing: 24) {
+        VStack(alignment: .leading, spacing: 32) {
             if let subtitle = storeApp.subtitle {
                 Text(subtitle)
                     .multilineTextAlignment(.center)
@@ -170,18 +169,7 @@ struct AppDetailView: View {
                     .font(.callout)
                     .foregroundColor(.secondary)
             } else {
-                GridStack(minCellWidth: 40, spacing: 8, numItems: storeApp.permissions.count, alignment: .leading) { index, cellWidth in
-                    let permission = storeApp.permissions[index]
-                    
-                    VStack {
-                        Image(systemName: "photo.on.rectangle")
-                            .padding()
-                            .background(Circle().foregroundColor(Color(UIColor.secondarySystemBackground)))
-                        Text(permission.type.localizedShortName ?? "")
-                    }
-                    .frame(width: cellWidth, height: cellWidth * 1.2)
-                    .background(Color.red)
-                }
+                AppPermissionsGrid(permissions: storeApp.permissions)
             }
             
             Spacer()
