@@ -49,8 +49,8 @@ public extension ALTAppPermissionType
         {
         case .photos: return UIImage(systemName: "photo.on.rectangle.angled")
         case .location: return UIImage(systemName: "location")
-        case .contacts: return UIImage(systemName: "location")
-        case .reminders: return UIImage(systemName: "")
+        case .contacts: return UIImage(systemName: "person.2")
+        case .reminders: return UIImage(systemName: "checklist")
         case .appleMusic: return UIImage(systemName: "music.note")
         case .microphone: return UIImage(systemName: "mic")
         case .speechRecognition: return UIImage(systemName: "waveform.and.mic")
