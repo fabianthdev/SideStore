@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "expandabletext",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/NuPlay/ExpandableText",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d140b404c6683bb169bb01ef4eeecdb6d9be8fb8"
+      }
+    },
+    {
       "identity" : "gridstack",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pietropizzi/GridStack",

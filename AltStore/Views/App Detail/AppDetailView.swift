@@ -9,6 +9,7 @@
 import SwiftUI
 import GridStack
 import AsyncImage
+import ExpandableText
 import AltStoreCore
 
 struct AppDetailView: View {
@@ -102,8 +103,9 @@ struct AppDetailView: View {
                     .equatable()
             }
             
-            Text(storeApp.localizedDescription)
+            ExpandableText(text: storeApp.localizedDescription)
                 .lineLimit(6)
+                .expandButton(TextSet(text: "More...", font: .callout, color: .accentColor))
                 .padding(.horizontal)
             
             currentVersionView
@@ -147,8 +149,9 @@ struct AppDetailView: View {
             }
             
             if let versionDescription = storeApp.versionDescription {
-                Text(versionDescription)
+                ExpandableText(text: versionDescription)
                     .lineLimit(5)
+                    .expandButton(TextSet(text: "More...", font: .callout, color: .accentColor))
             } else {
                 Text("No version information")
                     .foregroundColor(.secondary)
