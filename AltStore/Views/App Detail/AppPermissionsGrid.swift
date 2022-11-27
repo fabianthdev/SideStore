@@ -1,0 +1,54 @@
+//
+//  AppPermissionsGrid.swift
+//  SideStore
+//
+//  Created by Fabian Thies on 27.11.22.
+//  Copyright © 2022 SideStore. All rights reserved.
+//
+
+import SwiftUI
+import AltStoreCore
+
+struct AppPermissionsGrid: View {
+    
+    let permissions: [AppPermission]
+    
+    let columns = Array(repeating: GridItem(.flexible()), count: 3)
+    
+    var body: some View {
+        LazyVGrid(columns: columns) {
+            ForEach(permissions, id: \.type) { permission in
+                AppPermissionGridItemView(permission: permission)
+            }
+        }
+    }
+}
+
+struct AppPermissionGridItemView: View {
+    let permission: AppPermission
+    
+    @State var isPopoverPresented = false
+    
+    var body: some View {
+        SwiftUI.Button {
+            self.isPopoverPresented = true
+        } label: {
+            VStack {
+                Image(uiImage: (permission.type.icon?.withRenderingMode(.alwaysTemplate) ?? UIImage(systemName: "questionmark"))!)  // TODO: Replace with system icon
+                    .padding()
+                    .background(Circle().foregroundColor(Color(.secondarySystemBackground)))
+                Text(permission.type.localizedShortName ?? "")
+            }
+            .foregroundColor(.primary)
+        }
+        .alert(isPresented: self.$isPopoverPresented) {
+            Alert(title: Text("Usage Description"), message: Text(permission.usageDescription))
+        }
+    }
+}
+
+//struct AppPermissionsGrid_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AppPermissionsGrid()
+//    }
+//}
