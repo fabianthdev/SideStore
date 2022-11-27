@@ -34,6 +34,7 @@
 		1F0DD810293222DF007608A4 /* AsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD80F293222DF007608A4 /* AsyncImage */; };
 		1F0DD81329322487007608A4 /* LazyScrollingVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81229322487007608A4 /* LazyScrollingVStack.swift */; };
 		1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */; };
+		1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD81E2932D84C007608A4 /* ExpandableText */; };
 		1F6E08DA292806E0005059C0 /* AppRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08D9292806E0005059C0 /* AppRowView.swift */; };
 		1F6E08DC292807D3005059C0 /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08DB292807D3005059C0 /* AppIconView.swift */; };
 		1F6E08E029280B12005059C0 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08DF29280B12005059C0 /* SafariView.swift */; };
@@ -905,6 +906,7 @@
 				191E5FB4290A5DA0001A3B7C /* libminimuxer.a in Frameworks */,
 				19104DBC2909C4E500C49C7B /* libEmotionalDamage.a in Frameworks */,
 				19104D952909BAEA00C49C7B /* libimobiledevice.a in Frameworks */,
+				1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */,
 				1FB96FB829297C11007E68D1 /* GridStack in Frameworks */,
 				B3146ED2284F581E00BBC3FD /* Roxas.framework in Frameworks */,
 				D533E8B72727841800A9B5DD /* libAppleArchive.tbd in Frameworks */,
@@ -2093,6 +2095,7 @@
 				4879A9612861049C00FC1BBD /* OpenSSL */,
 				1FB96FB729297C11007E68D1 /* GridStack */,
 				1F0DD80F293222DF007608A4 /* AsyncImage */,
+				1F0DD81E2932D84C007608A4 /* ExpandableText */,
 			);
 			productName = AltStore;
 			productReference = BFD2476A2284B9A500981D42 /* SideStore.app */;
@@ -2165,6 +2168,7 @@
 				4879A9602861049C00FC1BBD /* XCRemoteSwiftPackageReference "OpenSSL" */,
 				1FB96FB629297C11007E68D1 /* XCRemoteSwiftPackageReference "GridStack" */,
 				1F0DD80E293222DF007608A4 /* XCRemoteSwiftPackageReference "AsyncImage" */,
+				1F0DD81D2932D84C007608A4 /* XCRemoteSwiftPackageReference "ExpandableText" */,
 			);
 			productRefGroup = BFD2476B2284B9A500981D42 /* Products */;
 			projectDirPath = "";
@@ -3393,6 +3397,14 @@
 				minimumVersion = 0.0.1;
 			};
 		};
+		1F0DD81D2932D84C007608A4 /* XCRemoteSwiftPackageReference "ExpandableText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NuPlay/ExpandableText";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		1FB96FB629297C11007E68D1 /* XCRemoteSwiftPackageReference "GridStack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pietropizzi/GridStack";
@@ -3482,6 +3494,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1F0DD80E293222DF007608A4 /* XCRemoteSwiftPackageReference "AsyncImage" */;
 			productName = AsyncImage;
+		};
+		1F0DD81E2932D84C007608A4 /* ExpandableText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F0DD81D2932D84C007608A4 /* XCRemoteSwiftPackageReference "ExpandableText" */;
+			productName = ExpandableText;
 		};
 		1FB96FB729297C11007E68D1 /* GridStack */ = {
 			isa = XCSwiftPackageProductDependency;
