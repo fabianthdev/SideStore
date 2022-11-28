@@ -25,6 +25,7 @@ public extension ALTAppPermissionType
         switch self
         {
         case .photos: return NSLocalizedString("Photos", comment: "")
+        case .camera: return NSLocalizedString("Camera", comment: "")
         case .location: return NSLocalizedString("Location", comment: "")
         case .contacts: return NSLocalizedString("Contacts", comment: "")
         case .reminders: return NSLocalizedString("Reminders", comment: "")
@@ -48,6 +49,7 @@ public extension ALTAppPermissionType
         switch self
         {
         case .photos: return UIImage(systemName: "photo.on.rectangle.angled")
+        case .camera: return UIImage(systemName: "camera")
         case .location: return UIImage(systemName: "location")
         case .contacts: return UIImage(systemName: "person.2")
         case .reminders: return UIImage(systemName: "checklist")
