@@ -44,6 +44,26 @@ struct NewsView: View {
         .navigationTitle("News")
         .sheet(item: self.$activeExternalUrl) { url in
             SafariView(url: url)
+                .ignoresSafeArea()
+        }
+        .onAppear(perform: fetchNews)
+    }
+    
+    
+    func fetchNews() {
+        AppManager.shared.fetchSources { result in
+            do {
+                do {
+                    let (_, context) = try result.get()
+                    try context.save()
+                } catch let error as AppManager.FetchSourcesError {
+                    try error.managedObjectContext?.save()
+                    throw error
+                }
+            } catch {
+                print(error)
+                NotificationManager.shared.reportError(error: error)
+            }
         }
     }
 }

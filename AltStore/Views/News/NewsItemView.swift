@@ -98,3 +98,11 @@ extension URL: Identifiable {
 //        NewsItemView()
 //    }
 //}
+
+
+extension NewsItemView: Equatable {
+    /// Prevent re-rendering of the view if the parameters didn't change
+    static func == (lhs: NewsItemView, rhs: NewsItemView) -> Bool {
+        lhs.newsItem.identifier == rhs.newsItem.identifier
+    }
+}
