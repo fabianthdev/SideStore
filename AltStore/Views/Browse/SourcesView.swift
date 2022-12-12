@@ -12,6 +12,9 @@ import CoreData
 
 struct SourcesView: View {
     
+    @Environment(\.dismiss)
+    private var dismiss
+    
     @Environment(\.managedObjectContext)
     var managedObjectContext
     
@@ -102,9 +105,7 @@ struct SourcesView: View {
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
-                SwiftUI.Button {
-                    self.isShowingAddSourceAlert = false
-                } label: {
+                SwiftUI.Button(action: self.dismiss) {
                     Text("Done").bold()
                 }
             }

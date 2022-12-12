@@ -65,18 +65,8 @@ struct ConfirmAddSourceView: View {
                 confirmationHandler(fetchedSource)
             } label: {
                 Label(title: { Text("Add Source") }, icon: { Image(systemName: "plus") })
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(
-                        maxWidth: .infinity,
-                        alignment: .bottomLeading
-                    )
-                    .background(
-                        RoundedRectangle(cornerRadius: 10)
-                            .foregroundColor(Color.accentColor)
-                    )
             }
+            .buttonStyle(FilledButtonStyle())
             .padding()
         }
         .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
