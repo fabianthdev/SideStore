@@ -39,7 +39,8 @@ struct AppRowView: View {
             AppPillButton(app: app)
         }
         .padding()
-        .background(Color(storeApp?.tintColor ?? UIColor.black).opacity(0.5))
+        .blurBackground(.systemUltraThinMaterialLight)
+        .background(Color(storeApp?.tintColor ?? UIColor.black).opacity(0.4))
         .clipShape(RoundedRectangle(cornerRadius: 30, style: .circular))
     }
 }
