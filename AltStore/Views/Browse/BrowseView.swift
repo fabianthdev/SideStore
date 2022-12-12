@@ -15,11 +15,11 @@ struct BrowseView: View {
         NSSortDescriptor(keyPath: \StoreApp.sortIndex, ascending: true),
         NSSortDescriptor(keyPath: \StoreApp.name, ascending: true),
         NSSortDescriptor(keyPath: \StoreApp.bundleIdentifier, ascending: true)
-    ]/*, predicate: NSPredicate(format: "%K != %@", #keyPath(StoreApp.bundleIdentifier), StoreApp.altstoreAppID)*/)
+    ], predicate: NSPredicate(format: "%K != %@", #keyPath(StoreApp.bundleIdentifier), StoreApp.altstoreAppID))
     var apps: FetchedResults<StoreApp>
     
     var filteredApps: [StoreApp] {
-        apps.filter { $0.matches(self.searchText) }
+        apps.items(matching: self.searchText)
     }
     
     @State
@@ -31,7 +31,7 @@ struct BrowseView: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 24) {
+            LazyVStack(spacing: 32) {
                 ForEach(filteredApps, id: \.bundleIdentifier) { app in
                     NavigationLink {
                         AppDetailView(storeApp: app)
@@ -66,34 +66,5 @@ struct BrowseView: View {
 struct BrowseView_Previews: PreviewProvider {
     static var previews: some View {
         BrowseView()
-    }
-}
-
-
-extension StoreApp {
-    func matches(_ searchText: String) -> Bool {
-        searchText.isEmpty ||
-        self.name.lowercased().contains(searchText.lowercased()) ||
-        self.developerName.lowercased().contains(searchText.lowercased())
-    }
-}
-
-extension View {
-    
-    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
-        if condition {
-            transform(self)
-        } else {
-            self
-        }
-    }
-    
-    
-    @ViewBuilder func searchable(text: Binding<String>, placeholder: String) -> some View {
-        if #available(iOS 15.0, *) {
-            self.searchable(text: text, prompt: Text(placeholder))
-        } else {
-            self
-        }
     }
 }
