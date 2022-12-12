@@ -13,48 +13,73 @@ import Intents
 
 struct SettingsView: View {
     
+    var connectedAppleID: Team? {
+        DatabaseManager.shared.activeTeam()
+    }
+    
+    @SwiftUI.FetchRequest(sortDescriptors: [], predicate: NSPredicate(format: "%K == YES", #keyPath(Team.isActiveTeam)))
+    var connectedTeams: FetchedResults<Team>
+    
+    
     @AppStorage("isBackgroundRefreshEnabled")
     var isBackgroundRefreshEnabled: Bool = true
     
+    @State var isShowingConnectAppleIDView = false
     @State var isShowingAddShortcutView = false
+    
+    let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
     
     var body: some View {
         List {
             Section {
                 
-                if let team = DatabaseManager.shared.activeTeam() {
+                if let connectedAppleID = connectedTeams.first {
                     HStack {
                         Text("Name")
                             .foregroundColor(.secondary)
                         Spacer()
-                        Text(team.name)
+                        Text(connectedAppleID.name)
                     }
                     
                     HStack {
                         Text("E-Mail")
                             .foregroundColor(.secondary)
                         Spacer()
-                        Text(team.account.appleID)
+                        Text(connectedAppleID.account.appleID)
                     }
                     
                     HStack {
                         Text("Type")
                             .foregroundColor(.secondary)
                         Spacer()
-                        Text(team.type.localizedDescription)
+                        Text(connectedAppleID.type.localizedDescription)
+                    }
+                } else {
+                    SwiftUI.Button {
+                        self.connectAppleID()
+                    } label: {
+                        Text("Connect your Apple ID")
                     }
                 }
             } header: {
-                HStack {
-                    Text("Connected Apple ID")
-                    Spacer()
-                    SwiftUI.Button {
-                        
-                    } label: {
-                        Text("Sign Out")
-                            .font(.callout)
-                            .bold()
+                if !connectedTeams.isEmpty {
+                    HStack {
+                        Text("Connected Apple ID")
+                        Spacer()
+                        SwiftUI.Button {
+                            self.disconnectAppleID()
+                        } label: {
+                            Text("Sign Out")
+                                .font(.callout)
+                                .bold()
+                        }
                     }
+                }
+            } footer: {
+                VStack(spacing: 4) {
+                    Text("Your Apple ID is required to sign the apps you install with SideStore.")
+                    
+                    Text("Your credentials are only sent to Apple's servers and are not accessible by the SideStore Team. Once successfully logged in, the login details are stored securely on your device.")
                 }
             }
             
@@ -63,16 +88,14 @@ struct SettingsView: View {
                     Text("Background Refresh")
                 })
                 
-                if #available(iOS 14.0, *) {
-                    SwiftUI.Button {
-                        self.isShowingAddShortcutView = true
-                    } label: {
-                        Text("Add to Siri...")
-                    }
-                    .sheet(isPresented: self.$isShowingAddShortcutView) {
-                        if let shortcut = INShortcut(intent: INInteraction.refreshAllApps().intent) {
-                            SiriShortcutSetupView(shortcut: shortcut)
-                        }
+                SwiftUI.Button {
+                    self.isShowingAddShortcutView = true
+                } label: {
+                    Text("Add to Siri...")
+                }
+                .sheet(isPresented: self.$isShowingAddShortcutView) {
+                    if let shortcut = INShortcut(intent: INInteraction.refreshAllApps().intent) {
+                        SiriShortcutSetupView(shortcut: shortcut)
                     }
                 }
             } header: {
@@ -114,7 +137,7 @@ struct SettingsView: View {
             Section {
                 
             } footer: {
-                Text("SideStore 1.0.0")
+                Text("SideStore \(appVersion)")
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity)
             }
@@ -130,6 +153,42 @@ struct SettingsView: View {
                         .imageScale(.large)
                 }
 
+            }
+        }
+    }
+    
+    
+//    var appleIDSection: some View {
+//
+//    }
+    
+    
+    
+    func connectAppleID() {
+        AppManager.shared.authenticate(presentingViewController: nil) { (result) in
+            DispatchQueue.main.async {
+                switch result
+                {
+                case .failure(OperationError.cancelled):
+                    // Ignore
+                    break
+                    
+                case .failure(let error):
+                    NotificationManager.shared.reportError(error: error)
+                    
+                case .success: break
+                }
+            }
+        }
+    }
+    
+    func disconnectAppleID() {
+        DatabaseManager.shared.signOut { (error) in
+            DispatchQueue.main.async {
+                if let error = error
+                {
+                    NotificationManager.shared.reportError(error: error)
+                }
             }
         }
     }

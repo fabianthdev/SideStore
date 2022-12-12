@@ -20,10 +20,17 @@
 		1920B04F2924AC8300744F60 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1920B04E2924AC8300744F60 /* Settings.bundle */; };
 		19B9B7452845E6DF0076EF69 /* SelectTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */; };
 		1F0DD810293222DF007608A4 /* AsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD80F293222DF007608A4 /* AsyncImage */; };
-		1F0DD81329322487007608A4 /* LazyScrollingVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81229322487007608A4 /* LazyScrollingVStack.swift */; };
 		1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */; };
 		1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD81E2932D84C007608A4 /* ExpandableText */; };
 		1F0DD8212933B749007608A4 /* AppPermissionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */; };
+		1F0DD83F29367F6C007608A4 /* ConnectAppleIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD83E29367F6C007608A4 /* ConnectAppleIDView.swift */; };
+		1F0DD84129368056007608A4 /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD84029368056007608A4 /* EnvironmentValues.swift */; };
+		1F0DD8432936B0F9007608A4 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8422936B0F9007608A4 /* RoundedTextField.swift */; };
+		1F0DD8452936B3FE007608A4 /* FilledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8442936B3FE007608A4 /* FilledButtonStyle.swift */; };
+		1F66F5BA2938CA5700A910CA /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F66F5B92938CA5700A910CA /* VisualEffectView.swift */; };
+		1F66F5BC2938F03700A910CA /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F66F5BB2938F03700A910CA /* Modifiers.swift */; };
+		1F66F5BE2938F06100A910CA /* StoreApp+Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F66F5BD2938F06100A910CA /* StoreApp+Filterable.swift */; };
+		1F66F5C02938F07C00A910CA /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F66F5BF2938F07C00A910CA /* Filterable.swift */; };
 		1F6E08DA292806E0005059C0 /* AppRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08D9292806E0005059C0 /* AppRowView.swift */; };
 		1F6E08DC292807D3005059C0 /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08DB292807D3005059C0 /* AppIconView.swift */; };
 		1F6E08E029280B12005059C0 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08DF29280B12005059C0 /* SafariView.swift */; };
@@ -542,9 +549,16 @@
 		191E5FD7290A6EFB001A3B7C /* minimuxer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = minimuxer.h; path = ../Dependencies/minimuxer/minimuxer.h; sourceTree = "<group>"; };
 		1920B04E2924AC8300744F60 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamViewController.swift; sourceTree = "<group>"; };
-		1F0DD81229322487007608A4 /* LazyScrollingVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyScrollingVStack.swift; sourceTree = "<group>"; };
 		1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotsScrollView.swift; sourceTree = "<group>"; };
 		1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionsGrid.swift; sourceTree = "<group>"; };
+		1F0DD83E29367F6C007608A4 /* ConnectAppleIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAppleIDView.swift; sourceTree = "<group>"; };
+		1F0DD84029368056007608A4 /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
+		1F0DD8422936B0F9007608A4 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		1F0DD8442936B3FE007608A4 /* FilledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButtonStyle.swift; sourceTree = "<group>"; };
+		1F66F5B92938CA5700A910CA /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		1F66F5BB2938F03700A910CA /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		1F66F5BD2938F06100A910CA /* StoreApp+Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreApp+Filterable.swift"; sourceTree = "<group>"; };
+		1F66F5BF2938F07C00A910CA /* Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filterable.swift; sourceTree = "<group>"; };
 		1F6E08D9292806E0005059C0 /* AppRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRowView.swift; sourceTree = "<group>"; };
 		1F6E08DB292807D3005059C0 /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
 		1F6E08DF29280B12005059C0 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
@@ -1031,19 +1045,13 @@
 			path = "libimobiledevice-glue/src";
 			sourceTree = "<group>";
 		};
-		1F0DD81129322472007608A4 /* Layout */ = {
-			isa = PBXGroup;
-			children = (
-				1F0DD81229322487007608A4 /* LazyScrollingVStack.swift */,
-			);
-			path = Layout;
-			sourceTree = "<group>";
-		};
 		1F6E08DD29280AF1005059C0 /* View Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				1FB96FF1292D051F007E68D1 /* Styles */,
 				1F6E08DE29280AFF005059C0 /* UIView Representables */,
+				1F0DD84029368056007608A4 /* EnvironmentValues.swift */,
+				1F66F5BB2938F03700A910CA /* Modifiers.swift */,
 			);
 			path = "View Extensions";
 			sourceTree = "<group>";
@@ -1053,6 +1061,7 @@
 			children = (
 				1F6E08DF29280B12005059C0 /* SafariView.swift */,
 				1FB96FCE292BBBC9007E68D1 /* SiriShortcutSetupView.swift */,
+				1F66F5B92938CA5700A910CA /* VisualEffectView.swift */,
 			);
 			path = "UIView Representables";
 			sourceTree = "<group>";
@@ -1130,6 +1139,7 @@
 			isa = PBXGroup;
 			children = (
 				1FAFC5C02927E13C00B8D837 /* SettingsView.swift */,
+				1F0DD83E29367F6C007608A4 /* ConnectAppleIDView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1139,6 +1149,7 @@
 			children = (
 				1FAFC5C32927E18100B8D837 /* NavigationTab.swift */,
 				1F943C672927F39400ABE095 /* ViewModel.swift */,
+				1F66F5BF2938F07C00A910CA /* Filterable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1146,12 +1157,12 @@
 		1FB84BA72928E073006A5CF4 /* View Components */ = {
 			isa = PBXGroup;
 			children = (
-				1F0DD81129322472007608A4 /* Layout */,
 				1F6E08D9292806E0005059C0 /* AppRowView.swift */,
 				1F6E08DB292807D3005059C0 /* AppIconView.swift */,
 				1F6E08E529280F4B005059C0 /* RatingStars.swift */,
 				1FB96FBD292A20E5007E68D1 /* ObservableScrollView.swift */,
 				1FB96FBF292A63F2007E68D1 /* AppPillButton.swift */,
+				1F0DD8422936B0F9007608A4 /* RoundedTextField.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -1177,6 +1188,7 @@
 			children = (
 				1F6E08E329280D1E005059C0 /* PillButtonStyle.swift */,
 				1FB96FF2292D0539007E68D1 /* PillButtonProgressViewStyle.swift */,
+				1F0DD8442936B3FE007608A4 /* FilledButtonStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -1855,6 +1867,7 @@
 				BFE00A1F2503097F00EB4D0C /* INInteraction+AltStore.swift */,
 				D57F2C9326E01BC700B9FA39 /* UIDevice+Vibration.swift */,
 				B376FE3D29258C8900E18883 /* OSLog+SideStore.swift */,
+				1F66F5BD2938F06100A910CA /* StoreApp+Filterable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2654,6 +2667,7 @@
 				1F943C6C2927F90400ABE095 /* SettingsView.swift in Sources */,
 				BFDB6A0D22AAFC1A007EA6D6 /* OperationError.swift in Sources */,
 				BF74989B23621C0700CED65F /* ForwardingNavigationController.swift in Sources */,
+				1F66F5C02938F07C00A910CA /* Filterable.swift in Sources */,
 				BF3D649D22E7AC1B00E9056B /* PermissionPopoverViewController.swift in Sources */,
 				D57F2C9426E01BC700B9FA39 /* UIDevice+Vibration.swift in Sources */,
 				BFD2478F2284C8F900981D42 /* Button.swift in Sources */,
@@ -2667,9 +2681,11 @@
 				1F6E08E829282174005059C0 /* ConfirmAddSourceView.swift in Sources */,
 				BFE6073A231ADF82002B0E8E /* SettingsViewController.swift in Sources */,
 				1F943C6A2927F8F700ABE095 /* ViewModel.swift in Sources */,
+				1F0DD8432936B0F9007608A4 /* RoundedTextField.swift in Sources */,
 				D57F2C9126E0070200B9FA39 /* EnableJITOperation.swift in Sources */,
 				BF8CAE4E248AEABA004D6CCE /* UIDevice+Jailbreak.swift in Sources */,
 				1FB96FC7292A853D007E68D1 /* SourcesView.swift in Sources */,
+				1F66F5BE2938F06100A910CA /* StoreApp+Filterable.swift in Sources */,
 				D5E1E7C128077DE90016FC96 /* FetchTrustedSourcesOperation.swift in Sources */,
 				BFE338DF22F0EADB002E24B9 /* FetchSourceOperation.swift in Sources */,
 				D54DED1428CBC44B008B27A0 /* ErrorLogTableViewCell.swift in Sources */,
@@ -2678,12 +2694,12 @@
 				1F943C712927F90400ABE095 /* MyAppsView.swift in Sources */,
 				BF3BEFC124086A1E00DE7D55 /* RefreshAppOperation.swift in Sources */,
 				BFE60740231AFD2A002B0E8E /* InsetGroupTableViewCell.swift in Sources */,
-				1F0DD81329322487007608A4 /* LazyScrollingVStack.swift in Sources */,
 				BF0DCA662433BDF500E3A595 /* AnalyticsManager.swift in Sources */,
 				BFCCB51A245E3401001853EA /* VerifyAppOperation.swift in Sources */,
 				BFF0B6982322CAB8007A79E1 /* InstructionsViewController.swift in Sources */,
 				BF9ABA4522DCFF43008935CF /* BrowseViewController.swift in Sources */,
 				BF770E5422BC044E002A40FE /* OperationContexts.swift in Sources */,
+				1F0DD84129368056007608A4 /* EnvironmentValues.swift in Sources */,
 				BFD2478C2284C4C300981D42 /* AppIconImageView.swift in Sources */,
 				BF8F69C422E662D300049BA1 /* AppViewController.swift in Sources */,
 				BFF0B68E23219520007A79E1 /* PatreonViewController.swift in Sources */,
@@ -2720,6 +2736,7 @@
 				D5F2F6A92720B7C20081CCF5 /* PatchViewController.swift in Sources */,
 				B39F16132918D7C5002E9404 /* Consts.swift in Sources */,
 				1F0DD8212933B749007608A4 /* AppPermissionsGrid.swift in Sources */,
+				1F0DD8452936B3FE007608A4 /* FilledButtonStyle.swift in Sources */,
 				BF8F69C222E659F700049BA1 /* AppContentViewController.swift in Sources */,
 				BF08858522DE7EC800DE9F1E /* UpdateCollectionViewCell.swift in Sources */,
 				BFB39B5C252BC10E00D1BE50 /* Managed.swift in Sources */,
@@ -2736,12 +2753,15 @@
 				D57FE84428C7DB7100216002 /* ErrorLogViewController.swift in Sources */,
 				1F6E08E429280D1E005059C0 /* PillButtonStyle.swift in Sources */,
 				BFBE0007250AD0E70080826E /* ViewAppIntentHandler.swift in Sources */,
+				1F0DD83F29367F6C007608A4 /* ConnectAppleIDView.swift in Sources */,
 				BFDB6A0822AAED73007EA6D6 /* ResignAppOperation.swift in Sources */,
 				D593F1942717749A006E82DE /* PatchAppOperation.swift in Sources */,
 				BF770E5122BB1CF6002A40FE /* InstallAppOperation.swift in Sources */,
 				BF9ABA4B22DD1380008935CF /* NavigationBar.swift in Sources */,
 				BF6C8FAC242935ED00125131 /* NSAttributedString+Markdown.m in Sources */,
 				BFF00D322501BDA100746320 /* BackgroundRefreshAppsOperation.swift in Sources */,
+				1F66F5BC2938F03700A910CA /* Modifiers.swift in Sources */,
+				1F66F5BA2938CA5700A910CA /* VisualEffectView.swift in Sources */,
 				BF0C4EBD22A1BD8B009A2DD7 /* AppManager.swift in Sources */,
 				BF2901312318F7A800D88A45 /* AppBannerView.swift in Sources */,
 				BFF00D342501BDCF00746320 /* IntentHandler.swift in Sources */,
@@ -3428,6 +3448,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AltStore/AltStore.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -3464,6 +3485,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = AltStore/AltStore.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
