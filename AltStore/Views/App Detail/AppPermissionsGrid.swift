@@ -37,7 +37,7 @@ struct AppPermissionGridItemView: View {
                 Image(uiImage: (permission.type.icon?.withRenderingMode(.alwaysTemplate) ?? UIImage(systemName: "questionmark"))!)  // TODO: Replace with system icon
                     .padding()
                     .background(Circle().foregroundColor(Color(.secondarySystemBackground)))
-                Text(permission.type.localizedShortName ?? "")
+                Text(permission.type.localizedShortName ?? permission.type.localizedName ?? "")
             }
             .foregroundColor(.primary)
         }

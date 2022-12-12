@@ -32,6 +32,9 @@ struct AppDetailView: View {
     let headerViewHeight: CGFloat = 140
     let permissionColumns = 4
     
+    var headerBlurRadius: CGFloat {
+        min(20, max(0, 20 - (scrollOffset / -150) * 20))
+    }
     var isHeaderViewVisible: Bool {
         scrollOffset < headerViewHeight + 12
     }
@@ -78,8 +81,10 @@ struct AppDetailView: View {
         ZStack(alignment: .center) {
             GeometryReader { proxy in
                 AppIconView(iconUrl: storeApp.iconURL, size: proxy.frame(in: .global).width)
-                    .blur(radius: 20)
+                    .blur(radius: headerBlurRadius)
+                    .offset(y: min(0, scrollOffset))
             }
+            .padding()
             
             AppRowView(app: storeApp)
                 .padding(.horizontal)
