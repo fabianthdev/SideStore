@@ -30,3 +30,9 @@ struct AppIconView: View {
     }
 }
 
+extension AppIconView: Equatable {
+    /// Prevent re-rendering of the view if the parameters didn't change
+    static func == (lhs: AppIconView, rhs: AppIconView) -> Bool {
+        lhs.iconUrl == rhs.iconUrl && lhs.cornerRadius == rhs.cornerRadius
+    }
+}
