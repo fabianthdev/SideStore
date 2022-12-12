@@ -14,7 +14,7 @@ struct BrowseAppPreviewView: View {
     let storeApp: StoreApp
     
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             AppRowView(app: storeApp)
             
             if let subtitle = storeApp.subtitle {
