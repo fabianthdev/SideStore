@@ -21,10 +21,10 @@
     {
       "identity" : "asyncimage",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/zzzzeu/AsyncImage",
+      "location" : "https://github.com/fabianthdev/AsyncImage",
       "state" : {
-        "revision" : "854d01f6bb9550f4aeee8959ab5b67d7d7775f02",
-        "version" : "0.0.1"
+        "branch" : "main",
+        "revision" : "04fe7c66f8362b863c926b87a6d5d9820ffc5bad"
       }
     },
     {

@@ -31,7 +31,6 @@
 		191E6087290C7B50001A3B7C /* libminimuxer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 191E5FB5290A5E1F001A3B7C /* libminimuxer.a */; };
 		1920B04F2924AC8300744F60 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1920B04E2924AC8300744F60 /* Settings.bundle */; };
 		19B9B7452845E6DF0076EF69 /* SelectTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */; };
-		1F0DD810293222DF007608A4 /* AsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD80F293222DF007608A4 /* AsyncImage */; };
 		1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */; };
 		1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD81E2932D84C007608A4 /* ExpandableText */; };
 		1F0DD8212933B749007608A4 /* AppPermissionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */; };
@@ -39,6 +38,10 @@
 		1F0DD84129368056007608A4 /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD84029368056007608A4 /* EnvironmentValues.swift */; };
 		1F0DD8432936B0F9007608A4 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8422936B0F9007608A4 /* RoundedTextField.swift */; };
 		1F0DD8452936B3FE007608A4 /* FilledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8442936B3FE007608A4 /* FilledButtonStyle.swift */; };
+		1F6284D5295209DA0060AAD8 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6284D4295209DA0060AAD8 /* AppAction.swift */; };
+		1F6284D7295218980060AAD8 /* DocumentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6284D6295218980060AAD8 /* DocumentPicker.swift */; };
+		1F6284D929523D340060AAD8 /* SideloadingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6284D829523D340060AAD8 /* SideloadingManager.swift */; };
+		1F6284DB295254C80060AAD8 /* AppScreenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6284DA295254C80060AAD8 /* AppScreenshot.swift */; };
 		1F66F5BA2938CA5700A910CA /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F66F5B92938CA5700A910CA /* VisualEffectView.swift */; };
 		1F66F5BC2938F03700A910CA /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F66F5BB2938F03700A910CA /* Modifiers.swift */; };
 		1F66F5BE2938F06100A910CA /* StoreApp+Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F66F5BD2938F06100A910CA /* StoreApp+Filterable.swift */; };
@@ -49,6 +52,7 @@
 		1F6E08E429280D1E005059C0 /* PillButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08E329280D1E005059C0 /* PillButtonStyle.swift */; };
 		1F6E08E629280F4B005059C0 /* RatingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08E529280F4B005059C0 /* RatingStars.swift */; };
 		1F6E08E829282174005059C0 /* ConfirmAddSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6E08E729282174005059C0 /* ConfirmAddSourceView.swift */; };
+		1F74FF1E295263510047C051 /* AsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1F74FF1D295263510047C051 /* AsyncImage */; };
 		1F943C692927F8F200ABE095 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5B52927E06300B8D837 /* RootView.swift */; };
 		1F943C6A2927F8F700ABE095 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F943C672927F39400ABE095 /* ViewModel.swift */; };
 		1F943C6B2927F8F700ABE095 /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5C32927E18100B8D837 /* NavigationTab.swift */; };
@@ -58,6 +62,7 @@
 		1F943C6F2927F90400ABE095 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5B82927E0EE00B8D837 /* NewsView.swift */; };
 		1F943C702927F90400ABE095 /* BrowseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5BA2927E0F800B8D837 /* BrowseView.swift */; };
 		1F943C712927F90400ABE095 /* MyAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAFC5BD2927E10D00B8D837 /* MyAppsView.swift */; };
+		1FA1C8CA294906890083119D /* MyAppsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA1C8C9294906890083119D /* MyAppsViewModel.swift */; };
 		1FB84BA62928DE08006A5CF4 /* AppDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB84BA52928DE08006A5CF4 /* AppDetailView.swift */; };
 		1FB96FBE292A20E5007E68D1 /* ObservableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FBD292A20E5007E68D1 /* ObservableScrollView.swift */; };
 		1FB96FC0292A63F2007E68D1 /* AppPillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FBF292A63F2007E68D1 /* AppPillButton.swift */; };
@@ -500,6 +505,10 @@
 		1F0DD84029368056007608A4 /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
 		1F0DD8422936B0F9007608A4 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		1F0DD8442936B3FE007608A4 /* FilledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButtonStyle.swift; sourceTree = "<group>"; };
+		1F6284D4295209DA0060AAD8 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		1F6284D6295218980060AAD8 /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
+		1F6284D829523D340060AAD8 /* SideloadingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideloadingManager.swift; sourceTree = "<group>"; };
+		1F6284DA295254C80060AAD8 /* AppScreenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshot.swift; sourceTree = "<group>"; };
 		1F66F5B92938CA5700A910CA /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		1F66F5BB2938F03700A910CA /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		1F66F5BD2938F06100A910CA /* StoreApp+Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreApp+Filterable.swift"; sourceTree = "<group>"; };
@@ -513,6 +522,7 @@
 		1F943C632927EF4200ABE095 /* NewsItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemView.swift; sourceTree = "<group>"; };
 		1F943C652927F36600ABE095 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		1F943C672927F39400ABE095 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1FA1C8C9294906890083119D /* MyAppsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppsViewModel.swift; sourceTree = "<group>"; };
 		1FAFC5A42927E00000B8D837 /* SideStoreUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideStoreUIApp.swift; sourceTree = "<group>"; };
 		1FAFC5B52927E06300B8D837 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		1FAFC5B82927E0EE00B8D837 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
@@ -928,7 +938,7 @@
 				D533E8BE2727BBF800A9B5DD /* libcurl.a in Frameworks */,
 				4879A9622861049C00FC1BBD /* OpenSSL in Frameworks */,
 				B3C395F4284F35DD00DA9E2F /* Nuke in Frameworks */,
-				1F0DD810293222DF007608A4 /* AsyncImage in Frameworks */,
+				1F74FF1E295263510047C051 /* AsyncImage in Frameworks */,
 				BF1614F1250822F100767AEA /* Roxas.framework in Frameworks */,
 				B3C395F7284F362400DA9E2F /* AppCenterAnalytics in Frameworks */,
 				D533E8BC2727BBEE00A9B5DD /* libfragmentzip.a in Frameworks */,
@@ -990,6 +1000,7 @@
 				1F6E08DF29280B12005059C0 /* SafariView.swift */,
 				1FB96FCE292BBBC9007E68D1 /* SiriShortcutSetupView.swift */,
 				1F66F5B92938CA5700A910CA /* VisualEffectView.swift */,
+				1F6284D6295218980060AAD8 /* DocumentPicker.swift */,
 			);
 			path = "UIView Representables";
 			sourceTree = "<group>";
@@ -1059,6 +1070,8 @@
 			isa = PBXGroup;
 			children = (
 				1FAFC5BD2927E10D00B8D837 /* MyAppsView.swift */,
+				1FA1C8C9294906890083119D /* MyAppsViewModel.swift */,
+				1F6284D4295209DA0060AAD8 /* AppAction.swift */,
 			);
 			path = "My Apps";
 			sourceTree = "<group>";
@@ -1091,6 +1104,7 @@
 				1FB96FBD292A20E5007E68D1 /* ObservableScrollView.swift */,
 				1FB96FBF292A63F2007E68D1 /* AppPillButton.swift */,
 				1F0DD8422936B0F9007608A4 /* RoundedTextField.swift */,
+				1F6284DA295254C80060AAD8 /* AppScreenshot.swift */,
 			);
 			path = "View Components";
 			sourceTree = "<group>";
@@ -1099,6 +1113,7 @@
 			isa = PBXGroup;
 			children = (
 				1FB96FC2292A6D7E007E68D1 /* DateFormatterHelper.swift */,
+				1F6284D829523D340060AAD8 /* SideloadingManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -2107,8 +2122,8 @@
 				B3C395F6284F362400DA9E2F /* AppCenterAnalytics */,
 				B3C395F8284F362400DA9E2F /* AppCenterCrashes */,
 				4879A9612861049C00FC1BBD /* OpenSSL */,
-				1F0DD80F293222DF007608A4 /* AsyncImage */,
 				1F0DD81E2932D84C007608A4 /* ExpandableText */,
+				1F74FF1D295263510047C051 /* AsyncImage */,
 			);
 			productName = AltStore;
 			productReference = BFD2476A2284B9A500981D42 /* SideStore.app */;
@@ -2179,8 +2194,8 @@
 				B3C395FD284F3C0900DA9E2F /* XCRemoteSwiftPackageReference "STPrivilegedTask" */,
 				4879A95D2861046500FC1BBD /* XCRemoteSwiftPackageReference "AltSign" */,
 				4879A9602861049C00FC1BBD /* XCRemoteSwiftPackageReference "OpenSSL" */,
-				1F0DD80E293222DF007608A4 /* XCRemoteSwiftPackageReference "AsyncImage" */,
 				1F0DD81D2932D84C007608A4 /* XCRemoteSwiftPackageReference "ExpandableText" */,
+				1F74FF1C295263510047C051 /* XCRemoteSwiftPackageReference "AsyncImage" */,
 			);
 			productRefGroup = BFD2476B2284B9A500981D42 /* Products */;
 			projectDirPath = "";
@@ -2500,6 +2515,7 @@
 				1F943C6D2927F90400ABE095 /* NewsViewModel.swift in Sources */,
 				1FB96FF3292D0539007E68D1 /* PillButtonProgressViewStyle.swift in Sources */,
 				1F6E08E829282174005059C0 /* ConfirmAddSourceView.swift in Sources */,
+				1F6284D929523D340060AAD8 /* SideloadingManager.swift in Sources */,
 				BFE6073A231ADF82002B0E8E /* SettingsViewController.swift in Sources */,
 				1F943C6A2927F8F700ABE095 /* ViewModel.swift in Sources */,
 				1F0DD8432936B0F9007608A4 /* RoundedTextField.swift in Sources */,
@@ -2512,7 +2528,9 @@
 				BFB6B21E231870160022A802 /* NewsViewController.swift in Sources */,
 				BFC57A652416C72400EB891E /* DeactivateAppOperation.swift in Sources */,
 				1F943C712927F90400ABE095 /* MyAppsView.swift in Sources */,
+				1FA1C8CA294906890083119D /* MyAppsViewModel.swift in Sources */,
 				BF3BEFC124086A1E00DE7D55 /* RefreshAppOperation.swift in Sources */,
+				1F6284DB295254C80060AAD8 /* AppScreenshot.swift in Sources */,
 				BFE60740231AFD2A002B0E8E /* InsetGroupTableViewCell.swift in Sources */,
 				BF0DCA662433BDF500E3A595 /* AnalyticsManager.swift in Sources */,
 				BFCCB51A245E3401001853EA /* VerifyAppOperation.swift in Sources */,
@@ -2531,6 +2549,7 @@
 				BF41B806233423AE00C593A3 /* TabBarController.swift in Sources */,
 				1FB96FC9292ABDD0007E68D1 /* AddSourceView.swift in Sources */,
 				1F6E08DC292807D3005059C0 /* AppIconView.swift in Sources */,
+				1F6284D5295209DA0060AAD8 /* AppAction.swift in Sources */,
 				BFE00A202503097F00EB4D0C /* INInteraction+AltStore.swift in Sources */,
 				BFDB6A0B22AAEDB7007EA6D6 /* Operation.swift in Sources */,
 				1FB96FEC292C171D007E68D1 /* NotificationManager.swift in Sources */,
@@ -2571,6 +2590,7 @@
 				BFC84A4D2421A19100853474 /* SourcesViewController.swift in Sources */,
 				BFF0B696232242D3007A79E1 /* LicensesViewController.swift in Sources */,
 				1F6E08E429280D1E005059C0 /* PillButtonStyle.swift in Sources */,
+				1F6284D7295218980060AAD8 /* DocumentPicker.swift in Sources */,
 				BFBE0007250AD0E70080826E /* ViewAppIntentHandler.swift in Sources */,
 				1F0DD83F29367F6C007608A4 /* ConnectAppleIDView.swift in Sources */,
 				BFDB6A0822AAED73007EA6D6 /* ResignAppOperation.swift in Sources */,
@@ -3411,17 +3431,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1F0DD80E293222DF007608A4 /* XCRemoteSwiftPackageReference "AsyncImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/zzzzeu/AsyncImage";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.1;
-			};
-		};
 		1F0DD81D2932D84C007608A4 /* XCRemoteSwiftPackageReference "ExpandableText" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/NuPlay/ExpandableText";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		1F74FF1C295263510047C051 /* XCRemoteSwiftPackageReference "AsyncImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fabianthdev/AsyncImage";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -3504,15 +3524,15 @@
 			package = 4879A9602861049C00FC1BBD /* XCRemoteSwiftPackageReference "OpenSSL" */;
 			productName = OpenSSL;
 		};
-		1F0DD80F293222DF007608A4 /* AsyncImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1F0DD80E293222DF007608A4 /* XCRemoteSwiftPackageReference "AsyncImage" */;
-			productName = AsyncImage;
-		};
 		1F0DD81E2932D84C007608A4 /* ExpandableText */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1F0DD81D2932D84C007608A4 /* XCRemoteSwiftPackageReference "ExpandableText" */;
 			productName = ExpandableText;
+		};
+		1F74FF1D295263510047C051 /* AsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F74FF1C295263510047C051 /* XCRemoteSwiftPackageReference "AsyncImage" */;
+			productName = AsyncImage;
 		};
 		4879A95E2861046500FC1BBD /* AltSign */ = {
 			isa = XCSwiftPackageProductDependency;

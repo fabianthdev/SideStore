@@ -60,7 +60,11 @@ struct AppPillButton: View {
     
     func handleButton() {
         if let installedApp {
-            self.openApp(installedApp)
+            if showRemainingDays {
+                self.refreshApp(installedApp)
+            } else {
+                self.openApp(installedApp)
+            }
         } else if let storeApp {
             self.installApp(storeApp)
         }
@@ -68,6 +72,10 @@ struct AppPillButton: View {
     
     func openApp(_ installedApp: InstalledApp) {
         UIApplication.shared.open(installedApp.openAppURL)
+    }
+    
+    func refreshApp(_ installedApp: InstalledApp) {
+        
     }
     
     func installApp(_ storeApp: StoreApp) {
