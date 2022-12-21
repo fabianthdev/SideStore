@@ -62,10 +62,13 @@ class NotificationManager: ObservableObject {
             detailText = underlyingError?.localizedDescription ?? error.localizedRecoverySuggestion
         }
         
-        
+        self.showNotification(title: text, detailText: detailText)
+    }
+    
+    func showNotification(title: String, detailText: String?) {
         let notificationId = UUID()
         
-        self.notifications[notificationId] = Notification(id: notificationId, title: text, message: detailText)
+        self.notifications[notificationId] = Notification(id: notificationId, title: title, message: detailText)
         
         let dismissWorkItem = DispatchWorkItem {
             self.notifications.removeValue(forKey: notificationId)
