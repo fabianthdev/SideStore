@@ -26,16 +26,24 @@ struct NewsView: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 24) {
-                ForEach(news, id: \.objectID) { newsItem in
-                    NewsItemView(newsItem: newsItem)
-                        .onNewsSelection { newsItem in
-                            self.activeExternalUrl = newsItem.externalURL
-                        }
-                        .frame(
-                            maxWidth: .infinity,
-                            alignment: .topLeading
-                        )
+            self.announcementsCarousel
+            
+            VStack(alignment: .leading) {
+                Text("From your Sources")
+                    .font(.title2)
+                    .bold()
+                
+                LazyVStack(spacing: 24) {
+                    ForEach(news, id: \.objectID) { newsItem in
+                        NewsItemView(newsItem: newsItem)
+                            .onNewsSelection { newsItem in
+                                self.activeExternalUrl = newsItem.externalURL
+                            }
+                            .frame(
+                                maxWidth: .infinity,
+                                alignment: .topLeading
+                            )
+                    }
                 }
             }
             .padding()
@@ -47,6 +55,20 @@ struct NewsView: View {
                 .ignoresSafeArea()
         }
         .onAppear(perform: fetchNews)
+    }
+    
+    var announcementsCarousel: some View {
+        TabView {
+            ForEach(0..<5) { _ in
+                RoundedRectangle(cornerRadius: 10)
+                    .foregroundColor(.secondary)
+                    .shadow(radius: 5, y: 3)
+                    .padding()
+            }
+        }
+        .tabViewStyle(PageTabViewStyle())
+        .frame(maxWidth: .infinity)
+        .aspectRatio(16/9, contentMode: .fit)
     }
     
     
