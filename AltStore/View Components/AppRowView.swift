@@ -16,6 +16,8 @@ struct AppRowView: View {
         (app as? StoreApp) ?? (app as? InstalledApp)?.storeApp
     }
     
+    var showRemainingDays: Bool = false
+    
     var body: some View {
         HStack(alignment: .center, spacing: 12) {
             AppIconView(iconUrl: storeApp?.iconURL)
@@ -36,11 +38,10 @@ struct AppRowView: View {
             
             Spacer()
             
-            AppPillButton(app: app)
+            AppPillButton(app: app, showRemainingDays: showRemainingDays)
         }
         .padding()
-        .blurBackground(.systemUltraThinMaterialLight)
-        .background(Color(storeApp?.tintColor ?? UIColor.black).opacity(0.4))
+        .tintedBackground(Color(storeApp?.tintColor ?? UIColor(Color.accentColor)))
         .clipShape(RoundedRectangle(cornerRadius: 30, style: .circular))
     }
 }

@@ -26,4 +26,10 @@ extension View {
             self
         }
     }
+    
+    @ViewBuilder func tintedBackground(_ color: Color) -> some View {
+        self
+            .blurBackground(.systemUltraThinMaterial)
+            .background(color.opacity(0.4))
+    }
 }
