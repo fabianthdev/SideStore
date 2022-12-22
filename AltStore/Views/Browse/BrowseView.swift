@@ -37,7 +37,7 @@ struct BrowseView: View {
                     VStack(alignment: .leading, spacing: 32) {
                         promotedCategoriesView
                         
-                        Text("All Apps")
+                        Text(L10n.BrowseView.Section.AllApps.title)
                             .font(.title2)
                             .bold()
                     }
@@ -55,16 +55,16 @@ struct BrowseView: View {
                 }
             }
             .padding()
-            .searchable(text: self.$searchText, placeholder: "Search")
+            .searchable(text: self.$searchText, placeholder: L10n.BrowseView.search)
         }
         .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
-        .navigationTitle("Browse")
+        .navigationTitle(L10n.BrowseView.title)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 SwiftUI.Button {
                     self.isShowingSourcesView = true
                 } label: {
-                    Text("Sources")
+                    Text(L10n.BrowseView.Actions.sources)
                 }
                 .sheet(isPresented: self.$isShowingSourcesView) {
                     NavigationView {
@@ -88,12 +88,14 @@ struct BrowseView: View {
     var promotedCategoriesView: some View {
         VStack {
             HStack {
-                Text("Promoted Categories")
+                Text(L10n.BrowseView.Section.PromotedCategories.title)
                     .font(.title2)
                     .bold()
                 Spacer()
-                SwiftUI.Button(action: {}, label: { Text("Show all") })
-                    .font(.callout)
+                SwiftUI.Button(action: {}, label: {
+                    Text(L10n.BrowseView.Section.PromotedCategories.showAll)
+                })
+                .font(.callout)
             }
             
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {

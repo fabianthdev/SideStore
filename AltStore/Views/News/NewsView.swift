@@ -29,7 +29,7 @@ struct NewsView: View {
             self.announcementsCarousel
             
             VStack(alignment: .leading) {
-                Text("From your Sources")
+                Text(L10n.NewsView.Section.FromSources.title)
                     .font(.title2)
                     .bold()
                 
@@ -49,7 +49,7 @@ struct NewsView: View {
             .padding()
         }
         .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
-        .navigationTitle("News")
+        .navigationTitle(L10n.NewsView.title)
         .sheet(item: self.$activeExternalUrl) { url in
             SafariView(url: url)
                 .ignoresSafeArea()
