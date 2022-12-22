@@ -36,6 +36,8 @@
 		1F07F56B2955F11500F7BE95 /* AppScreenshotsPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */; };
 		1F07F56F2955FB2000F7BE95 /* AppIDsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F56E2955FB2000F7BE95 /* AppIDsView.swift */; };
 		1F07F550295455A300F7BE95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F07F552295455A300F7BE95 /* Localizable.strings */; };
+		1F07F556295458D800F7BE95 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F554295458D800F7BE95 /* Assets.swift */; };
+		1F07F557295458D800F7BE95 /* Localizations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F555295458D800F7BE95 /* Localizations.swift */; };
 		1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */; };
 		1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD81E2932D84C007608A4 /* ExpandableText */; };
 		1F0DD8212933B749007608A4 /* AppPermissionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */; };
@@ -507,6 +509,8 @@
 		1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotsPreview.swift; sourceTree = "<group>"; };
 		1F07F56E2955FB2000F7BE95 /* AppIDsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIDsView.swift; sourceTree = "<group>"; };
 		1F07F551295455A300F7BE95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1F07F554295458D800F7BE95 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		1F07F555295458D800F7BE95 /* Localizations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizations.swift; sourceTree = "<group>"; };
 		1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotsScrollView.swift; sourceTree = "<group>"; };
 		1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionsGrid.swift; sourceTree = "<group>"; };
 		1F0DD83E29367F6C007608A4 /* ConnectAppleIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAppleIDView.swift; sourceTree = "<group>"; };
@@ -991,6 +995,15 @@
 				191E605F290B2D6B001A3B7C /* utils.c */,
 			);
 			name = "libimobiledevice-glue";
+			sourceTree = "<group>";
+		};
+		1F07F553295458D800F7BE95 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				1F07F554295458D800F7BE95 /* Assets.swift */,
+				1F07F555295458D800F7BE95 /* Localizations.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		1F6E08DD29280AF1005059C0 /* View Extensions */ = {
@@ -1682,6 +1695,7 @@
 			children = (
 				1FAFC5B72927E06C00B8D837 /* App */,
 				1FB96FC1292A6D6C007E68D1 /* Helper */,
+				1F07F553295458D800F7BE95 /* Generated */,
 				1FB96FEA292C1704007E68D1 /* Manager */,
 				1FAFC5C22927E17100B8D837 /* Protocols */,
 				1FAFC5B02927E01400B8D837 /* Views */,
@@ -2523,6 +2537,7 @@
 				1F66F5C02938F07C00A910CA /* Filterable.swift in Sources */,
 				BF3D649D22E7AC1B00E9056B /* PermissionPopoverViewController.swift in Sources */,
 				D57F2C9426E01BC700B9FA39 /* UIDevice+Vibration.swift in Sources */,
+				1F07F556295458D800F7BE95 /* Assets.swift in Sources */,
 				BFD2478F2284C8F900981D42 /* Button.swift in Sources */,
 				1F943C6F2927F90400ABE095 /* NewsView.swift in Sources */,
 				BF56D2AC23DF8E170006506D /* FetchAppIDsOperation.swift in Sources */,
@@ -2580,6 +2595,7 @@
 				BF88F97224F8727D00BB75DF /* AppManagerErrors.swift in Sources */,
 				B39F16152918D7DA002E9404 /* Consts+Proxy.swift in Sources */,
 				1F6E08E629280F4B005059C0 /* RatingStars.swift in Sources */,
+				1F07F557295458D800F7BE95 /* Localizations.swift in Sources */,
 				BF6C8FAE2429597900125131 /* BannerCollectionViewCell.swift in Sources */,
 				1FB96FC0292A63F2007E68D1 /* AppPillButton.swift in Sources */,
 				BF6F439223644C6E00A0B879 /* RefreshAltStoreViewController.swift in Sources */,
