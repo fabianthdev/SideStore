@@ -23,6 +23,7 @@
 		1F07F5692955D3EC00F7BE95 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 1F07F5682955D3EC00F7BE95 /* SFSafeSymbols */; };
 		1F07F56B2955F11500F7BE95 /* AppScreenshotsPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */; };
 		1F07F56F2955FB2000F7BE95 /* AppIDsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F56E2955FB2000F7BE95 /* AppIDsView.swift */; };
+		1F07F550295455A300F7BE95 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F07F552295455A300F7BE95 /* Localizable.strings */; };
 		1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */; };
 		1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD81E2932D84C007608A4 /* ExpandableText */; };
 		1F0DD8212933B749007608A4 /* AppPermissionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */; };
@@ -560,6 +561,7 @@
 		19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamViewController.swift; sourceTree = "<group>"; };
 		1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotsPreview.swift; sourceTree = "<group>"; };
 		1F07F56E2955FB2000F7BE95 /* AppIDsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIDsView.swift; sourceTree = "<group>"; };
+		1F07F551295455A300F7BE95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotsScrollView.swift; sourceTree = "<group>"; };
 		1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionsGrid.swift; sourceTree = "<group>"; };
 		1F0DD83E29367F6C007608A4 /* ConnectAppleIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAppleIDView.swift; sourceTree = "<group>"; };
@@ -1870,6 +1872,7 @@
 				BFB1169C22932DB100BB457C /* apps.json */,
 				BFD247762284B9A700981D42 /* Assets.xcassets */,
 				BF770E6822BD57DD002A40FE /* Silence.m4a */,
+				1F07F552295455A300F7BE95 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -2462,6 +2465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F07F550295455A300F7BE95 /* Localizable.strings in Resources */,
 				BFC57A702416FC7600EB891E /* InstalledAppsCollectionHeaderView.xib in Resources */,
 				BFB4323F22DE852000B7F8BC /* UpdateCollectionViewCell.xib in Resources */,
 				BFE60738231ADF49002B0E8E /* Settings.storyboard in Resources */,
@@ -2877,6 +2881,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1F07F552295455A300F7BE95 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F07F551295455A300F7BE95 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BF580488246A28F9008AE704 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
