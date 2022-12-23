@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 import AltStoreCore
 
 struct AppPermissionsGrid: View {
@@ -34,7 +35,7 @@ struct AppPermissionGridItemView: View {
             self.isPopoverPresented = true
         } label: {
             VStack {
-                Image(uiImage: (permission.type.icon?.withRenderingMode(.alwaysTemplate) ?? UIImage(systemName: "questionmark"))!)  // TODO: Replace with system icon
+                Image(uiImage: permission.type.icon ?? UIImage(systemSymbol: .questionmark))
                     .padding()
                     .background(Circle().foregroundColor(Color(.secondarySystemBackground)))
                 Text(permission.type.localizedShortName ?? permission.type.localizedName ?? "")

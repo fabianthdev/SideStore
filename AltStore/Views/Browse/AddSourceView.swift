@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 
 struct AddSourceView: View {
     
@@ -28,7 +29,7 @@ struct AddSourceView: View {
                     Text("Please enter the source url here. Then, tap continue to validate and add the source in the next step.")
                     
                     HStack(alignment: .top) {
-                        Image(systemName: "exclamationmark.triangle.fill")
+                        Image(systemSymbol: .exclamationmarkTriangleFill)
                         
                         Text("Be careful with unvalidated third-party sources! Make sure to only add sources that you trust.")
                     }

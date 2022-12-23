@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 import AltStoreCore
 import CoreData
 
@@ -57,7 +58,7 @@ struct SourcesView: View {
                                 SwiftUI.Button {
                                     self.removeSource(source)
                                 } label: {
-                                    Label("Remove", systemImage: "trash")
+                                    Label("Remove", systemSymbol: .trash)
                                 }
                             }))
                         }
@@ -85,7 +86,7 @@ struct SourcesView: View {
                 SwiftUI.Button {
                     self.isShowingAddSourceAlert = true
                 } label: {
-                    Image(systemName: "plus")
+                    Image(systemSymbol: .plus)
                 }
                 .sheet(isPresented: self.$isShowingAddSourceAlert) {
                     NavigationView {

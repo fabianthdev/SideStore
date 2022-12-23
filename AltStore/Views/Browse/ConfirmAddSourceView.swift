@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 import AltStoreCore
 
 struct ConfirmAddSourceView: View {
@@ -64,7 +65,7 @@ struct ConfirmAddSourceView: View {
             SwiftUI.Button {
                 confirmationHandler(fetchedSource)
             } label: {
-                Label(title: { Text("Add Source") }, icon: { Image(systemName: "plus") })
+                Label("Add Source", systemSymbol: .plus)
             }
             .buttonStyle(FilledButtonStyle())
             .padding()
@@ -75,7 +76,7 @@ struct ConfirmAddSourceView: View {
                 SwiftUI.Button {
                     
                 } label: {
-                    Image(systemName: "xmark.circle.fill")
+                    Image(systemSymbol: .xmarkCircleFill)
                         .foregroundColor(.secondary)
                 }
 
