@@ -32,6 +32,7 @@
 		1920B04F2924AC8300744F60 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1920B04E2924AC8300744F60 /* Settings.bundle */; };
 		19B9B7452845E6DF0076EF69 /* SelectTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */; };
 		1F07F5672955D16A00F7BE95 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 1F07F5662955D16A00F7BE95 /* SFSafeSymbols */; };
+		1F07F5692955D3EC00F7BE95 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 1F07F5682955D3EC00F7BE95 /* SFSafeSymbols */; };
 		1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */; };
 		1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD81E2932D84C007608A4 /* ExpandableText */; };
 		1F0DD8212933B749007608A4 /* AppPermissionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */; };
@@ -912,6 +913,7 @@
 			files = (
 				B3C395F1284F2DE700DA9E2F /* KeychainAccess in Frameworks */,
 				4879A95F2861046500FC1BBD /* AltSign in Frameworks */,
+				1F07F5692955D3EC00F7BE95 /* SFSafeSymbols in Frameworks */,
 				B39575F5284F29E20080B4FF /* Roxas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2076,6 +2078,7 @@
 			packageProductDependencies = (
 				B3C395F0284F2DE700DA9E2F /* KeychainAccess */,
 				4879A95E2861046500FC1BBD /* AltSign */,
+				1F07F5682955D3EC00F7BE95 /* SFSafeSymbols */,
 			);
 			productName = AltStoreCore;
 			productReference = BF66EE7E2501AE50007EE018 /* AltStoreCore.framework */;
@@ -3537,6 +3540,11 @@
 			productName = OpenSSL;
 		};
 		1F07F5662955D16A00F7BE95 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F07F5652955D16A00F7BE95 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+		1F07F5682955D3EC00F7BE95 /* SFSafeSymbols */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1F07F5652955D16A00F7BE95 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;

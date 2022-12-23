@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 
 struct RatingStars: View {
     
@@ -15,7 +16,7 @@ struct RatingStars: View {
     var body: some View {
         HStack(spacing: 0) {
             ForEach(0..<5) { i in
-                Image(systemName: i < rating ? "star.fill" : "star")
+                Image(systemSymbol: i < rating ? .starFill : .star)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             }

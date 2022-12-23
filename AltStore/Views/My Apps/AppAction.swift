@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SFSafeSymbols
 
 enum AppAction: Int, CaseIterable {
     case install, open, refresh
@@ -34,20 +35,20 @@ enum AppAction: Int, CaseIterable {
         }
     }
     
-    var imageName: String {
+    var symbol: SFSymbol {
         switch self {
-        case .install: return "Install"
-        case .open: return "arrow.up.forward.app"
-        case .refresh: return "arrow.clockwise"
-        case .activate: return "checkmark.circle"
-        case .deactivate: return "xmark.circle"
-        case .remove: return "trash"
-        case .enableJIT: return "bolt"
-        case .backup: return "doc.on.doc"
-        case .exportBackup: return "arrow.up.doc"
-        case .restoreBackup: return "arrow.down.doc"
-        case .chooseCustomIcon: return "photo"
-        case .resetCustomIcon: return "arrow.uturn.left"
+        case .install: return .squareAndArrowDown
+        case .open: return .arrowUpForwardApp
+        case .refresh: return .arrowClockwise
+        case .activate: return .checkmarkCircle
+        case .deactivate: return .xmarkCircle
+        case .remove: return .trash
+        case .enableJIT: return .bolt
+        case .backup: return .docOnDoc
+        case .exportBackup: return .arrowUpDoc
+        case .restoreBackup: return .arrowDownDoc
+        case .chooseCustomIcon: return .photo
+        case .resetCustomIcon: return .arrowUturnLeft
         }
     }
 }

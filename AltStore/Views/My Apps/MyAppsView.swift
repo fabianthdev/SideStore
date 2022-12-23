@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 import MobileCoreServices
 import AltStoreCore
 
@@ -119,7 +120,7 @@ struct MyAppsView: View {
                 SwiftUI.Button {
                     self.isShowingFilePicker = true
                 } label: {
-                    Image(systemName: "plus")
+                    Image(systemSymbol: .plus)
                         .imageScale(.large)
                 }
                 .sheet(isPresented: self.$isShowingFilePicker) {
@@ -157,7 +158,7 @@ struct MyAppsView: View {
                     SwiftUI.Button {
                         self.perform(action: action, for: app)
                     } label: {
-                        Label(action.title, systemImage: action.imageName)
+                        Label(action.title, systemSymbol: action.symbol)
                     }
                 }
             }))

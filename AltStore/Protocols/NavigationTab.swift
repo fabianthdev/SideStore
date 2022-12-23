@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import SFSafeSymbols
 
 protocol NavigationTab: RawRepresentable, Identifiable, CaseIterable, Hashable where RawValue == Int {
     static var defaultTab: Self { get }
-    var displaySymbol: String { get }
+    var displaySymbol: SFSymbol { get }
     var displayName: String { get }
 }
 

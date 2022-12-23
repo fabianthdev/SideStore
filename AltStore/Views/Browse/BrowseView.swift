@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 import AltStoreCore
 
 struct BrowseView: View {
@@ -76,7 +77,7 @@ struct BrowseView: View {
                 SwiftUI.Button {
                     
                 } label: {
-                    Image(systemName: "line.3.horizontal.decrease.circle")
+                    Image(systemSymbol: .lineHorizontal3DecreaseCircle)
                         .imageScale(.large)
                 }
 
@@ -127,7 +128,7 @@ struct PromotedCategoryView: View {
             }
             
             HStack {
-                Image(systemName: "dpad.right.filled")
+                Image(systemSymbol: .dpadRightFill)
                 Text("Games &\nEmulators")
                     .multilineTextAlignment(.leading)
             }

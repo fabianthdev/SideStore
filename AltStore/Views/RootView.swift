@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 
 struct RootView: View {
     
@@ -78,12 +79,12 @@ extension RootView {
         
         static var defaultTab: RootView.Tab  = .news
         
-        var displaySymbol: String {
+        var displaySymbol: SFSymbol {
             switch self {
-            case .news: return "newspaper"
-            case .browse: return "app.dashed"
-            case .myApps: return "app.badge"
-            case .settings: return "gearshape"
+            case .news: return .newspaper
+            case .browse: return .booksVertical
+            case .myApps: return .appBadge
+            case .settings: return .gearshape
             }
         }
 
@@ -97,7 +98,7 @@ extension RootView {
         }
         
         var label: some View {
-            Label(self.displayName, systemImage: self.displaySymbol)
+            Label(self.displayName, systemSymbol: self.displaySymbol)
         }
     }
 }

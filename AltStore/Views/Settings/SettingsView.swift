@@ -8,6 +8,7 @@
 
 import SwiftUI
 import AsyncImage
+import SFSafeSymbols
 import AltStoreCore
 import Intents
 
@@ -149,7 +150,7 @@ struct SettingsView: View {
                 SwiftUI.Button {
                     
                 } label: {
-                    Image(systemName: "person.crop.circle")
+                    Image(systemSymbol: .personCropCircle)
                         .imageScale(.large)
                 }
 
