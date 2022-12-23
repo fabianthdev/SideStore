@@ -33,6 +33,7 @@
 		19B9B7452845E6DF0076EF69 /* SelectTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */; };
 		1F07F5672955D16A00F7BE95 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 1F07F5662955D16A00F7BE95 /* SFSafeSymbols */; };
 		1F07F5692955D3EC00F7BE95 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 1F07F5682955D3EC00F7BE95 /* SFSafeSymbols */; };
+		1F07F56B2955F11500F7BE95 /* AppScreenshotsPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */; };
 		1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */; };
 		1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD81E2932D84C007608A4 /* ExpandableText */; };
 		1F0DD8212933B749007608A4 /* AppPermissionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */; };
@@ -501,6 +502,7 @@
 		191E6074290B2E02001A3B7C /* preboard.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = preboard.c; path = ../Dependencies/libimobiledevice/src/preboard.c; sourceTree = "<group>"; };
 		1920B04E2924AC8300744F60 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamViewController.swift; sourceTree = "<group>"; };
+		1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotsPreview.swift; sourceTree = "<group>"; };
 		1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotsScrollView.swift; sourceTree = "<group>"; };
 		1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionsGrid.swift; sourceTree = "<group>"; };
 		1F0DD83E29367F6C007608A4 /* ConnectAppleIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAppleIDView.swift; sourceTree = "<group>"; };
@@ -1058,6 +1060,7 @@
 				1FB84BA52928DE08006A5CF4 /* AppDetailView.swift */,
 				1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */,
 				1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */,
+				1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */,
 			);
 			path = "App Detail";
 			sourceTree = "<group>";
@@ -2561,6 +2564,7 @@
 				BFDB6A0B22AAEDB7007EA6D6 /* Operation.swift in Sources */,
 				1FB96FEC292C171D007E68D1 /* NotificationManager.swift in Sources */,
 				BF770E6722BD57C4002A40FE /* BackgroundTaskManager.swift in Sources */,
+				1F07F56B2955F11500F7BE95 /* AppScreenshotsPreview.swift in Sources */,
 				BF44EEFC246B4550002A52F2 /* RemoveAppOperation.swift in Sources */,
 				BF3D64B022E8D4B800E9056B /* AppContentViewControllerCells.swift in Sources */,
 				BFC57A6E2416FC5D00EB891E /* InstalledAppsCollectionHeaderView.swift in Sources */,
