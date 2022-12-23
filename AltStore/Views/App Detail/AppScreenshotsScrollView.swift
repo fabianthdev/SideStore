@@ -19,25 +19,36 @@ struct AppScreenshotsScrollView: View {
     var aspectRatio: CGFloat = 9/16
     var height: CGFloat = 400
     
+    @State var selectedScreenshotIndex: Int?
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(urls) { url in
-                    AsyncImage(url: url) { image in
-                        image
-                            .resizable()
-                    } placeholder: {
-                        Rectangle()
-                            .foregroundColor(.secondary)
+                ForEach(Array(urls.enumerated()), id: \.offset) { i, url in
+                    SwiftUI.Button {
+                        self.selectedScreenshotIndex = i
+                    } label: {
+                        AsyncImage(url: url) { image in
+                            image
+                                .resizable()
+                        } placeholder: {
+                            Rectangle()
+                                .foregroundColor(.secondary)
+                        }
+                        .aspectRatio(aspectRatio, contentMode: .fit)
+                        .cornerRadius(8)
                     }
-                    .aspectRatio(aspectRatio, contentMode: .fit)
-                    .cornerRadius(8)
                 }
             }
             .padding(.horizontal)
         }
         .frame(height: height)
         .shadow(radius: 12)
+        .sheet(item: self.$selectedScreenshotIndex) { index in
+            NavigationView {
+                AppScreenshotsPreview(urls: urls, aspectRatio: aspectRatio, initialIndex: index)
+            }
+        }
     }
 }
 
@@ -45,5 +56,11 @@ extension AppScreenshotsScrollView: Equatable {
     /// Prevent re-rendering of the view if the parameters didn't change
     static func == (lhs: AppScreenshotsScrollView, rhs: AppScreenshotsScrollView) -> Bool {
         lhs.urls == rhs.urls && lhs.aspectRatio == rhs.aspectRatio && lhs.height == rhs.height
+    }
+}
+
+extension Int: Identifiable {
+    public var id: Int {
+        self
     }
 }
