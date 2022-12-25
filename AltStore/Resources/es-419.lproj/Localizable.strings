@@ -3,28 +3,29 @@
   AltStore
 
   Created by Joshua Laymon on 23.12.22.
+  Updated by Gabriel Morazán on 25.12.22.
   Copyright © 2022 SideStore. All rights reserved.
 */
 
 
 /* NewsView */
 "NewsView.title" = "Noticias";
-"NewsView.Section.FromSources.title" = "De Tus Fuentes";
+"NewsView.Section.FromSources.title" = "De tus fuentes";
 
 
 /* BrowseView */
 "BrowseView.title" = "Navegar";
 "BrowseView.search" = "Buscar";
-"BrowseView.Section.PromotedCategories.title" = "Categorías Promocionadas";
-"BrowseView.Section.PromotedCategories.showAll" = "Ver todos";
-"BrowseView.Section.AllApps.title" = "Todos de las Aplicaciones";
+"BrowseView.Section.PromotedCategories.title" = "Categorías promocionadas";
+"BrowseView.Section.PromotedCategories.showAll" = "Mostrar todo";
+"BrowseView.Section.AllApps.title" = "Todas las aplicaciones";
 "BrowseView.Actions.sources" = "Fuentes";
-"BrowseView.Categories.gamesAndEmulators" = "Juegos y\nEmuladores";
+"BrowseView.Categories.gamesAndEmulators" = "Juegos y\nemuladores";
 
 /* RootView */
 "RootView.news" = "Noticias";
 "RootView.browse" = "Navegar";
-"RootView.myApps" = "Mis Apps";
+"RootView.myApps" = "Mis aplicaciones";
 "RootView.settings" = "Configuración";
 
 /* SettingsView */
@@ -49,38 +50,38 @@
 "SettingsView.refreshingAppsFooter" = "Active el refresco en segundo plano para que las aplicaciones sean refrescadas automáticamente cuando estés conectado a una red Wi-Fi y tengas a WireGuard activado.";
 
 /* ConnectAppleIDView */
-"ConnectAppleIDView.startWithSignIn" = "Inicia sesión con su Apple ID para comenzar.";
-"ConnectAppleIDView.signIn" = "Inicia sesión";
+"ConnectAppleIDView.startWithSignIn" = "Inicie sesión con su Apple ID para comenzar.";
+"ConnectAppleIDView.signIn" = "Iniciar sesión";
 "ConnectAppleIDView.password" = "Contraseña";
 "ConnectAppleIDView.whyDoWeNeedThis" = "¿Por qué necesitamos esto?";
-"ConnectAppleIDView.footer" = "Su Apple ID es usa para configurar las aplicaciones para instalar en su dispositivo. Los detalles del inicio de sesión serán guardadas de forma segura en su dispositivo y son enviados solomente a Apple para autenticación.";
+"ConnectAppleIDView.footer" = "Su Apple ID es usado para configurar las aplicaciones que se instalarán en su dispositivo. Sus credenciales serán guardadas de forma segura en su dispositivo y seran enviados solamente a Apple para ser autenticados.";
 "ConnectAppleIDView.connectYourAppleID" = "Conectar su Apple ID";
 "ConnectAppleIDView.cancel" = "Cancelar";
-"ConnectAppleIDView.failedToSignIn" = "No Pude iniciar sesión";
+"ConnectAppleIDView.failedToSignIn" = "No se pudo iniciar sesión";
 
 /* SourcesView */
-"SourcesView.sourcesDescription" = "Los fuentes controlan las aplicaciones que están disponibles a travès de SideStore.";
+"SourcesView.sourcesDescription" = "Las fuentes determinan que aplicaciones estarán disponibles a través del SideStore.";
 "SourcesView.remove" = "Eliminar";
-"SourcesView.trustedSources" = "Fuentes Confianza";
-"SourcesView.reviewedText" = "SideStore Team ha reseñado estas fuentes para asegurarse que seguras.";
+"SourcesView.trustedSources" = "Fuentes confiables";
+"SourcesView.reviewedText" = "SideStore Team ha verificado que estas fuentes son seguras de usar.";
 "SourcesView.sources" = "Fuentes";
 "SourcesView.done" = "Listo";
 
 /* AddSourceView */
 "AddSourceView.sourceURL" = "URL de fuente";
-"AddSourceView.sourceWarning" = "Introduce el URL de fuente aquí. Luego, toca \"Continuar\" para validar y agregar la fuente en el siguiente paso.";
-"AddSourceView.sourceWarningContinued" = "Ten cuidado con las fuentes de un tercero. Solo debe agregar fuentes en las que confíe.";
+"AddSourceView.sourceWarning" = "Introduce el URL de una fuente aquí. Luego, toca \"Continuar\" para validar y agregar la fuente en el siguiente paso.";
+"AddSourceView.sourceWarningContinued" = "¡Ten cuidado con las fuentes de terceros! Asegurate de solo agregar las fuentes en las que confíes.";
 "AddSourceView.continue" = "Continuar";
-"AddSourceView.title" = "Agregar Fuente";
+"AddSourceView.title" = "Agregar fuente";
 
 /* ConfirmAddSourceView */
 "ConfirmAddSourceView.apps" = "Aplicaciones";
 "ConfirmAddSourceView.newsItems" = "Noticias";
-"ConfirmAddSourceView.sourceContents" = "Contenidos de fuente";
-"ConfirmAddSourceView.sourceIdentifier" = "Identificador de fuente";
-"ConfirmAddSourceView.sourceURL" = "URL de fuente";
-"ConfirmAddSourceView.sourceInfo" = "Información de fuente";
-"ConfirmAddSourceView.addSource" = "Agregar Fuente";
+"ConfirmAddSourceView.sourceContents" = "Contenidos de la fuente";
+"ConfirmAddSourceView.sourceIdentifier" = "Identificador de la fuente";
+"ConfirmAddSourceView.sourceURL" = "URL de la fuente";
+"ConfirmAddSourceView.sourceInfo" = "Información sobre la fuente";
+"ConfirmAddSourceView.addSource" = "Agregar una fuente";
 
 /* AppPillButton */
 "AppPillButton.free" = "Gratis";
@@ -104,7 +105,7 @@
 "AppDetailView.more" = "Más...";
 "AppDetailView.whatsNew" = "Novedades";
 "AppDetailView.version" = "Versión";
-"AppDetailView.noVersionInformation" = "Sin información de versión";
+"AppDetailView.noVersionInformation" = "Sin información de la versión";
 "AppDetailView.noPermissions" = "Esta aplicación no requiere de permisos.";
 "AppDetailView.permissions" = "Los permisos";
 
@@ -113,11 +114,11 @@
 
 /* MyAppsView */
 "MyAppsView.active" = "Activo";
-"MyAppsView.sideloading" = "Instalando en progeso...";
-"MyAppsView.refreshAll" = "Refrescar todos";
-"MyAppsView.appIDsRemaining" = "App IDs restante";
+"MyAppsView.sideloading" = "Instalación en progreso...";
+"MyAppsView.refreshAll" = "Refrescar todo";
+"MyAppsView.appIDsRemaining" = "IDs de aplicaciones restantes";
 "MyAppsView.noUpdatesAvailable" = "No hay actualizaciones disponibles";
 "MyAppsView.failedToRefresh" = "No se pudo refrescar";
 "MyAppsView.apps" = "aplicaciones"; /* Keep this lowercase */
-"MyAppsView.viewAppIDs" = "Ver App IDs";
-"MyAppsView.myApps" = "Mis Aplicaciones";
+"MyAppsView.viewAppIDs" = "Ver IDs de las aplicaciones";
+"MyAppsView.myApps" = "Mis aplicaciones";
