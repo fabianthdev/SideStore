@@ -131,7 +131,7 @@ struct PromotedCategoryView: View {
             
             HStack {
                 Image(systemSymbol: .dpadRightFill)
-                Text("Games &\nEmulators")
+                Text(L10n.BrowseView.Categories.gamesAndEmulators)
                     .multilineTextAlignment(.leading)
             }
             .foregroundColor(.accentColor)

@@ -20,18 +20,18 @@ enum AppAction: Int, CaseIterable {
     
     var title: String {
         switch self {
-        case .install: return "Install"
-        case .open: return "Open"
-        case .refresh: return "Refresh"
-        case .activate: return "Activate"
-        case .deactivate: return "Deactivate"
-        case .remove: return "Remove"
-        case .enableJIT: return "Enable JIT"
-        case .backup: return "Back Up"
-        case .exportBackup: return "Export Backup"
-        case .restoreBackup: return "Restore Backup"
-        case .chooseCustomIcon: return "Change Icon"
-        case .resetCustomIcon: return "Reset Icon"
+        case .install: return L10n.AppAction.install
+        case .open: return L10n.AppAction.open
+        case .refresh: return L10n.AppAction.refresh
+        case .activate: return L10n.AppAction.activate
+        case .deactivate: return L10n.AppAction.deactivate
+        case .remove: return L10n.AppAction.remove
+        case .enableJIT: return L10n.AppAction.enableJIT
+        case .backup: return L10n.AppAction.backup
+        case .exportBackup: return L10n.AppAction.exportBackup
+        case .restoreBackup: return L10n.AppAction.restoreBackup
+        case .chooseCustomIcon: return L10n.AppAction.chooseCustomIcon
+        case .resetCustomIcon: return L10n.AppAction.resetIcon
         }
     }
     

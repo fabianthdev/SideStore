@@ -68,7 +68,7 @@ struct MyAppsView: View {
             LazyVStack(spacing: 16) {
                 if let progress = SideloadingManager.shared.progress {
                     VStack {
-                        Text("Sideloading in progress...")
+                        Text(L10n.MyAppsView.sideloading)
                             .padding()
                         
                         ProgressView(progress)
@@ -84,14 +84,14 @@ struct MyAppsView: View {
                 }
                 
                 HStack {
-                    Text("Active")
+                    Text(L10n.MyAppsView.active)
                         .font(.title2)
                         .bold()
                     Spacer()
                     SwiftUI.Button {
                         
                     } label: {
-                        Text("Refresh All")
+                        Text(L10n.MyAppsView.refreshAll)
                     }
                 }
                 
@@ -111,14 +111,14 @@ struct MyAppsView: View {
                 
                 VStack {
                     if DatabaseManager.shared.activeTeam()?.type == .free {
-                        Text("\(remainingAppIDs) App IDs Remaining")
+                        Text("\(remainingAppIDs) \(L10n.MyAppsView.appIDsRemaining)")
                             .foregroundColor(.secondary)
                     }
                     
                     SwiftUI.Button {
                         self.isShowingAppIDsView = true
                     } label: {
-                        Text("View App IDs")
+                        Text(L10n.MyAppsView.viewAppIDs)
                     }
                     .sheet(isPresented: self.$isShowingAppIDsView) {
                         NavigationView {
@@ -130,7 +130,7 @@ struct MyAppsView: View {
             .padding(.horizontal)
         }
         .background(Color(UIColor.systemGroupedBackground).ignoresSafeArea())
-        .navigationTitle("My Apps")
+        .navigationTitle(L10n.MyAppsView.myApps)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 SwiftUI.Button {
@@ -239,7 +239,7 @@ extension MyAppsView {
                     NotificationManager.shared.reportError(error: failure.value)
                 } else {
                     // TODO: Localize
-                    let title = "Failed to refresh \(failures.count) apps."
+                    let title = "\(L10n.MyAppsView.failedToRefresh) \(failures.count) \(L10n.MyAppsView.apps)"
                     
                     let error = failures.first?.value as NSError?
                     let message = error?.localizedFailure ?? error?.localizedFailureReason ?? error?.localizedDescription

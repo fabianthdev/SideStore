@@ -19,3 +19,106 @@
 "BrowseView.Section.PromotedCategories.showAll" = "Show all";
 "BrowseView.Section.AllApps.title" = "All Apps";
 "BrowseView.Actions.sources" = "Sources";
+"BrowseView.Categories.gamesAndEmulators" = "Games and\nEmulators";
+
+/* RootView */
+"RootView.news" = "News";
+"RootView.browse" = "Browse";
+"RootView.myApps" = "My Apps";
+"RootView.settings" = "Settings";
+
+/* SettingsView */
+"SettingsView.ConnectedAppleID.name" = "Name";
+"SettingsView.ConnectedAppleID.eMail" = "E-Mail";
+"SettingsView.ConnectedAppleID.type" = "Type";
+"SettingsView.ConnectedAppleID.text" = "Connected Apple ID";
+"SettingsView.ConnectedAppleID.signOut" = "Sign Out";
+"SettingsView.ConnectedAppleID.Footer.p1" = "Your Apple ID is required to sign the apps you install with SideStore.";
+"SettingsView.ConnectedAppleID.Footer.p2" = "Your credentials are only sent to Apple's servers and are not accessible by the SideStore Team. Once successfully logged in, the login details are stored securely on your device.";
+
+"SettingsView.connectAppleID" = "Connect your Apple ID";
+"SettingsView.backgroundRefresh" = "Background Refresh";
+"SettingsView.addToSiri" = "Add to Siri...";
+"SettingsView.refreshingApps" = "Refreshing Apps";
+"SettingsView.switchToUIKit" = "Switch to UIKit";
+"SettingsView.resetImageCache" = "Reset Image Cache";
+"SettingsView.debug" = "Debug";
+"SettingsView.swiftUIRedesign" = "SwiftUI Redesign";
+"SettingsView.credits" = "Credits";
+"SettingsView.title" = "Settings";
+"SettingsView.refreshingAppsFooter" = "Enable Background Refresh to automatically refresh apps in the background when connected to WiFi and with Wireguard active.";
+
+/* ConnectAppleIDView */
+"ConnectAppleIDView.startWithSignIn" = "Sign in with your Apple ID to get started.";
+"ConnectAppleIDView.signIn" = "Sign In";
+"ConnectAppleIDView.appleID" = "Apple ID";
+"ConnectAppleIDView.password" = "Password";
+"ConnectAppleIDView.whyDoWeNeedThis" = "Why do we need this?";
+"ConnectAppleIDView.footer" = "Your Apple ID is used to configure apps so they can be installed on this device. Your credentials will be stored securely in this device's Keychain and sent only to Apple for authentication.";
+"ConnectAppleIDView.connectYourAppleID" = "Connect Your Apple ID";
+"ConnectAppleIDView.cancel" = "Cancel";
+"ConnectAppleIDView.failedToSignIn" = "Failed to Sign In";
+
+/* SourcesView */
+"SourcesView.sourcesDescription" = "Sources control what apps are available to download through SideStore.";
+"SourcesView.remove" = "Remove";
+"SourcesView.trustedSources" = "Trusted Sources";
+"SourcesView.reviewedText" = "SideStore has reviewed these sources to make sure they meet our safety standards.";
+"SourcesView.sources" = "Sources";
+"SourcesView.done" = "Done";
+
+/* AddSourceView */
+"AddSourceView.sourceURL" = "Source URL";
+"AddSourceView.sourceWarning" = "Please enter the source url here. Then, tap continue to validate and add the source in the next step.";
+"AddSourceView.sourceWarningContinued" = "Be careful with unvalidated third-party sources! Make sure to only add sources that you trust.";
+"AddSourceView.continue" = "Continue";
+"AddSourceView.title" = "Add Source";
+
+/* ConfirmAddSourceView */
+"ConfirmAddSourceView.apps" = "Apps";
+"ConfirmAddSourceView.newsItems" = "News Items";
+"ConfirmAddSourceView.sourceContents" = "Source Contents";
+"ConfirmAddSourceView.sourceIdentifier" = "Source Identifier";
+"ConfirmAddSourceView.sourceURL" = "Source URL";
+"ConfirmAddSourceView.sourceInfo" = "Source Information";
+"ConfirmAddSourceView.addSource" = "Add Source";
+
+/* AppPillButton */
+"AppPillButton.free" = "Free";
+"AppPillButton.open" = "Open";
+
+/* AppAction */
+"AppAction.install" = "Install";
+"AppAction.open" = "Open";
+"AppAction.refresh" = "Refresh";
+"AppAction.activate" = "Activate";
+"AppAction.deactivate" = "Deactivate";
+"AppAction.remove" = "Remove";
+"AppAction.enableJIT" = "Activate JIT";
+"AppAction.backup" = "Backup";
+"AppAction.exportBackup" = "Export backup";
+"AppAction.restoreBackup" = "Restore backup";
+"AppAction.chooseCustomIcon" = "Customize icon";
+"AppAction.resetIcon" = "Reset icon";
+
+/* AppDetailView*/
+"AppDetailView.more" = "More...";
+"AppDetailView.whatsNew" = "What's New";
+"AppDetailView.version" = "Version";
+"AppDetailView.noVersionInformation" = "No version information";
+"AppDetailView.noPermissions" = "The app requires no permissions.";
+"AppDetailView.permissions" = "Permissions";
+
+/* AppPermissionGrid */
+"AppPermissionGrid.usageDescription" = "Usage Description";
+
+/* MyAppsView */
+"MyAppsView.active" = "Active";
+"MyAppsView.sideloading" = "Sideloading in progress...";
+"MyAppsView.refreshAll" = "Refresh All";
+"MyAppsView.appIDsRemaining" = "App IDs Remaining";
+"MyAppsView.noUpdatesAvailable" = "No Updates Available";
+"MyAppsView.failedToRefresh" = "Failed to refresh";
+"MyAppsView.apps" = "apps"; /* Keep this lowercase */
+"MyAppsView.viewAppIDs" = "View App IDs";
+"MyAppsView.myApps" = "My Apps";
