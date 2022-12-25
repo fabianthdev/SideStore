@@ -25,7 +25,7 @@
 /* RootView */
 "RootView.news" = "Noticias";
 "RootView.browse" = "Navegar";
-"RootView.myApps" = "Mis aplicaciones";
+"RootView.myApps" = "Mis apps";
 "RootView.settings" = "Configuración";
 
 /* SettingsView */
