@@ -34,7 +34,7 @@ struct SourcesView: View {
             LazyVStack(alignment: .leading, spacing: 24) {
                 // Installed Sources
                 LazyVStack(alignment: .leading, spacing: 12) {
-                    Text("Sources control what apps are available to download through SideStore.")
+                    Text(L10n.SourcesView.sourcesDescription)
                         .font(.callout)
                         .foregroundColor(.secondary)
                     
@@ -57,7 +57,7 @@ struct SourcesView: View {
                                 SwiftUI.Button {
                                     self.removeSource(source)
                                 } label: {
-                                    Label("Remove", systemImage: "trash")
+                                    Label(L10n.SourcesView.remove, systemImage: "trash")
                                 }
                             }))
                         }
@@ -66,11 +66,11 @@ struct SourcesView: View {
                 
                 // Trusted Sources
                 LazyVStack(alignment: .leading) {
-                    Text("Trusted Sources")
+                    Text(L10n.SourcesView.trustedSources)
                         .font(.title3)
                         .bold()
                     
-                    Text("SideStore has reviewed these sources to make sure they meet our safety standards.")
+                    Text(L10n.SourcesView.reviewedText)
                         .font(.callout)
                         .foregroundColor(.secondary)
                     
@@ -79,7 +79,7 @@ struct SourcesView: View {
             }
             .padding()
         }
-        .navigationTitle("Sources")
+        .navigationTitle(L10n.SourcesView.sources)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 SwiftUI.Button {
@@ -106,7 +106,7 @@ struct SourcesView: View {
             
             ToolbarItem(placement: .navigationBarTrailing) {
                 SwiftUI.Button(action: self.dismiss) {
-                    Text("Done").bold()
+                    Text(L10n.SourcesView.done).bold()
                 }
             }
         }

@@ -42,7 +42,7 @@ struct AppPermissionGridItemView: View {
             .foregroundColor(.primary)
         }
         .alert(isPresented: self.$isPopoverPresented) {
-            Alert(title: Text("Usage Description"), message: Text(permission.usageDescription))
+            Alert(title: Text(L10n.AppPermissionGrid.usageDescription), message: Text(permission.usageDescription))
         }
     }
 }

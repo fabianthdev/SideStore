@@ -30,16 +30,16 @@ struct ConnectAppleIDView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 32) {
-                Text("Sign in with your Apple ID to get started.")
+                Text(L10n.ConnectAppleIDView.startWithSignIn)
                 
                 VStack(spacing: 16) {
-                    RoundedTextField(title: "Apple ID", placeholder: "user@sidestore.io", text: $email)
+                    RoundedTextField(title: L10n.ConnectAppleIDView.appleID, placeholder: "user@sidestore.io", text: $email)
                     
-                    RoundedTextField(title: "Password", placeholder: "••••••", text: $password, isSecure: true)
+                    RoundedTextField(title: L10n.ConnectAppleIDView.password, placeholder: "••••••", text: $password, isSecure: true)
                 }
                 
                 SwiftUI.Button(action: signIn) {
-                    Text("Sign in")
+                    Text(L10n.ConnectAppleIDView.signIn)
                         .bold()
                 }
                 .buttonStyle(FilledButtonStyle(isLoading: isLoading))
@@ -48,10 +48,10 @@ struct ConnectAppleIDView: View {
                 Spacer()
                 
                 VStack(alignment: .leading) {
-                    Text("Why do we need this?")
+                    Text(L10n.ConnectAppleIDView.whyDoWeNeedThis)
                         .bold()
                     
-                    Text("Your Apple ID is used to configure apps so they can be installed on this device. Your credentials will be stored securely in this device's Keychain and sent only to Apple for authentication.")
+                    Text(L10n.ConnectAppleIDView.footer)
                 }
                 .padding()
                 .background(
@@ -62,11 +62,11 @@ struct ConnectAppleIDView: View {
             .padding(.horizontal)
         }
         .frame(maxWidth: .infinity)
-        .navigationTitle("Connect your Apple ID")
+        .navigationTitle(L10n.ConnectAppleIDView.connectYourAppleID)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 SwiftUI.Button(action: self.cancel) {
-                    Text("Cancel")
+                    Text(L10n.ConnectAppleIDView.cancel)
                 }
             }
         }
@@ -87,7 +87,7 @@ struct ConnectAppleIDView: View {
                 break
                 
             case .failure(let error as NSError):
-                let error = error.withLocalizedFailure(NSLocalizedString("Failed to Log In", comment: ""))
+                let error = error.withLocalizedFailure(NSLocalizedString(L10n.ConnectAppleIDView.failedToSignIn, comment: ""))
                 print(error)
                 
             case .success((let account, let session)):
