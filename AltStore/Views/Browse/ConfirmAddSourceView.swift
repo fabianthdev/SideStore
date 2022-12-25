@@ -24,7 +24,7 @@ struct ConfirmAddSourceView: View {
             List {
                 Section {
                     VStack(alignment: .leading) {
-                        Text("\(source.apps.count) Apps")
+                        Text("\(source.apps.count) \(L10n.ConfirmAddSourceView.apps)")
                         
                         Text(source.apps.map { $0.name }.joined(separator: ", "))
                             .font(.callout)
@@ -33,28 +33,28 @@ struct ConfirmAddSourceView: View {
                     }
                     
                     VStack() {
-                        Text("\(source.newsItems.count) News Items")
+                        Text("\(source.newsItems.count) \(L10n.ConfirmAddSourceView.newsItems)")
                     }
                 } header: {
-                    Text("Source Contents")
+                    Text(L10n.ConfirmAddSourceView.sourceContents)
                 }
                 
                 Section {
                     VStack(alignment: .leading) {
-                        Text("Source Identifier")
+                        Text(L10n.ConfirmAddSourceView.sourceIdentifier)
                         Text(source.identifier)
                             .font(.callout)
                             .foregroundColor(.secondary)
                     }
                     
                     VStack(alignment: .leading) {
-                        Text("Source URL")
+                        Text(L10n.ConfirmAddSourceView.sourceURL)
                         Text(source.sourceURL.absoluteString)
                             .font(.callout)
                             .foregroundColor(.secondary)
                     }
                 } header: {
-                    Text("Source Info")
+                    Text(L10n.ConfirmAddSourceView.sourceInfo)
                 }
             }
             .listStyle(InsetGroupedListStyle())
@@ -64,7 +64,7 @@ struct ConfirmAddSourceView: View {
             SwiftUI.Button {
                 confirmationHandler(fetchedSource)
             } label: {
-                Label(title: { Text("Add Source") }, icon: { Image(systemName: "plus") })
+                Label(title: { Text(L10n.ConfirmAddSourceView.addSource) }, icon: { Image(systemName: "plus") })
             }
             .buttonStyle(FilledButtonStyle())
             .padding()
