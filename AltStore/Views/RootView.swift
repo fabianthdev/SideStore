@@ -90,10 +90,10 @@ extension RootView {
 
         var displayName: String {
             switch self {
-            case .news: return "News"
-            case .browse: return "Browse"
-            case .myApps: return "My Apps"
-            case .settings: return "Settings"
+            case .news: return L10n.RootView.news
+            case .browse: return L10n.RootView.browse
+            case .myApps: return L10n.RootView.myApps
+            case .settings: return L10n.RootView.settings
             }
         }
         

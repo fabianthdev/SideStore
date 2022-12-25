@@ -114,7 +114,7 @@ struct AppDetailView: View {
             
             ExpandableText(text: storeApp.localizedDescription)
                 .lineLimit(6)
-                .expandButton(TextSet(text: "More...", font: .callout, color: .accentColor))
+                .expandButton(TextSet(text: L10n.AppDetailView.more, font: .callout, color: .accentColor))
                 .padding(.horizontal)
             
             currentVersionView
@@ -158,11 +158,11 @@ struct AppDetailView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading) {
-                    Text("What's New")
+                    Text(L10n.AppDetailView.whatsNew)
                         .bold()
                         .font(.title3)
                     
-                    Text("Version \(storeApp.version)")
+                    Text("\(L10n.AppDetailView.version) \(storeApp.version)")
                         .font(.callout)
                         .foregroundColor(.secondary)
                 }
@@ -180,9 +180,9 @@ struct AppDetailView: View {
             if let versionDescription = storeApp.versionDescription {
                 ExpandableText(text: versionDescription)
                     .lineLimit(5)
-                    .expandButton(TextSet(text: "More...", font: .callout, color: .accentColor))
+                    .expandButton(TextSet(text: L10n.AppDetailView.more, font: .callout, color: .accentColor))
             } else {
-                Text("No version information")
+                Text(L10n.AppDetailView.noVersionInformation)
                     .foregroundColor(.secondary)
             }
         }
@@ -190,12 +190,12 @@ struct AppDetailView: View {
     
     var permissionsView: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text("Permissions")
+            Text(L10n.AppDetailView.permissions)
                 .bold()
                 .font(.title3)
             
             if storeApp.permissions.isEmpty {
-                Text("The app requires no permissions.")
+                Text(L10n.AppDetailView.noPermissions)
                     .font(.callout)
                     .foregroundColor(.secondary)
             } else {

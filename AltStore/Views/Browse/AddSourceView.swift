@@ -23,15 +23,15 @@ struct AddSourceView: View {
                     .autocapitalization(.none)
                     .autocorrectionDisabled()
             } header: {
-                Text("Source URL")
+                Text(L10n.AddSourceView.sourceURL)
             } footer: {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Please enter the source url here. Then, tap continue to validate and add the source in the next step.")
+                    Text(L10n.AddSourceView.sourceWarning)
                     
                     HStack(alignment: .top) {
                         Image(systemSymbol: .exclamationmarkTriangleFill)
                         
-                        Text("Be careful with unvalidated third-party sources! Make sure to only add sources that you trust.")
+                        Text(L10n.AddSourceView.sourceWarningContinued)
                     }
                 }
             }
@@ -39,12 +39,12 @@ struct AddSourceView: View {
             SwiftUI.Button {
                 self.continueHandler(self.sourceUrlText)
             } label: {
-                Text("Continue")
+                Text(L10n.AddSourceView.continue)
             }
             .disabled(URL(string: self.sourceUrlText)?.host == nil)
         }
         .listStyle(InsetGroupedListStyle())
-        .navigationTitle("Add Source")
+        .navigationTitle(L10n.AddSourceView.title)
     }
 }
 

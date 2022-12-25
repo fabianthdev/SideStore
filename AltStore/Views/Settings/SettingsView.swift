@@ -36,21 +36,21 @@ struct SettingsView: View {
                 
                 if let connectedAppleID = connectedTeams.first {
                     HStack {
-                        Text("Name")
+                        Text(L10n.SettingsView.ConnectedAppleID.name)
                             .foregroundColor(.secondary)
                         Spacer()
                         Text(connectedAppleID.name)
                     }
                     
                     HStack {
-                        Text("E-Mail")
+                        Text(L10n.SettingsView.ConnectedAppleID.eMail)
                             .foregroundColor(.secondary)
                         Spacer()
                         Text(connectedAppleID.account.appleID)
                     }
                     
                     HStack {
-                        Text("Type")
+                        Text(L10n.SettingsView.ConnectedAppleID.type)
                             .foregroundColor(.secondary)
                         Spacer()
                         Text(connectedAppleID.type.localizedDescription)
@@ -59,18 +59,18 @@ struct SettingsView: View {
                     SwiftUI.Button {
                         self.connectAppleID()
                     } label: {
-                        Text("Connect your Apple ID")
+                        Text(L10n.SettingsView.connectAppleID)
                     }
                 }
             } header: {
                 if !connectedTeams.isEmpty {
                     HStack {
-                        Text("Connected Apple ID")
+                        Text(L10n.SettingsView.ConnectedAppleID.text)
                         Spacer()
                         SwiftUI.Button {
                             self.disconnectAppleID()
                         } label: {
-                            Text("Sign Out")
+                            Text(L10n.SettingsView.ConnectedAppleID.signOut)
                                 .font(.callout)
                                 .bold()
                         }
@@ -78,21 +78,21 @@ struct SettingsView: View {
                 }
             } footer: {
                 VStack(spacing: 4) {
-                    Text("Your Apple ID is required to sign the apps you install with SideStore.")
+                    Text(L10n.SettingsView.ConnectedAppleID.Footer.p1)
                     
-                    Text("Your credentials are only sent to Apple's servers and are not accessible by the SideStore Team. Once successfully logged in, the login details are stored securely on your device.")
+                    Text(L10n.SettingsView.ConnectedAppleID.Footer.p2)
                 }
             }
             
             Section {
                 Toggle(isOn: self.$isBackgroundRefreshEnabled, label: {
-                    Text("Background Refresh")
+                    Text(L10n.SettingsView.backgroundRefresh)
                 })
                 
                 SwiftUI.Button {
                     self.isShowingAddShortcutView = true
                 } label: {
-                    Text("Add to Siri...")
+                    Text(L10n.SettingsView.addToSiri)
                 }
                 .sheet(isPresented: self.$isShowingAddShortcutView) {
                     if let shortcut = INShortcut(intent: INInteraction.refreshAllApps().intent) {
@@ -100,22 +100,22 @@ struct SettingsView: View {
                     }
                 }
             } header: {
-                Text("Refreshing Apps")
+                Text(L10n.SettingsView.refreshingApps)
             } footer: {
-                Text("Enable Background Refresh to automatically refresh apps in the background when connected to WiFi and with Wireguard active.")
+                Text(L10n.SettingsView.refreshingAppsFooter)
             }
             
             
             Section {
                 SwiftUI.Button(action: switchToUIKit) {
-                    Text("Switch to UIKit")
+                    Text(L10n.SettingsView.switchToUIKit)
                 }
 
                 SwiftUI.Button(action: resetImageCache) {
-                    Text("Reset Image Cache")
+                    Text(L10n.SettingsView.resetImageCache)
                 }
             } header: {
-                Text("Debug")
+                Text(L10n.SettingsView.debug)
             }
             
             
@@ -124,7 +124,7 @@ struct SettingsView: View {
                     SafariView(url: URL(string: "https://fabian-thies.de")!)
                 } label: {
                     HStack {
-                        Text("SwiftUI Redesign")
+                        Text(L10n.SettingsView.swiftUIRedesign)
                             .foregroundColor(.secondary)
                         Spacer()
                         Text("fabianthdev")
@@ -132,7 +132,7 @@ struct SettingsView: View {
                 }
 
             } header: {
-                Text("Credits")
+                Text(L10n.SettingsView.credits)
             }
             
             Section {
@@ -144,7 +144,7 @@ struct SettingsView: View {
             }
         }
         .listStyle(InsetGroupedListStyle())
-        .navigationTitle("Settings")
+        .navigationTitle(L10n.SettingsView.title)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 SwiftUI.Button {
