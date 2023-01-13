@@ -51,7 +51,7 @@ struct SourcesView: View {
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
-                        .background(Color.accentColor.opacity(0.5))
+                        .tintedBackground(.accentColor)
                         .clipShape(RoundedRectangle(cornerRadius: 30, style: .circular))
                         .if(source.identifier != Source.altStoreIdentifier) { view in
                             view.contextMenu(ContextMenu(menuItems: {
@@ -156,6 +156,84 @@ struct SourcesView: View {
             }
         }
     }
+    
+    
+//    func fetchTrustedSources() {
+//        func finish(_ result: Result<[Source], Error>)
+//        {
+//            self.fetchTrustedSourcesResult = result.map { _ in () }
+//
+//            DispatchQueue.main.async {
+//                do
+//                {
+//                    let sources = try result.get()
+//                    print("Fetched trusted sources:", sources.map { $0.identifier })
+//
+//                    let sectionUpdate = RSTCellContentChange(type: .update, sectionIndex: 0)
+//                    self.trustedSourcesDataSource.setItems(sources, with: [sectionUpdate])
+//                }
+//                catch
+//                {
+//                    print("Error fetching trusted sources:", error)
+//
+//                    let sectionUpdate = RSTCellContentChange(type: .update, sectionIndex: 0)
+//                    self.trustedSourcesDataSource.setItems([], with: [sectionUpdate])
+//                }
+//            }
+//        }
+//
+//        self.fetchTrustedSourcesOperation = AppManager.shared.fetchTrustedSources { result in
+//            switch result
+//            {
+//            case .failure(let error): finish(.failure(error))
+//            case .success(let trustedSources):
+//                // Cache trusted source IDs.
+//                UserDefaults.shared.trustedSourceIDs = trustedSources.map { $0.identifier }
+//
+//                // Don't show sources without a sourceURL.
+//                let featuredSourceURLs = trustedSources.compactMap { $0.sourceURL }
+//
+//                // This context is never saved, but keeps the managed sources alive.
+//                let context = DatabaseManager.shared.persistentContainer.newBackgroundSavingViewContext()
+//                self._fetchTrustedSourcesContext = context
+//
+//                let dispatchGroup = DispatchGroup()
+//
+//                var sourcesByURL = [URL: Source]()
+//                var fetchError: Error?
+//
+//                for sourceURL in featuredSourceURLs
+//                {
+//                    dispatchGroup.enter()
+//
+//                    AppManager.shared.fetchSource(sourceURL: sourceURL, managedObjectContext: context) { result in
+//                        // Serialize access to sourcesByURL.
+//                        context.performAndWait {
+//                            switch result
+//                            {
+//                            case .failure(let error): fetchError = error
+//                            case .success(let source): sourcesByURL[source.sourceURL] = source
+//                            }
+//
+//                            dispatchGroup.leave()
+//                        }
+//                    }
+//                }
+//
+//                dispatchGroup.notify(queue: .main) {
+//                    if let error = fetchError
+//                    {
+//                        finish(.failure(error))
+//                    }
+//                    else
+//                    {
+//                        let sources = featuredSourceURLs.compactMap { sourcesByURL[$0] }
+//                        finish(.success(sources))
+//                    }
+//                }
+//            }
+//        }
+//    }
 }
 
 struct SourcesListView_Previews: PreviewProvider {
