@@ -35,7 +35,8 @@ struct AppPermissionGridItemView: View {
             self.isPopoverPresented = true
         } label: {
             VStack {
-                Image(uiImage: permission.type.icon ?? UIImage(systemSymbol: .questionmark))
+                Image(uiImage: permission.type.icon?.withRenderingMode(.alwaysTemplate) ?? UIImage(systemSymbol: .questionmark))
+                    .foregroundColor(.primary)
                     .padding()
                     .background(Circle().foregroundColor(Color(.secondarySystemBackground)))
                 Text(permission.type.localizedShortName ?? permission.type.localizedName ?? "")
