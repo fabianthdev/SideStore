@@ -36,7 +36,6 @@
 "SettingsView.ConnectedAppleID.signOut" = "Cerrar sesión";
 "SettingsView.ConnectedAppleID.Footer.p1" = "Se requiere de su Apple ID para firmar las aplicaciones que se instalan con SideStore.";
 "SettingsView.ConnectedAppleID.Footer.p2" = "Sus datos son enviados solamente a Apple, SideStore Team no tiene acceso alguno a sus credenciales. Los detalles del inicio de sesión serán guardadas de forma segura en su dispositivo después de haber iniciado sesión exitosamente.";
-
 "SettingsView.connectAppleID" = "Inicia sesión con un Apple ID";
 "SettingsView.backgroundRefresh" = "Refrescar en segundo plano";
 "SettingsView.addToSiri" = "Agregar a Siri...";
@@ -50,6 +49,7 @@
 "SettingsView.refreshingAppsFooter" = "Active el refresco en segundo plano para que las aplicaciones sean refrescadas automáticamente cuando estés conectado a una red Wi-Fi y tengas a WireGuard activado.";
 
 /* ConnectAppleIDView */
+"ConnectAppleIDView.appleID" = "Apple ID";
 "ConnectAppleIDView.startWithSignIn" = "Inicie sesión con su Apple ID para comenzar.";
 "ConnectAppleIDView.signIn" = "Iniciar sesión";
 "ConnectAppleIDView.password" = "Contraseña";
