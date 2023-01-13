@@ -44,10 +44,29 @@ struct NewsItemView: View {
     var newsContent: some View {
         VStack(alignment: .leading, spacing: 12) {
             VStack(alignment: .leading, spacing: 12) {
-                Text(newsItem.title)
-                    .font(.title2)
-                    .bold()
-                    .foregroundColor(.white)
+                VStack(alignment: .leading) {
+                    Text(newsItem.title)
+                        .font(.title2)
+                        .bold()
+                        .foregroundColor(.white)
+                    
+                    VStack(alignment: .leading) {
+                        if let sourceName = newsItem.source?.name {
+                            Text(sourceName)
+                                .italic()
+                        }
+                        
+                        if let externalURL = newsItem.externalURL {
+                            HStack(spacing: 0) {
+                                Image(systemSymbol: .link)
+                                Text(externalURL.host ?? "")
+                                    .italic()
+                            }
+                        }
+                    }
+                    .font(.system(size: 14))
+                    .foregroundColor(.white.opacity(0.7))
+                }
                 
                 Text(newsItem.caption)
                     .foregroundColor(.white.opacity(0.7))
