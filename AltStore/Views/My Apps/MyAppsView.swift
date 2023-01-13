@@ -29,6 +29,9 @@ struct MyAppsView: View {
     ], predicate: NSPredicate(format: "%K == YES", #keyPath(InstalledApp.isActive)))
     var activeApps: FetchedResults<InstalledApp>
     
+    @AppStorage("shouldShowAppUpdateHint")
+    var shouldShowAppUpdateHint: Bool = true
+    
     @ObservedObject
     var viewModel = MyAppsViewModel()
     
@@ -72,7 +75,11 @@ struct MyAppsView: View {
                     .background(Color(UIColor.secondarySystemBackground))
                 }
                 
+                if updates.isEmpty {
+                    if shouldShowAppUpdateHint {
                 updatesSection
+                    }
+                }
                 
                 HStack {
                     Text("Active")
@@ -139,15 +146,36 @@ struct MyAppsView: View {
     }
     
     var updatesSection: some View {
-        Text("No Updates Available")
-            .font(.headline)
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(alignment: .center) {
+                Text("All Apps are Up To Date")
             .bold()
+                Spacer()
+                
+                Menu {
+                    SwiftUI.Button {
+                        self.dismissUpdatesHint(forever: false)
+                    } label: {
+                        Label("Dismiss for now", systemSymbol: .zzz)
+                    }
+                    
+                    SwiftUI.Button {
+                        self.dismissUpdatesHint(forever: true)
+                    } label: {
+                        Label("Don't show this again", systemSymbol: .xmark)
+                    }
+                } label: {
+                    Image(systemSymbol: .xmark)
+                }
+            }
+            
+            Text("You will be notified once updates for your apps are available. The updates will then be shown here.")
+                .font(.callout)
+        }
             .foregroundColor(.secondary)
-            .opacity(0.8)
             .padding()
-            .frame(maxWidth: .infinity)
-            .tintedBackground(.accentColor)
-            .clipShape(RoundedRectangle(cornerRadius: 30, style: .circular))
+        .background(Color(.tertiarySystemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
     
     @ViewBuilder
@@ -168,6 +196,12 @@ struct MyAppsView: View {
         let installedApps = InstalledApp.fetchAppsForRefreshingAll(in: DatabaseManager.shared.viewContext)
         
         self.refresh(installedApps) { result in }
+    }
+    
+    func dismissUpdatesHint(forever: Bool) {
+        withAnimation {
+            self.shouldShowAppUpdateHint = false
+        }
     }
 }
 
