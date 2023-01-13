@@ -9,6 +9,7 @@
 import SwiftUI
 import AsyncImage
 import ExpandableText
+import SFSafeSymbols
 import AltStoreCore
 
 struct AppDetailView: View {
@@ -93,6 +94,10 @@ struct AppDetailView: View {
     
     var contentView: some View {
         VStack(alignment: .leading, spacing: 32) {
+            if storeApp.sourceIdentifier == Source.altStoreIdentifier {
+                officialAppBadge
+            }
+            
             if let subtitle = storeApp.subtitle {
                 Text(subtitle)
                     .multilineTextAlignment(.center)
@@ -127,6 +132,26 @@ struct AppDetailView: View {
                 .foregroundColor(Color(UIColor.systemBackground))
                 .shadow(radius: isHeaderViewVisible ? 12 : 0)
         )
+    }
+    
+    var officialAppBadge: some View {
+        HStack {
+            Spacer()
+            Image(systemSymbol: .checkmarkSealFill)
+            Text("Official App")
+            Spacer()
+        }
+        .foregroundColor(.accentColor)
+    }
+    
+    var trustedAppBadge: some View {
+        HStack {
+            Spacer()
+            Image(systemSymbol: .shieldLefthalfFill)
+            Text("From Trusted Source")
+            Spacer()
+        }
+        .foregroundColor(.accentColor)
     }
     
     var currentVersionView: some View {
