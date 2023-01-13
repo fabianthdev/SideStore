@@ -162,19 +162,23 @@ struct AppDetailView: View {
                         .bold()
                         .font(.title3)
                     
-                    Text("\(L10n.AppDetailView.version) \(storeApp.version)")
-                        .font(.callout)
-                        .foregroundColor(.secondary)
+                    if let version = storeApp.latestVersion?.version {
+                        Text("\(L10n.AppDetailView.version) \(version)")
+                            .font(.callout)
+                            .foregroundColor(.secondary)
+                    }
                 }
                 
                 Spacer()
-                
-                VStack(alignment: .trailing) {
-                    Text(dateFormatter.string(from: storeApp.versionDate))
-                    Text(byteCountFormatter.string(fromByteCount: Int64(storeApp.size)))
+
+                if let versionDate = storeApp.versionDate, let versionSize = storeApp.size {
+                    VStack(alignment: .trailing) {
+                        Text(dateFormatter.string(from: versionDate))
+                        Text(byteCountFormatter.string(fromByteCount: Int64(versionSize)))
+                    }
+                    .font(.callout)
+                    .foregroundColor(.secondary)
                 }
-                .font(.callout)
-                .foregroundColor(.secondary)
             }
             
             if let versionDescription = storeApp.versionDescription {

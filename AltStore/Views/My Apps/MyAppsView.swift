@@ -15,10 +15,10 @@ struct MyAppsView: View {
     
     // TODO: Refactor
     @SwiftUI.FetchRequest(sortDescriptors: [
-        NSSortDescriptor(keyPath: \InstalledApp.storeApp?.versionDate, ascending: true),
+        NSSortDescriptor(keyPath: \InstalledApp.storeApp?.latestVersion?.date, ascending: true),
         NSSortDescriptor(keyPath: \InstalledApp.name, ascending: true)
     ], predicate: NSPredicate(format: "%K == YES AND %K != nil AND %K != %K",
-                              #keyPath(InstalledApp.isActive), #keyPath(InstalledApp.storeApp), #keyPath(InstalledApp.version), #keyPath(InstalledApp.storeApp.version)))
+                              #keyPath(InstalledApp.isActive), #keyPath(InstalledApp.storeApp), #keyPath(InstalledApp.version), #keyPath(InstalledApp.storeApp.latestVersion.version)))
     var updates: FetchedResults<InstalledApp>
     
     

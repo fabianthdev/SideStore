@@ -64,11 +64,13 @@ class NotificationManager: ObservableObject {
         
         self.showNotification(title: text, detailText: detailText)
     }
-    
+
     func showNotification(title: String, detailText: String?) {
         let notificationId = UUID()
         
-        self.notifications[notificationId] = Notification(id: notificationId, title: title, message: detailText)
+        DispatchQueue.main.async {
+            self.notifications[notificationId] = Notification(id: notificationId, title: title, message: detailText)
+        }
         
         let dismissWorkItem = DispatchWorkItem {
             self.notifications.removeValue(forKey: notificationId)
