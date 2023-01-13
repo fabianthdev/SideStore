@@ -34,6 +34,7 @@
 		1F07F5672955D16A00F7BE95 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 1F07F5662955D16A00F7BE95 /* SFSafeSymbols */; };
 		1F07F5692955D3EC00F7BE95 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 1F07F5682955D3EC00F7BE95 /* SFSafeSymbols */; };
 		1F07F56B2955F11500F7BE95 /* AppScreenshotsPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */; };
+		1F07F56F2955FB2000F7BE95 /* AppIDsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F56E2955FB2000F7BE95 /* AppIDsView.swift */; };
 		1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */; };
 		1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD81E2932D84C007608A4 /* ExpandableText */; };
 		1F0DD8212933B749007608A4 /* AppPermissionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */; };
@@ -503,6 +504,7 @@
 		1920B04E2924AC8300744F60 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		19B9B7442845E6DF0076EF69 /* SelectTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTeamViewController.swift; sourceTree = "<group>"; };
 		1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotsPreview.swift; sourceTree = "<group>"; };
+		1F07F56E2955FB2000F7BE95 /* AppIDsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIDsView.swift; sourceTree = "<group>"; };
 		1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppScreenshotsScrollView.swift; sourceTree = "<group>"; };
 		1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionsGrid.swift; sourceTree = "<group>"; };
 		1F0DD83E29367F6C007608A4 /* ConnectAppleIDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectAppleIDView.swift; sourceTree = "<group>"; };
@@ -1079,6 +1081,7 @@
 				1FAFC5BD2927E10D00B8D837 /* MyAppsView.swift */,
 				1FA1C8C9294906890083119D /* MyAppsViewModel.swift */,
 				1F6284D4295209DA0060AAD8 /* AppAction.swift */,
+				1F07F56E2955FB2000F7BE95 /* AppIDsView.swift */,
 			);
 			path = "My Apps";
 			sourceTree = "<group>";
@@ -2604,6 +2607,7 @@
 				1F6284D7295218980060AAD8 /* DocumentPicker.swift in Sources */,
 				BFBE0007250AD0E70080826E /* ViewAppIntentHandler.swift in Sources */,
 				1F0DD83F29367F6C007608A4 /* ConnectAppleIDView.swift in Sources */,
+				1F07F56F2955FB2000F7BE95 /* AppIDsView.swift in Sources */,
 				BFDB6A0822AAED73007EA6D6 /* ResignAppOperation.swift in Sources */,
 				D593F1942717749A006E82DE /* PatchAppOperation.swift in Sources */,
 				BF770E5122BB1CF6002A40FE /* InstallAppOperation.swift in Sources */,

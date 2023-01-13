@@ -39,6 +39,8 @@ struct MyAppsView: View {
     @State var isShowingFilePicker: Bool = false
     @State var selectedSideloadingIpaURL: URL?
     
+    @State var isShowingAppIDsView: Bool = false
+    
     var remainingAppIDs: Int {
         guard let team = DatabaseManager.shared.activeTeam() else {
             return 0
@@ -77,7 +79,7 @@ struct MyAppsView: View {
                 
                 if updates.isEmpty {
                     if shouldShowAppUpdateHint {
-                updatesSection
+                        updatesSection
                     }
                 }
                 
@@ -108,13 +110,20 @@ struct MyAppsView: View {
                 }
                 
                 VStack {
-                    Text("\(remainingAppIDs) App IDs Remaining")
-                        .foregroundColor(.secondary)
+                    if DatabaseManager.shared.activeTeam()?.type == .free {
+                        Text("\(remainingAppIDs) App IDs Remaining")
+                            .foregroundColor(.secondary)
+                    }
                     
                     SwiftUI.Button {
-                        
+                        self.isShowingAppIDsView = true
                     } label: {
                         Text("View App IDs")
+                    }
+                    .sheet(isPresented: self.$isShowingAppIDsView) {
+                        NavigationView {
+                            AppIDsView()
+                        }
                     }
                 }
             }
@@ -149,7 +158,7 @@ struct MyAppsView: View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .center) {
                 Text("All Apps are Up To Date")
-            .bold()
+                    .bold()
                 Spacer()
                 
                 Menu {
@@ -172,8 +181,8 @@ struct MyAppsView: View {
             Text("You will be notified once updates for your apps are available. The updates will then be shown here.")
                 .font(.callout)
         }
-            .foregroundColor(.secondary)
-            .padding()
+        .foregroundColor(.secondary)
+        .padding()
         .background(Color(.tertiarySystemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }
