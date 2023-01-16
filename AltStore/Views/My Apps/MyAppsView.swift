@@ -155,19 +155,19 @@ struct MyAppsView: View {
     }
     
     var updatesSection: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        HintView {
             HStack(alignment: .center) {
                 Text("All Apps are Up To Date")
                     .bold()
                 Spacer()
-                
+
                 Menu {
                     SwiftUI.Button {
                         self.dismissUpdatesHint(forever: false)
                     } label: {
                         Label("Dismiss for now", systemSymbol: .zzz)
                     }
-                    
+
                     SwiftUI.Button {
                         self.dismissUpdatesHint(forever: true)
                     } label: {
@@ -176,15 +176,13 @@ struct MyAppsView: View {
                 } label: {
                     Image(systemSymbol: .xmark)
                 }
+                .foregroundColor(.secondary)
             }
-            
+
             Text("You will be notified once updates for your apps are available. The updates will then be shown here.")
                 .font(.callout)
+                .foregroundColor(.secondary)
         }
-        .foregroundColor(.secondary)
-        .padding()
-        .background(Color(.tertiarySystemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
     
     @ViewBuilder
@@ -428,6 +426,8 @@ extension MyAppsView {
 
 struct MyAppsView_Previews: PreviewProvider {
     static var previews: some View {
-        MyAppsView()
+        NavigationView {
+            MyAppsView()
+        }
     }
 }

@@ -42,15 +42,34 @@ struct BrowseView: View {
                             .bold()
                     }
                 }
-                
-                LazyVStack(spacing: 32) {
-                    ForEach(filteredApps, id: \.bundleIdentifier) { app in
-                        NavigationLink {
-                            AppDetailView(storeApp: app)
+
+                if searchText.isEmpty, filteredApps.count == 0 {
+                    HintView {
+                        Text("You don't have any apps yet.")
+                            .bold()
+
+                        Text("Apps are provided by \"sources\". The specification for them is an open standard, so everyone can create their own source. To get you started, we have compiled a list of \"Trusted Sources\" which you can check out by tapping the button below.")
+                            .font(.callout)
+                            .foregroundColor(.secondary)
+
+                        SwiftUI.Button {
+                            self.isShowingSourcesView = true
                         } label: {
-                            BrowseAppPreviewView(storeApp: app)
+                            Label("Add Source", systemSymbol: .plus)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(FilledButtonStyle())
+                        .padding(.top, 8)
+                    }
+                } else {
+                    LazyVStack(spacing: 32) {
+                        ForEach(filteredApps, id: \.bundleIdentifier) { app in
+                            NavigationLink {
+                                AppDetailView(storeApp: app)
+                            } label: {
+                                BrowseAppPreviewView(storeApp: app)
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
                     }
                 }
             }
@@ -111,7 +130,9 @@ struct BrowseView: View {
 
 struct BrowseView_Previews: PreviewProvider {
     static var previews: some View {
-        BrowseView()
+        NavigationView {
+            BrowseView()
+        }
     }
 }
 
