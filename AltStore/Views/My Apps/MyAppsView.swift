@@ -157,7 +157,7 @@ struct MyAppsView: View {
     var updatesSection: some View {
         HintView {
             HStack(alignment: .center) {
-                Text("All Apps are Up To Date")
+                Text(L10n.MyAppsView.Hints.NoUpdates.title)
                     .bold()
                 Spacer()
 
@@ -165,13 +165,13 @@ struct MyAppsView: View {
                     SwiftUI.Button {
                         self.dismissUpdatesHint(forever: false)
                     } label: {
-                        Label("Dismiss for now", systemSymbol: .zzz)
+                        Label(L10n.MyAppsView.Hints.NoUpdates.dismissForNow, systemSymbol: .zzz)
                     }
 
                     SwiftUI.Button {
                         self.dismissUpdatesHint(forever: true)
                     } label: {
-                        Label("Don't show this again", systemSymbol: .xmark)
+                        Label(L10n.MyAppsView.Hints.NoUpdates.dontShowAgain, systemSymbol: .xmark)
                     }
                 } label: {
                     Image(systemSymbol: .xmark)
@@ -179,7 +179,7 @@ struct MyAppsView: View {
                 .foregroundColor(.secondary)
             }
 
-            Text("You will be notified once updates for your apps are available. The updates will then be shown here.")
+            Text(L10n.MyAppsView.Hints.NoUpdates.text)
                 .font(.callout)
                 .foregroundColor(.secondary)
         }

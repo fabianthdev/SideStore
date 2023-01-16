@@ -44,11 +44,11 @@ struct AppScreenshotsPreview: View {
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .cancellationAction) {
                 SwiftUI.Button {
                     self.dismiss()
                 } label: {
-                    Text("Close")
+                    Text(L10n.Action.close)
                 }
             }
         }

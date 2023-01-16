@@ -26,7 +26,7 @@ struct AppRowView: View {
                 Text(app.name)
                     .bold()
                 
-                Text(storeApp?.developerName ?? "Sideloaded")
+                Text(storeApp?.developerName ?? L10n.AppRowView.sideloaded)
                     .font(.callout)
                     .foregroundColor(.secondary)
                 

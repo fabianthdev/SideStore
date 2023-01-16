@@ -7,6 +7,11 @@
 */
 
 
+/* General Actions */
+"Action.done" = "Done";
+"Action.close" = "Close";
+
+
 /* NewsView */
 "NewsView.title" = "News";
 "NewsView.Section.FromSources.title" = "From your Sources";
@@ -18,8 +23,18 @@
 "BrowseView.Section.PromotedCategories.title" = "Promoted Categories";
 "BrowseView.Section.PromotedCategories.showAll" = "Show all";
 "BrowseView.Section.AllApps.title" = "All Apps";
+"BrowseView.Hints.NoApps.title" = "You don't have any apps yet.";
+"BrowseView.Hints.NoApps.text" = "Apps are provided by \"sources\". The specification for them is an open standard, so everyone can create their own source. To get you started, we have compiled a list of \"Trusted Sources\" which you can check out by tapping the button below.";
+"BrowseView.Hints.NoApps.addSource" = "Add Source";
 "BrowseView.Actions.sources" = "Sources";
 "BrowseView.Categories.gamesAndEmulators" = "Games and\nEmulators";
+
+/* AppRowView */
+"AppRowView.sideloaded" = "Sideloaded";
+
+/* AppPillButton */
+"AppPillButton.free" = "Free";
+"AppPillButton.open" = "Open";
 
 /* RootView */
 "RootView.news" = "News";
@@ -102,6 +117,8 @@
 "AppAction.resetIcon" = "Reset icon";
 
 /* AppDetailView*/
+"AppDetailView.Badge.official" = "Official App";
+"AppDetailView.Badge.trusted" = "From Trusted Source";
 "AppDetailView.more" = "More...";
 "AppDetailView.whatsNew" = "What's New";
 "AppDetailView.version" = "Version";
@@ -117,8 +134,16 @@
 "MyAppsView.sideloading" = "Sideloading in progress...";
 "MyAppsView.refreshAll" = "Refresh All";
 "MyAppsView.appIDsRemaining" = "App IDs Remaining";
-"MyAppsView.noUpdatesAvailable" = "No Updates Available";
 "MyAppsView.failedToRefresh" = "Failed to refresh";
 "MyAppsView.apps" = "apps"; /* Keep this lowercase */
 "MyAppsView.viewAppIDs" = "View App IDs";
 "MyAppsView.myApps" = "My Apps";
+"MyAppsView.Hints.NoUpdates.title" = "All Apps are Up To Date";
+"MyAppsView.Hints.NoUpdates.text" = "You will be notified once updates for your apps are available. The updates will then be shown here.";
+"MyAppsView.Hints.NoUpdates.dismissForNow" = "Dismiss for now";
+"MyAppsView.Hints.NoUpdates.dontShowAgain" = "Don't show this again";
+
+
+/* AppIDsView */
+"AppIDsView.title" = "App IDs";
+"AppIDsView.description" = "Each app and app extension installed with SideStore must register an App ID with Apple.\n\nApp IDs for paid developer accounts never expire, and there is no limit to how many you can create.";

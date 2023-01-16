@@ -24,7 +24,7 @@ struct AppIDsView: View {
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading) {
-                Text("Each app and app extension installed with SideStore must register an App ID with Apple.\n\nApp IDs for paid developer accounts never expire, and there is no limit to how many you can create.")
+                Text(L10n.AppIDsView.description)
                     .foregroundColor(.secondary)
                 
                 ForEach(appIDs, id: \.identifier) { appId in
@@ -42,10 +42,10 @@ struct AppIDsView: View {
             }
             .padding()
         }
-        .navigationTitle("App IDs")
+        .navigationTitle(L10n.AppIDsView.title)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                SwiftUI.Button("Done", action: self.dismiss)
+            ToolbarItem(placement: .confirmationAction) {
+                SwiftUI.Button(L10n.Action.done, action: self.dismiss)
             }
         }
     }

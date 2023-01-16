@@ -44,10 +44,10 @@ struct AppPillButton: View {
                 return DateFormatterHelper.string(forExpirationDate: installedApp.expirationDate)
             }
             
-            return "Open"
+            return L10n.AppPillButton.open
         }
         
-        return "Free"
+        return L10n.AppPillButton.free
     }
     
     var body: some View {

@@ -138,7 +138,7 @@ struct AppDetailView: View {
         HStack {
             Spacer()
             Image(systemSymbol: .checkmarkSealFill)
-            Text("Official App")
+            Text(L10n.AppDetailView.Badge.official)
             Spacer()
         }
         .foregroundColor(.accentColor)
@@ -148,7 +148,7 @@ struct AppDetailView: View {
         HStack {
             Spacer()
             Image(systemSymbol: .shieldLefthalfFill)
-            Text("From Trusted Source")
+            Text(L10n.AppDetailView.Badge.trusted)
             Spacer()
         }
         .foregroundColor(.accentColor)

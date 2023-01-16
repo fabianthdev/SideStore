@@ -45,17 +45,17 @@ struct BrowseView: View {
 
                 if searchText.isEmpty, filteredApps.count == 0 {
                     HintView {
-                        Text("You don't have any apps yet.")
+                        Text(L10n.BrowseView.Hints.NoApps.title)
                             .bold()
 
-                        Text("Apps are provided by \"sources\". The specification for them is an open standard, so everyone can create their own source. To get you started, we have compiled a list of \"Trusted Sources\" which you can check out by tapping the button below.")
+                        Text(L10n.BrowseView.Hints.NoApps.text)
                             .font(.callout)
                             .foregroundColor(.secondary)
 
                         SwiftUI.Button {
                             self.isShowingSourcesView = true
                         } label: {
-                            Label("Add Source", systemSymbol: .plus)
+                            Label(L10n.BrowseView.Hints.NoApps.addSource, systemSymbol: .plus)
                         }
                         .buttonStyle(FilledButtonStyle())
                         .padding(.top, 8)

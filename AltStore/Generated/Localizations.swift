@@ -10,6 +10,12 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  internal enum Action {
+    /// Close
+    internal static let close = L10n.tr("Localizable", "Action.close", fallback: "Close")
+    /// General Actions
+    internal static let done = L10n.tr("Localizable", "Action.done", fallback: "Done")
+  }
   internal enum AddSourceView {
     /// Continue
     internal static let `continue` = L10n.tr("Localizable", "AddSourceView.continue", fallback: "Continue")
@@ -49,7 +55,7 @@ internal enum L10n {
     internal static let restoreBackup = L10n.tr("Localizable", "AppAction.restoreBackup", fallback: "Restore backup")
   }
   internal enum AppDetailView {
-    /// AppDetailView
+    /// More...
     internal static let more = L10n.tr("Localizable", "AppDetailView.more", fallback: "More...")
     /// The app requires no permissions.
     internal static let noPermissions = L10n.tr("Localizable", "AppDetailView.noPermissions", fallback: "The app requires no permissions.")
@@ -61,6 +67,20 @@ internal enum L10n {
     internal static let version = L10n.tr("Localizable", "AppDetailView.version", fallback: "Version")
     /// What's New
     internal static let whatsNew = L10n.tr("Localizable", "AppDetailView.whatsNew", fallback: "What's New")
+    internal enum Badge {
+      /// AppDetailView
+      internal static let official = L10n.tr("Localizable", "AppDetailView.Badge.official", fallback: "Official App")
+      /// From Trusted Source
+      internal static let trusted = L10n.tr("Localizable", "AppDetailView.Badge.trusted", fallback: "From Trusted Source")
+    }
+  }
+  internal enum AppIDsView {
+    /// Each app and app extension installed with SideStore must register an App ID with Apple.
+    /// 
+    /// App IDs for paid developer accounts never expire, and there is no limit to how many you can create.
+    internal static let description = L10n.tr("Localizable", "AppIDsView.description", fallback: "Each app and app extension installed with SideStore must register an App ID with Apple.\n\nApp IDs for paid developer accounts never expire, and there is no limit to how many you can create.")
+    /// AppIDsView
+    internal static let title = L10n.tr("Localizable", "AppIDsView.title", fallback: "App IDs")
   }
   internal enum AppPermissionGrid {
     /// AppPermissionGrid
@@ -71,6 +91,10 @@ internal enum L10n {
     internal static let free = L10n.tr("Localizable", "AppPillButton.free", fallback: "Free")
     /// Open
     internal static let `open` = L10n.tr("Localizable", "AppPillButton.open", fallback: "Open")
+  }
+  internal enum AppRowView {
+    /// AppRowView
+    internal static let sideloaded = L10n.tr("Localizable", "AppRowView.sideloaded", fallback: "Sideloaded")
   }
   internal enum BrowseView {
     /// Search
@@ -85,6 +109,16 @@ internal enum L10n {
       /// Games and
       /// Emulators
       internal static let gamesAndEmulators = L10n.tr("Localizable", "BrowseView.Categories.gamesAndEmulators", fallback: "Games and\nEmulators")
+    }
+    internal enum Hints {
+      internal enum NoApps {
+        /// Add Source
+        internal static let addSource = L10n.tr("Localizable", "BrowseView.Hints.NoApps.addSource", fallback: "Add Source")
+        /// Apps are provided by "sources". The specification for them is an open standard, so everyone can create their own source. To get you started, we have compiled a list of "Trusted Sources" which you can check out by tapping the button below.
+        internal static let text = L10n.tr("Localizable", "BrowseView.Hints.NoApps.text", fallback: "Apps are provided by \"sources\". The specification for them is an open standard, so everyone can create their own source. To get you started, we have compiled a list of \"Trusted Sources\" which you can check out by tapping the button below.")
+        /// You don't have any apps yet.
+        internal static let title = L10n.tr("Localizable", "BrowseView.Hints.NoApps.title", fallback: "You don't have any apps yet.")
+      }
     }
     internal enum Section {
       internal enum AllApps {
@@ -146,16 +180,24 @@ internal enum L10n {
     internal static let failedToRefresh = L10n.tr("Localizable", "MyAppsView.failedToRefresh", fallback: "Failed to refresh")
     /// My Apps
     internal static let myApps = L10n.tr("Localizable", "MyAppsView.myApps", fallback: "My Apps")
-    /// No Updates Available
-    internal static let noUpdatesAvailable = L10n.tr("Localizable", "MyAppsView.noUpdatesAvailable", fallback: "No Updates Available")
     /// Refresh All
     internal static let refreshAll = L10n.tr("Localizable", "MyAppsView.refreshAll", fallback: "Refresh All")
-    /// Active
-    internal static let remainingAppID = L10n.tr("Localizable", "MyAppsView.remainingAppID", fallback: "Active")
     /// Sideloading in progress...
     internal static let sideloading = L10n.tr("Localizable", "MyAppsView.sideloading", fallback: "Sideloading in progress...")
     /// Keep this lowercase
     internal static let viewAppIDs = L10n.tr("Localizable", "MyAppsView.viewAppIDs", fallback: "View App IDs")
+    internal enum Hints {
+      internal enum NoUpdates {
+        /// Dismiss for now
+        internal static let dismissForNow = L10n.tr("Localizable", "MyAppsView.Hints.NoUpdates.dismissForNow", fallback: "Dismiss for now")
+        /// Don't show this again
+        internal static let dontShowAgain = L10n.tr("Localizable", "MyAppsView.Hints.NoUpdates.dontShowAgain", fallback: "Don't show this again")
+        /// You will be notified once updates for your apps are available. The updates will then be shown here.
+        internal static let text = L10n.tr("Localizable", "MyAppsView.Hints.NoUpdates.text", fallback: "You will be notified once updates for your apps are available. The updates will then be shown here.")
+        /// All Apps are Up To Date
+        internal static let title = L10n.tr("Localizable", "MyAppsView.Hints.NoUpdates.title", fallback: "All Apps are Up To Date")
+      }
+    }
   }
   internal enum NewsView {
     /// NewsView
