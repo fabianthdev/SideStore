@@ -24,15 +24,7 @@ struct BrowseAppPreviewView: View {
             if !storeApp.screenshotURLs.isEmpty {
                 HStack {
                     ForEach(storeApp.screenshotURLs.prefix(2)) { url in
-                        AsyncImage(url: url) { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        } placeholder: {
-                            Color(UIColor.secondarySystemBackground)
-                                .aspectRatio(9/16, contentMode: .fit)
-                        }
-                        .cornerRadius(8)
+                        AppScreenshot(url: url)
                     }
                 }
                 .frame(height: 300)

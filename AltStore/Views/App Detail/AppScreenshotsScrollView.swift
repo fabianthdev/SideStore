@@ -28,15 +28,7 @@ struct AppScreenshotsScrollView: View {
                     SwiftUI.Button {
                         self.selectedScreenshotIndex = i
                     } label: {
-                        AsyncImage(url: url) { image in
-                            image
-                                .resizable()
-                        } placeholder: {
-                            Rectangle()
-                                .foregroundColor(.secondary)
-                        }
-                        .aspectRatio(aspectRatio, contentMode: .fit)
-                        .cornerRadius(8)
+                        AppScreenshot(url: url)
                     }
                 }
             }
