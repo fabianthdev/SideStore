@@ -77,7 +77,7 @@ struct SettingsView: View {
                     }
                 }
             } footer: {
-                VStack(spacing: 4) {
+                VStack(alignment: .leading, spacing: 4) {
                     Text(L10n.SettingsView.ConnectedAppleID.Footer.p1)
                     
                     Text(L10n.SettingsView.ConnectedAppleID.Footer.p2)
@@ -218,7 +218,9 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        NavigationView {
+            SettingsView()
+        }
     }
 }
 
