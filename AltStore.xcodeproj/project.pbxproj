@@ -33,6 +33,7 @@
 		1F0DD84129368056007608A4 /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD84029368056007608A4 /* EnvironmentValues.swift */; };
 		1F0DD8432936B0F9007608A4 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8422936B0F9007608A4 /* RoundedTextField.swift */; };
 		1F0DD8452936B3FE007608A4 /* FilledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8442936B3FE007608A4 /* FilledButtonStyle.swift */; };
+		1F2EF787297C4D40002FD839 /* LicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2EF786297C4D40002FD839 /* LicensesView.swift */; };
 		1F44634529744E570070E514 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44634429744E570070E514 /* HintView.swift */; };
 		1F5DF9D82974426300DDAA47 /* AppScreenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DF9D72974426300DDAA47 /* AppScreenshot.swift */; };
 		1F6284D5295209DA0060AAD8 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6284D4295209DA0060AAD8 /* AppAction.swift */; };
@@ -573,6 +574,7 @@
 		1F0DD84029368056007608A4 /* EnvironmentValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentValues.swift; sourceTree = "<group>"; };
 		1F0DD8422936B0F9007608A4 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		1F0DD8442936B3FE007608A4 /* FilledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButtonStyle.swift; sourceTree = "<group>"; };
+		1F2EF786297C4D40002FD839 /* LicensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesView.swift; sourceTree = "<group>"; };
 		1F44634429744E570070E514 /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 		1F5DF9D72974426300DDAA47 /* AppScreenshot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppScreenshot.swift; sourceTree = "<group>"; };
 		1F6284D4295209DA0060AAD8 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
@@ -1181,6 +1183,7 @@
 			children = (
 				1FAFC5C02927E13C00B8D837 /* SettingsView.swift */,
 				1F0DD83E29367F6C007608A4 /* ConnectAppleIDView.swift */,
+				1F2EF786297C4D40002FD839 /* LicensesView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -2829,6 +2832,7 @@
 				1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */,
 				BFDBBD80246CB84F004ED2F3 /* RemoveAppBackupOperation.swift in Sources */,
 				1FB96FCF292BBBCA007E68D1 /* SiriShortcutSetupView.swift in Sources */,
+				1F2EF787297C4D40002FD839 /* LicensesView.swift in Sources */,
 				BFF0B6942321CB85007A79E1 /* AuthenticationViewController.swift in Sources */,
 				BF3432FB246B894F0052F4A1 /* BackupAppOperation.swift in Sources */,
 				BF9ABA4922DD0742008935CF /* ScreenshotCollectionViewCell.swift in Sources */,

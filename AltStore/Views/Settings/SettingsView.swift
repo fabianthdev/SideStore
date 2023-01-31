@@ -27,6 +27,8 @@ struct SettingsView: View {
     
     @State var isShowingConnectAppleIDView = false
     @State var isShowingAddShortcutView = false
+
+    @State var externalURLToShow: URL?
     
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
     
@@ -104,7 +106,45 @@ struct SettingsView: View {
             } footer: {
                 Text(L10n.SettingsView.refreshingAppsFooter)
             }
-            
+
+            Section {
+                SwiftUI.Button {
+                    self.externalURLToShow = URL(string: "https://sidestore.io")!
+                } label: {
+                    HStack {
+                        Text("Developers")
+                            .foregroundColor(.secondary)
+                        Spacer()
+                        Text("SideStore Team")
+                        Image(systemSymbol: .chevronRight)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .foregroundColor(.primary)
+
+                SwiftUI.Button {
+                    self.externalURLToShow = URL(string: "https://fabian-thies.de")!
+                } label: {
+                    HStack {
+                        Text(L10n.SettingsView.swiftUIRedesign)
+                            .foregroundColor(.secondary)
+                        Spacer()
+                        Text("fabianthdev")
+                        Image(systemSymbol: .chevronRight)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .foregroundColor(.primary)
+
+                NavigationLink {
+                    LicensesView()
+                } label: {
+                    Text("Licenses")
+                }
+
+            } header: {
+                Text(L10n.SettingsView.credits)
+            }
             
             Section {
                 SwiftUI.Button(action: switchToUIKit) {
@@ -117,23 +157,7 @@ struct SettingsView: View {
             } header: {
                 Text(L10n.SettingsView.debug)
             }
-            
-            
-            Section {
-                NavigationLink {
-                    SafariView(url: URL(string: "https://fabian-thies.de")!)
-                } label: {
-                    HStack {
-                        Text(L10n.SettingsView.swiftUIRedesign)
-                            .foregroundColor(.secondary)
-                        Spacer()
-                        Text("fabianthdev")
-                    }
-                }
 
-            } header: {
-                Text(L10n.SettingsView.credits)
-            }
             
             Section {
                 
@@ -155,6 +179,9 @@ struct SettingsView: View {
                 }
 
             }
+        }
+        .sheet(item: $externalURLToShow) { url in
+            SafariView(url: url)
         }
     }
     
