@@ -18,7 +18,9 @@ struct MyAppsView: View {
         NSSortDescriptor(keyPath: \InstalledApp.storeApp?.latestVersion?.date, ascending: true),
         NSSortDescriptor(keyPath: \InstalledApp.name, ascending: true)
     ], predicate: NSPredicate(format: "%K == YES AND %K != nil AND %K != %K",
-                              #keyPath(InstalledApp.isActive), #keyPath(InstalledApp.storeApp), #keyPath(InstalledApp.version), #keyPath(InstalledApp.storeApp.latestVersion.version)))
+                              #keyPath(InstalledApp.isActive), #keyPath(InstalledApp.storeApp),
+                              #keyPath(InstalledApp.version), #keyPath(InstalledApp.storeApp.latestVersion.version))
+    )
     var updates: FetchedResults<InstalledApp>
     
     
@@ -108,21 +110,23 @@ struct MyAppsView: View {
                         self.rowView(for: app)
                     }
                 }
-                
-                VStack {
-                    if DatabaseManager.shared.activeTeam()?.type == .free {
-                        Text("\(remainingAppIDs) \(L10n.MyAppsView.appIDsRemaining)")
-                            .foregroundColor(.secondary)
-                    }
-                    
-                    SwiftUI.Button {
-                        self.isShowingAppIDsView = true
-                    } label: {
-                        Text(L10n.MyAppsView.viewAppIDs)
-                    }
-                    .sheet(isPresented: self.$isShowingAppIDsView) {
-                        NavigationView {
-                            AppIDsView()
+
+                if let activeTeam = DatabaseManager.shared.activeTeam() {
+                    VStack {
+                        if activeTeam.type == .free {
+                            Text("\(remainingAppIDs) \(L10n.MyAppsView.appIDsRemaining)")
+                                .foregroundColor(.secondary)
+                        }
+
+                        SwiftUI.Button {
+                            self.isShowingAppIDsView = true
+                        } label: {
+                            Text(L10n.MyAppsView.viewAppIDs)
+                        }
+                        .sheet(isPresented: self.$isShowingAppIDsView) {
+                            NavigationView {
+                                AppIDsView()
+                            }
                         }
                     }
                 }

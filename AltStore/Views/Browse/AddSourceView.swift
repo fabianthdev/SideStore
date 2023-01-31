@@ -45,6 +45,7 @@ struct AddSourceView: View {
         }
         .listStyle(InsetGroupedListStyle())
         .navigationTitle(L10n.AddSourceView.title)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
