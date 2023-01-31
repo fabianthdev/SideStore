@@ -55,16 +55,24 @@ internal enum L10n {
     internal static let restoreBackup = L10n.tr("Localizable", "AppAction.restoreBackup", fallback: "Restore backup")
   }
   internal enum AppDetailView {
+    /// 
+    internal static let information = L10n.tr("Localizable", "AppDetailView.information", fallback: "")
     /// More...
     internal static let more = L10n.tr("Localizable", "AppDetailView.more", fallback: "More...")
     /// The app requires no permissions.
     internal static let noPermissions = L10n.tr("Localizable", "AppDetailView.noPermissions", fallback: "The app requires no permissions.")
+    /// No screenshots available for this app.
+    internal static let noScreenshots = L10n.tr("Localizable", "AppDetailView.noScreenshots", fallback: "No screenshots available for this app.")
     /// No version information
     internal static let noVersionInformation = L10n.tr("Localizable", "AppDetailView.noVersionInformation", fallback: "No version information")
     /// Permissions
     internal static let permissions = L10n.tr("Localizable", "AppDetailView.permissions", fallback: "Permissions")
-    /// Version
-    internal static let version = L10n.tr("Localizable", "AppDetailView.version", fallback: "Version")
+    /// Ratings & Reviews
+    internal static let reviews = L10n.tr("Localizable", "AppDetailView.reviews", fallback: "Ratings & Reviews")
+    /// Version %@
+    internal static func version(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "AppDetailView.version", String(describing: p1), fallback: "Version %@")
+    }
     /// What's New
     internal static let whatsNew = L10n.tr("Localizable", "AppDetailView.whatsNew", fallback: "What's New")
     internal enum Badge {
@@ -72,6 +80,46 @@ internal enum L10n {
       internal static let official = L10n.tr("Localizable", "AppDetailView.Badge.official", fallback: "Official App")
       /// From Trusted Source
       internal static let trusted = L10n.tr("Localizable", "AppDetailView.Badge.trusted", fallback: "From Trusted Source")
+    }
+    internal enum Information {
+      /// Compatibility
+      internal static let compatibility = L10n.tr("Localizable", "AppDetailView.Information.compatibility", fallback: "Compatibility")
+      /// Requires iOS %@ or higher
+      internal static func compatibilityAtLeast(_ p1: Any) -> String {
+        return L10n.tr("Localizable", "AppDetailView.Information.compatibilityAtLeast", String(describing: p1), fallback: "Requires iOS %@ or higher")
+      }
+      /// Requires iOS %@ or lower
+      internal static func compatibilityOrLower(_ p1: Any) -> String {
+        return L10n.tr("Localizable", "AppDetailView.Information.compatibilityOrLower", String(describing: p1), fallback: "Requires iOS %@ or lower")
+      }
+      /// Unknown
+      internal static let compatibilityUnknown = L10n.tr("Localizable", "AppDetailView.Information.compatibilityUnknown", fallback: "Unknown")
+      /// Developer
+      internal static let developer = L10n.tr("Localizable", "AppDetailView.Information.developer", fallback: "Developer")
+      /// Latest Version
+      internal static let latestVersion = L10n.tr("Localizable", "AppDetailView.Information.latestVersion", fallback: "Latest Version")
+      /// Size
+      internal static let size = L10n.tr("Localizable", "AppDetailView.Information.size", fallback: "Size")
+      /// Source
+      internal static let source = L10n.tr("Localizable", "AppDetailView.Information.source", fallback: "Source")
+    }
+    internal enum Reviews {
+      /// out of %d
+      internal static func outOf(_ p1: Int) -> String {
+        return L10n.tr("Localizable", "AppDetailView.Reviews.outOf", p1, fallback: "out of %d")
+      }
+      /// %d Ratings
+      internal static func ratings(_ p1: Int) -> String {
+        return L10n.tr("Localizable", "AppDetailView.Reviews.ratings", p1, fallback: "%d Ratings")
+      }
+      /// See All
+      internal static let seeAll = L10n.tr("Localizable", "AppDetailView.Reviews.seeAll", fallback: "See All")
+    }
+    internal enum WhatsNew {
+      /// Show project on GitHub
+      internal static let showOnGithub = L10n.tr("Localizable", "AppDetailView.WhatsNew.showOnGithub", fallback: "Show project on GitHub")
+      /// Version History
+      internal static let versionHistory = L10n.tr("Localizable", "AppDetailView.WhatsNew.versionHistory", fallback: "Version History")
     }
   }
   internal enum AppIDsView {

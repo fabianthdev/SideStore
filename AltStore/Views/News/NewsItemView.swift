@@ -50,13 +50,15 @@ struct NewsItemView: View {
                         .bold()
                         .foregroundColor(.white)
                     
-                    VStack(alignment: .leading) {
+                    HStack(spacing: 0) {
                         if let sourceName = newsItem.source?.name {
                             Text(sourceName)
                                 .italic()
                         }
                         
                         if let externalURL = newsItem.externalURL {
+                            Text(" • ")
+
                             HStack(spacing: 0) {
                                 Image(systemSymbol: .link)
                                 Text(externalURL.host ?? "")

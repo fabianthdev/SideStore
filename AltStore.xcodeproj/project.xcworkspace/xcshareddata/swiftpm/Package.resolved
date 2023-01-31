@@ -30,10 +30,10 @@
     {
       "identity" : "expandabletext",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/NuPlay/ExpandableText",
+      "location" : "https://github.com/fabianthdev/ExpandableText",
       "state" : {
         "branch" : "main",
-        "revision" : "d140b404c6683bb169bb01ef4eeecdb6d9be8fb8"
+        "revision" : "a375f5b8c73f0af69aa7add890378fdf404a29bc"
       }
     },
     {

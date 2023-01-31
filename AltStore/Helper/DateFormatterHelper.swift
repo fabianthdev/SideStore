@@ -16,6 +16,20 @@ struct DateFormatterHelper {
         dateComponentsFormatter.collapsesLargestUnit = false
         return dateComponentsFormatter
     }()
+
+    private static let relativeDateFormatter: RelativeDateTimeFormatter = {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .abbreviated
+        return formatter
+    }()
+
+    private static let mediumDateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        return dateFormatter
+    }()
+
     
     
     static func string(forExpirationDate date: Date) -> String {
@@ -32,10 +46,11 @@ struct DateFormatterHelper {
             self.appExpirationDateFormatter.unitsStyle = .full
             self.appExpirationDateFormatter.allowedUnits = [.day]
         }
-            
-        return self.appExpirationDateFormatter.string(from: startDate, to: date) ?? ""
-        }
         
         return self.appExpirationDateFormatter.string(from: startDate, to: date) ?? ""
+    }
+
+    static func string(forRelativeDate date: Date, to referenceDate: Date = Date()) -> String {
+        self.relativeDateFormatter.localizedString(for: date, relativeTo: referenceDate)
     }
 }

@@ -16,14 +16,7 @@ struct AppDetailView: View {
     
     let storeApp: StoreApp
 
-    var dateFormatter: DateFormatter = {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
-        return dateFormatter
-    }()
-
-    var byteCountFormatter: ByteCountFormatter = {
+    let byteCountFormatter: ByteCountFormatter = {
         let formatter = ByteCountFormatter()
         return formatter
     }()
@@ -93,38 +86,81 @@ struct AppDetailView: View {
     }
     
     var contentView: some View {
-        VStack(alignment: .leading, spacing: 32) {
-            if storeApp.sourceIdentifier == Source.altStoreIdentifier {
-                officialAppBadge
-            }
-            
-            if let subtitle = storeApp.subtitle {
-                Text(subtitle)
-                    .multilineTextAlignment(.center)
+        VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 32) {
+                if storeApp.sourceIdentifier == Source.altStoreIdentifier {
+                    officialAppBadge
+                }
+
+                if let subtitle = storeApp.subtitle {
+                    VStack {
+                        if #available(iOS 15.0, *) {
+                            Image(systemSymbol: .quoteOpening)
+                                .foregroundColor(.secondary.opacity(0.5))
+                                .imageScale(.large)
+                                .transformEffect(CGAffineTransform(a: 1, b: 0, c: -0.3, d: 1, tx: 0, ty: 0))
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .offset(x: 30)
+                        }
+
+                        Text(subtitle)
+                            .bold()
+                            .italic()
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+
+                        if #available(iOS 15.0, *) {
+                            Image(systemSymbol: .quoteClosing)
+                                .foregroundColor(.secondary.opacity(0.5))
+                                .imageScale(.large)
+                                .transformEffect(CGAffineTransform(a: 1, b: 0, c: -0.3, d: 1, tx: 0, ty: 0))
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .offset(x: -30)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+
+                if !storeApp.screenshotURLs.isEmpty {
+                    // Equatable: Only reload the view if the screenshots change.
+                    // This prevents unnecessary redraws on scroll.
+                    AppScreenshotsScrollView(urls: storeApp.screenshotURLs)
+                        .equatable()
+                } else {
+                    VStack() {
+                        Text(L10n.AppDetailView.noScreenshots)
+                            .italic()
+                            .foregroundColor(.secondary)
+                    }
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal)
+                }
+
+                ExpandableText(text: storeApp.localizedDescription)
+                    .lineLimit(6)
+                    .expandButton(TextSet(text: L10n.AppDetailView.more, font: .callout, color: .accentColor))
+                    .padding(.horizontal)
             }
-            
-            if !storeApp.screenshotURLs.isEmpty {
-                // Equatable: Only reload the view if the screenshots change.
-                // This prevents unnecessary redraws on scroll.
-                AppScreenshotsScrollView(urls: storeApp.screenshotURLs)
-                    .equatable()
+
+
+            VStack(spacing: 16) {
+                Divider()
+
+                currentVersionView
+
+                Divider()
+
+                ratingsView
+
+                Divider()
+
+                permissionsView
+
+                Divider()
+
+                informationView
             }
-            
-            ExpandableText(text: storeApp.localizedDescription)
-                .lineLimit(6)
-                .expandButton(TextSet(text: L10n.AppDetailView.more, font: .callout, color: .accentColor))
-                .padding(.horizontal)
-            
-            currentVersionView
-                .padding(.horizontal)
-            
-            permissionsView
-                .padding(.horizontal)
-            
-            // TODO: Add review view
-            // Only let users rate the app if it is currently installed!
+            .padding(.horizontal)
         }
         .padding(.vertical)
         .background(
@@ -156,25 +192,26 @@ struct AppDetailView: View {
     
     var currentVersionView: some View {
         VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .bottom) {
-                VStack(alignment: .leading) {
+            VStack {
+                HStack(alignment: .firstTextBaseline) {
                     Text(L10n.AppDetailView.whatsNew)
                         .bold()
                         .font(.title3)
-                    
-                    if let version = storeApp.latestVersion?.version {
-                        Text("\(L10n.AppDetailView.version) \(version)")
-                            .font(.callout)
-                            .foregroundColor(.secondary)
+
+                    Spacer()
+
+                    NavigationLink {
+                        AppVersionHistoryView(storeApp: self.storeApp)
+                    } label: {
+                        Text(L10n.AppDetailView.WhatsNew.versionHistory)
                     }
                 }
-                
-                Spacer()
 
-                if let versionDate = storeApp.versionDate, let versionSize = storeApp.size {
-                    VStack(alignment: .trailing) {
-                        Text(dateFormatter.string(from: versionDate))
-                        Text(byteCountFormatter.string(fromByteCount: Int64(versionSize)))
+                if let latestVersion = storeApp.latestVersion {
+                    HStack {
+                        Text(L10n.AppDetailView.version(latestVersion.version))
+                        Spacer()
+                        Text(DateFormatterHelper.string(forRelativeDate: latestVersion.date))
                     }
                     .font(.callout)
                     .foregroundColor(.secondary)
@@ -189,6 +226,109 @@ struct AppDetailView: View {
                 Text(L10n.AppDetailView.noVersionInformation)
                     .foregroundColor(.secondary)
             }
+
+
+            if true {
+                SwiftUI.Button {
+                    UIApplication.shared.open(URL(string: "https://github.com/SideStore/SideStore")!) { _ in }
+                } label: {
+                    HStack {
+                        Text(L10n.AppDetailView.WhatsNew.showOnGithub)
+                        Image(systemSymbol: .arrowUpForwardSquare)
+                    }
+                }
+            }
+        }
+    }
+
+    var ratingsView: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(alignment: .firstTextBaseline) {
+                Text(L10n.AppDetailView.whatsNew)
+                    .bold()
+                    .font(.title3)
+
+                Spacer()
+
+                NavigationLink {
+                    AppVersionHistoryView(storeApp: self.storeApp)
+                } label: {
+                    Text(L10n.AppDetailView.Reviews.seeAll)
+                }
+            }
+
+            HStack(spacing: 40) {
+                VStack {
+                    Text("3.0")
+                        .font(.system(size: 48, weight: .bold, design: .rounded))
+                        .opacity(0.8)
+                    Text(L10n.AppDetailView.Reviews.outOf(5))
+                        .bold()
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                }
+
+                VStack(alignment: .trailing) {
+                    LazyVGrid(columns: [GridItem(.fixed(48), alignment: .trailing), GridItem(.flexible())], spacing: 2) {
+                        ForEach(Array(1...5).reversed(), id: \.self) { rating in
+                            HStack(spacing: 2) {
+                                ForEach(0..<rating) { _ in
+                                    Image(systemSymbol: .starFill)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: 8)
+                                }
+                            }
+
+                            ProgressView(value: 0.5)
+                                .frame(maxWidth: .infinity)
+                                .progressViewStyle(LinearProgressViewStyle(tint: .secondary))
+                        }
+                    }
+                    .foregroundColor(.secondary)
+                    .frame(maxWidth: .infinity)
+
+                    Text(L10n.AppDetailView.Reviews.ratings(5))
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                }
+            }
+
+            TabView {
+                ForEach(0..<5) { i in
+                    HintView(backgroundColor: Color(UIColor.secondarySystemBackground)) {
+                        VStack(alignment: .leading) {
+                            VStack(alignment: .leading, spacing: 4) {
+                                HStack {
+                                    Text("Review \(i + 1)")
+                                        .bold()
+                                        .lineLimit(1)
+
+                                    Spacer()
+
+                                    Text(DateFormatterHelper.string(forRelativeDate: Date().addingTimeInterval(-60*60)))
+                                        .foregroundColor(.secondary)
+                                }
+
+                                RatingStars(rating: i + 1)
+                                    .frame(height: 12)
+                                    .foregroundColor(.yellow)
+                            }
+
+                            ExpandableText(text: "Long review text content here.\nMultiple lines.\nAt least three are shown.\nBut are there more?")
+                                .lineLimit(3)
+                                .expandButton(TextSet(text: L10n.AppDetailView.more, font: .callout, color: .accentColor))
+                        }
+                        .frame(maxWidth: .infinity)
+
+                    }
+                    .tag(i)
+                    .padding(.horizontal, 16)
+                }
+            }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .frame(height: 150)
+            .padding(.horizontal, -16)
         }
     }
     
@@ -207,6 +347,55 @@ struct AppDetailView: View {
             }
             
             Spacer()
+        }
+    }
+
+    var informationData: [(title: String, content: String)] {
+        var data: [(title: String, content: String)] = [
+            (L10n.AppDetailView.Information.source, self.storeApp.source?.name ?? ""),
+            (L10n.AppDetailView.Information.developer, self.storeApp.developerName),
+//                ("Category", self.storeApp.category),
+        ]
+
+        if let latestVersion = self.storeApp.latestVersion {
+            data += [
+                (L10n.AppDetailView.Information.size, self.byteCountFormatter.string(fromByteCount: latestVersion.size)),
+                (L10n.AppDetailView.Information.latestVersion, self.storeApp.latestVersion?.version ?? ""),
+            ]
+
+            var compatibility: String = L10n.AppDetailView.Information.compatibilityUnknown
+            let iOSVersion = ProcessInfo.processInfo.operatingSystemVersion
+
+            if let minOSVersion = latestVersion.minOSVersion, ProcessInfo.processInfo.isOperatingSystemAtLeast(minOSVersion) == false {
+                compatibility = L10n.AppDetailView.Information.compatibilityAtLeast(minOSVersion.stringValue)
+            }
+
+            if let maxOSVersion = latestVersion.maxOSVersion,
+               (!ProcessInfo.processInfo.isOperatingSystemAtLeast(maxOSVersion) || maxOSVersion.stringValue.compare(iOSVersion.stringValue, options: .numeric) == .orderedSame) {
+                compatibility = L10n.AppDetailView.Information.compatibilityOrLower(maxOSVersion.stringValue)
+            }
+
+            data.append((L10n.AppDetailView.Information.compatibility, compatibility))
+        }
+        return data
+    }
+
+    var informationView: some View {
+        VStack(alignment: .leading) {
+            Text(L10n.AppDetailView.information)
+                .bold()
+                .font(.title3)
+
+            LazyVGrid(columns: [GridItem(.flexible(), alignment: .leading), GridItem(.flexible(), alignment: .trailing)], spacing: 8) {
+                ForEach(informationData, id: \.title) { title, content in
+                    Text(title)
+                        .foregroundColor(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    Text(content)
+                        .multilineTextAlignment(.trailing)
+                }
+            }
         }
     }
 }

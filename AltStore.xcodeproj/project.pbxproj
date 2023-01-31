@@ -27,12 +27,12 @@
 		1F07F56B2955F11500F7BE95 /* AppScreenshotsPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */; };
 		1F07F56F2955FB2000F7BE95 /* AppIDsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F07F56E2955FB2000F7BE95 /* AppIDsView.swift */; };
 		1F0DD81C2932D2FF007608A4 /* AppScreenshotsScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */; };
-		1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F0DD81E2932D84C007608A4 /* ExpandableText */; };
 		1F0DD8212933B749007608A4 /* AppPermissionsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */; };
 		1F0DD83F29367F6C007608A4 /* ConnectAppleIDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD83E29367F6C007608A4 /* ConnectAppleIDView.swift */; };
 		1F0DD84129368056007608A4 /* EnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD84029368056007608A4 /* EnvironmentValues.swift */; };
 		1F0DD8432936B0F9007608A4 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8422936B0F9007608A4 /* RoundedTextField.swift */; };
 		1F0DD8452936B3FE007608A4 /* FilledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0DD8442936B3FE007608A4 /* FilledButtonStyle.swift */; };
+		1F1295812989B51F0048FCB9 /* ExpandableText in Frameworks */ = {isa = PBXBuildFile; productRef = 1F1295802989B51F0048FCB9 /* ExpandableText */; };
 		1F2EF787297C4D40002FD839 /* LicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2EF786297C4D40002FD839 /* LicensesView.swift */; };
 		1F44634529744E570070E514 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F44634429744E570070E514 /* HintView.swift */; };
 		1F5DF9D82974426300DDAA47 /* AppScreenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5DF9D72974426300DDAA47 /* AppScreenshot.swift */; };
@@ -70,6 +70,7 @@
 		1FB96FCF292BBBCA007E68D1 /* SiriShortcutSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FCE292BBBC9007E68D1 /* SiriShortcutSetupView.swift */; };
 		1FB96FEC292C171D007E68D1 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FEB292C171D007E68D1 /* NotificationManager.swift */; };
 		1FB96FF3292D0539007E68D1 /* PillButtonProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB96FF2292D0539007E68D1 /* PillButtonProgressViewStyle.swift */; };
+		1FFEF104298552DB0098374C /* AppVersionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FFEF103298552DB0098374C /* AppVersionHistoryView.swift */; };
 		4879A95F2861046500FC1BBD /* AltSign in Frameworks */ = {isa = PBXBuildFile; productRef = 4879A95E2861046500FC1BBD /* AltSign */; };
 		4879A9622861049C00FC1BBD /* OpenSSL in Frameworks */ = {isa = PBXBuildFile; productRef = 4879A9612861049C00FC1BBD /* OpenSSL */; };
 		B3146ED2284F581E00BBC3FD /* Roxas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3146ECD284F580500BBC3FD /* Roxas.framework */; };
@@ -611,6 +612,7 @@
 		1FB96FCE292BBBC9007E68D1 /* SiriShortcutSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiriShortcutSetupView.swift; sourceTree = "<group>"; };
 		1FB96FEB292C171D007E68D1 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		1FB96FF2292D0539007E68D1 /* PillButtonProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillButtonProgressViewStyle.swift; sourceTree = "<group>"; };
+		1FFEF103298552DB0098374C /* AppVersionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionHistoryView.swift; sourceTree = "<group>"; };
 		B3146EC6284F580500BBC3FD /* Roxas.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Roxas.xcodeproj; path = Dependencies/Roxas/Roxas.xcodeproj; sourceTree = "<group>"; };
 		B33FFBA9295F8F78002259E6 /* preboard.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = preboard.c; path = src/preboard.c; sourceTree = "<group>"; };
 		B33FFBAB295F8F98002259E6 /* companion_proxy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = companion_proxy.c; path = src/companion_proxy.c; sourceTree = "<group>"; };
@@ -1018,8 +1020,8 @@
 				191E6087290C7B50001A3B7C /* libminimuxer.a in Frameworks */,
 				191E5FB4290A5DA0001A3B7C /* libminimuxer.a in Frameworks */,
 				19104DBC2909C4E500C49C7B /* libEmotionalDamage.a in Frameworks */,
+				1F1295812989B51F0048FCB9 /* ExpandableText in Frameworks */,
 				19104D952909BAEA00C49C7B /* libimobiledevice.a in Frameworks */,
-				1F0DD81F2932D84C007608A4 /* ExpandableText in Frameworks */,
 				B3146ED2284F581E00BBC3FD /* Roxas.framework in Frameworks */,
 				D533E8B72727841800A9B5DD /* libAppleArchive.tbd in Frameworks */,
 				B3C395F9284F362400DA9E2F /* AppCenterCrashes in Frameworks */,
@@ -1155,6 +1157,7 @@
 				1F0DD81B2932D2FF007608A4 /* AppScreenshotsScrollView.swift */,
 				1F0DD8202933B749007608A4 /* AppPermissionsGrid.swift */,
 				1F07F56A2955F11500F7BE95 /* AppScreenshotsPreview.swift */,
+				1FFEF103298552DB0098374C /* AppVersionHistoryView.swift */,
 			);
 			path = "App Detail";
 			sourceTree = "<group>";
@@ -2271,9 +2274,9 @@
 				B3C395F6284F362400DA9E2F /* AppCenterAnalytics */,
 				B3C395F8284F362400DA9E2F /* AppCenterCrashes */,
 				4879A9612861049C00FC1BBD /* OpenSSL */,
-				1F0DD81E2932D84C007608A4 /* ExpandableText */,
 				1F74FF1D295263510047C051 /* AsyncImage */,
 				1F07F5662955D16A00F7BE95 /* SFSafeSymbols */,
+				1F1295802989B51F0048FCB9 /* ExpandableText */,
 			);
 			productName = AltStore;
 			productReference = BFD2476A2284B9A500981D42 /* SideStore.app */;
@@ -2345,9 +2348,9 @@
 				B3C395FD284F3C0900DA9E2F /* XCRemoteSwiftPackageReference "STPrivilegedTask" */,
 				4879A95D2861046500FC1BBD /* XCRemoteSwiftPackageReference "AltSign" */,
 				4879A9602861049C00FC1BBD /* XCRemoteSwiftPackageReference "OpenSSL" */,
-				1F0DD81D2932D84C007608A4 /* XCRemoteSwiftPackageReference "ExpandableText" */,
 				1F74FF1C295263510047C051 /* XCRemoteSwiftPackageReference "AsyncImage" */,
 				1F07F5652955D16A00F7BE95 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+				1F12957F2989B51F0048FCB9 /* XCRemoteSwiftPackageReference "ExpandableText" */,
 			);
 			productRefGroup = BFD2476B2284B9A500981D42 /* Products */;
 			projectDirPath = "";
@@ -2750,6 +2753,7 @@
 				1F943C712927F90400ABE095 /* MyAppsView.swift in Sources */,
 				1FA1C8CA294906890083119D /* MyAppsViewModel.swift in Sources */,
 				BF3BEFC124086A1E00DE7D55 /* RefreshAppOperation.swift in Sources */,
+				1FFEF104298552DB0098374C /* AppVersionHistoryView.swift in Sources */,
 				BFE60740231AFD2A002B0E8E /* InsetGroupTableViewCell.swift in Sources */,
 				BF0DCA662433BDF500E3A595 /* AnalyticsManager.swift in Sources */,
 				BFCCB51A245E3401001853EA /* VerifyAppOperation.swift in Sources */,
@@ -3686,9 +3690,9 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		1F0DD81D2932D84C007608A4 /* XCRemoteSwiftPackageReference "ExpandableText" */ = {
+		1F12957F2989B51F0048FCB9 /* XCRemoteSwiftPackageReference "ExpandableText" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/NuPlay/ExpandableText";
+			repositoryURL = "https://github.com/fabianthdev/ExpandableText";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -3789,9 +3793,9 @@
 			package = 1F07F5652955D16A00F7BE95 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
 		};
-		1F0DD81E2932D84C007608A4 /* ExpandableText */ = {
+		1F1295802989B51F0048FCB9 /* ExpandableText */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1F0DD81D2932D84C007608A4 /* XCRemoteSwiftPackageReference "ExpandableText" */;
+			package = 1F12957F2989B51F0048FCB9 /* XCRemoteSwiftPackageReference "ExpandableText" */;
 			productName = ExpandableText;
 		};
 		1F74FF1D295263510047C051 /* AsyncImage */ = {

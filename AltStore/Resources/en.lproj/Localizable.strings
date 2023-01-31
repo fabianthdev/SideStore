@@ -119,12 +119,28 @@
 /* AppDetailView*/
 "AppDetailView.Badge.official" = "Official App";
 "AppDetailView.Badge.trusted" = "From Trusted Source";
+"AppDetailView.noScreenshots" = "No screenshots available for this app.";
 "AppDetailView.more" = "More...";
 "AppDetailView.whatsNew" = "What's New";
-"AppDetailView.version" = "Version";
+"AppDetailView.WhatsNew.versionHistory" = "Version History";
+"AppDetailView.WhatsNew.showOnGithub" = "Show project on GitHub";
+"AppDetailView.reviews" = "Ratings & Reviews";
+"AppDetailView.Reviews.outOf" = "out of %d";
+"AppDetailView.Reviews.ratings" = "%d Ratings";
+"AppDetailView.Reviews.seeAll" = "See All";
+"AppDetailView.version" = "Version %@";
 "AppDetailView.noVersionInformation" = "No version information";
 "AppDetailView.noPermissions" = "The app requires no permissions.";
 "AppDetailView.permissions" = "Permissions";
+"AppDetailView.information" = "Information";
+"AppDetailView.Information.source" = "Source";
+"AppDetailView.Information.developer" = "Developer";
+"AppDetailView.Information.size" = "Size";
+"AppDetailView.Information.latestVersion" = "Latest Version";
+"AppDetailView.Information.compatibility" = "Compatibility";
+"AppDetailView.Information.compatibilityUnknown" = "Unknown";
+"AppDetailView.Information.compatibilityAtLeast" = "Requires iOS %@ or higher";
+"AppDetailView.Information.compatibilityOrLower" = "Requires iOS %@ or lower";
 
 /* AppPermissionGrid */
 "AppPermissionGrid.usageDescription" = "Usage Description";

@@ -61,8 +61,10 @@ struct RootView: View {
                     }
                 }
                 .padding()
-                .background(Color(UIColor.altPrimary))
+                .foregroundColor(.white)
+                .background(Color.accentColor)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
+                .shadow(radius: 15)
             }
             
             Spacer()
@@ -83,7 +85,7 @@ extension RootView {
             switch self {
             case .news: return .newspaper
             case .browse: return .booksVertical
-            case .myApps: return .appBadge
+            case .myApps: return .squareStack
             case .settings: return .gearshape
             }
         }

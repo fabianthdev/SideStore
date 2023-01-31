@@ -43,6 +43,8 @@ struct AppScreenshotsPreview: View {
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .navigationTitle("\(index + 1) of \(self.urls.count)")
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .cancellationAction) {
                 SwiftUI.Button {
