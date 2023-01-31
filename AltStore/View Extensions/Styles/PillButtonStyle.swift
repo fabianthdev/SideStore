@@ -25,7 +25,7 @@ struct PillButtonStyle: ButtonStyle {
         }
         .frame(minWidth: 40)
         .padding(.horizontal, 16)
-        .padding(.vertical, 8)
+        .padding(.vertical, 6)
         .background(background)
         .foregroundColor(self.progress == nil ? .white : Color(tintColor))
         .clipShape(Capsule())
@@ -42,5 +42,18 @@ struct PillButtonStyle: ButtonStyle {
                 Color(tintColor)
             }
         }
+    }
+}
+
+
+struct PillButtonStyle_Previews: PreviewProvider {
+
+    static var previews: some View {
+        SwiftUI.Button {
+
+        } label: {
+            Text("Label").bold()
+        }
+        .buttonStyle(PillButtonStyle(tintColor: Asset.accentColor.color))
     }
 }

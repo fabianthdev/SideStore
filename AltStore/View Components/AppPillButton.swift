@@ -51,10 +51,10 @@ struct AppPillButton: View {
     }
     
     var body: some View {
-        SwiftUI.Button(action: handleButton, label: {
+        SwiftUI.Button(action: handleButton) {
             Text(buttonText.uppercased())
                 .bold()
-        })
+        }
         .buttonStyle(PillButtonStyle(tintColor: storeApp?.tintColor ?? .black, progress: progress))
     }
     

@@ -22,25 +22,18 @@ struct DateFormatterHelper {
         let startDate = Date()
         let interval = date.timeIntervalSince(startDate)
         guard interval > 0 else {
-            return ""
+            return "EXPIRED"
         }
         
-        if interval < (1 * 60 * 60) {
+        if interval < (24 * 60 * 60) {
             self.appExpirationDateFormatter.unitsStyle = .positional
             self.appExpirationDateFormatter.allowedUnits = [.minute, .second]
-        }
-        else if interval < (2 * 24 * 60 * 60)
-        {
-            self.appExpirationDateFormatter.unitsStyle = .positional
-            self.appExpirationDateFormatter.allowedUnits = [.hour, .minute, .second]
-        }
-        else
-        {
+        } else {
             self.appExpirationDateFormatter.unitsStyle = .full
             self.appExpirationDateFormatter.allowedUnits = [.day]
+        }
             
-//            let numberOfDays = endDate.numberOfCalendarDays(since: startDate)
-//            text = String(format: NSLocalizedString("%@ DAYS", comment: ""), NSNumber(value: numberOfDays))
+        return self.appExpirationDateFormatter.string(from: startDate, to: date) ?? ""
         }
         
         return self.appExpirationDateFormatter.string(from: startDate, to: date) ?? ""
