@@ -155,7 +155,7 @@
 "MyAppsView.myApps" = "Mis aplicaciones";
 "MyAppsView.Hints.NoUpdates.title" = "Todas las aplicaciones están actualizadas";
 "MyAppsView.Hints.NoUpdates.text" = "Serás notificado cuando halla actualizaciones disponibles para tus aplicaciones. Las actualizaciones serán mostradas aquí.";
-"MyAppsView.Hints.NoUpdates.dismissForNow" = "Ignorar por ahota";
+"MyAppsView.Hints.NoUpdates.dismissForNow" = "Ignorar por ahora";
 "MyAppsView.Hints.NoUpdates.dontShowAgain" = "No volver a mostar este mensaje";
 
 
