@@ -3,9 +3,13 @@
   AltStore
 
   Created by Joshua Laymon on 23.12.22.
-  Updated by Gabriel Morazán on 25.12.22.
-  Copyright © 2022 SideStore. All rights reserved.
+  Updated by Gabriel Morazán on 03.03.23.
+  Copyright © 2023 SideStore. All rights reserved.
 */
+
+/* General Actions */
+"Action.done" = "Listo";
+"Action.close" = "Cerrar";
 
 
 /* NewsView */
@@ -20,7 +24,17 @@
 "BrowseView.Section.PromotedCategories.showAll" = "Mostrar todo";
 "BrowseView.Section.AllApps.title" = "Todas las aplicaciones";
 "BrowseView.Actions.sources" = "Fuentes";
+"BrowseView.Hints.NoApps.title" = "No tienes ninguna aplicacición todavía.";
+"BrowseView.Hints.NoApps.text" = "Las aplicaciones son proporcionadas por las \"funtes\". Las especificaciones para estas son un estándar abierto, por lo tanto cualquiera puede crear su propia fuente. Para que puedas empezar de forma sencilla, hemos compilado una lista de \"fuentes confiables\" que puedes revisar al tocar el botón de abajo.";
+"BrowseView.Hints.NoApps.addSource" = "Agregar fuente";
 "BrowseView.Categories.gamesAndEmulators" = "Juegos y\nemuladores";
+
+/* AppRowView */
+"AppRowView.sideloaded" = "Instalado";
+
+/* AppPillButton */
+"AppPillButton.free" = "Gratis";
+"AppPillButton.open" = "Abrir";
 
 /* RootView */
 "RootView.news" = "Noticias";
@@ -102,12 +116,30 @@
 "AppAction.resetIcon" = "Reiniciar icono";
 
 /* AppDetailView*/
+"AppDetailView.Badge.official" = "Aplicación oficial";
+"AppDetailView.Badge.trusted" = "De una fuente confiable";
+"AppDetailView.noScreenshots" = "No hay capturas de pantalla disponibles para esta aplicacición.";
 "AppDetailView.more" = "Más...";
 "AppDetailView.whatsNew" = "Novedades";
-"AppDetailView.version" = "Versión";
+"AppDetailView.WhatsNew.versionHistory" = "Historial de versiones";
+"AppDetailView.WhatsNew.showOnGithub" = "Mostrar el proyecto en GitHub";
+"AppDetailView.reviews" = "Calificaciones y reseñas";
+"AppDetailView.Reviews.outOf" = "de %d";
+"AppDetailView.Reviews.ratings" = "%d calificaciones";
+"AppDetailView.Reviews.seeAll" = "Ver todas";
+"AppDetailView.version" = "Versión %@";
 "AppDetailView.noVersionInformation" = "Sin información de la versión";
 "AppDetailView.noPermissions" = "Esta aplicación no requiere de permisos.";
 "AppDetailView.permissions" = "Los permisos";
+"AppDetailView.information" = "Información";
+"AppDetailView.Information.source" = "Fuente";
+"AppDetailView.Information.developer" = "Desarrollador";
+"AppDetailView.Information.size" = "Tamaño";
+"AppDetailView.Information.latestVersion" = "Versión más reciente";
+"AppDetailView.Information.compatibility" = "Compatibilidad";
+"AppDetailView.Information.compatibilityUnknown" = "Desconocido";
+"AppDetailView.Information.compatibilityAtLeast" = "Requiere de iOS %@ para arriba";
+"AppDetailView.Information.compatibilityOrLower" = "Requiere de iOS %@ para abajo";
 
 /* AppPermissionGrid */
 "AppPermissionGrid.usageDescription" = "Descripciones de uso";
@@ -117,8 +149,16 @@
 "MyAppsView.sideloading" = "Instalación en progreso...";
 "MyAppsView.refreshAll" = "Refrescar todo";
 "MyAppsView.appIDsRemaining" = "IDs de aplicaciones restantes";
-"MyAppsView.noUpdatesAvailable" = "No hay actualizaciones disponibles";
 "MyAppsView.failedToRefresh" = "No se pudo refrescar";
 "MyAppsView.apps" = "aplicaciones"; /* Keep this lowercase */
 "MyAppsView.viewAppIDs" = "Ver IDs de las aplicaciones";
 "MyAppsView.myApps" = "Mis aplicaciones";
+"MyAppsView.Hints.NoUpdates.title" = "Todas las aplicaciones están actualizadas";
+"MyAppsView.Hints.NoUpdates.text" = "Serás notificado cuando halla actualizaciones disponibles para tus aplicaciones. Las actualizaciones serán mostradas aquí.";
+"MyAppsView.Hints.NoUpdates.dismissForNow" = "Ignorar por ahota";
+"MyAppsView.Hints.NoUpdates.dontShowAgain" = "No volver a mostar este mensaje";
+
+
+/* AppIDsView */
+"AppIDsView.title" = "IDs de aplicaciones";
+"AppIDsView.description" = "Cada aplicacición y extensión instalada con SideStore debe registrar un ID de aplicacición con Apple.\n\nLos IDs de aplicaciones para las cuentas de desarrollador compradas nunca se van a expirar, y no hay límite de cuantos IDs puedes crear.";
